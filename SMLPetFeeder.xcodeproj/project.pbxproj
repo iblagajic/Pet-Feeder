@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0281FF1A8BE3F2006AA051 /* SMLPetCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0281FE1A8BE3F2006AA051 /* SMLPetCardViewController.m */; };
 		1A7CD73C1A8AAC1F00640E2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD73B1A8AAC1F00640E2E /* main.m */; };
 		1A7CD73F1A8AAC1F00640E2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD73E1A8AAC1F00640E2E /* AppDelegate.m */; };
 		1A7CD7421A8AAC1F00640E2E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7411A8AAC1F00640E2E /* RootViewController.m */; };
-		1A7CD7451A8AAC1F00640E2E /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7441A8AAC1F00640E2E /* DataViewController.m */; };
 		1A7CD7481A8AAC1F00640E2E /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7471A8AAC1F00640E2E /* ModelController.m */; };
 		1A7CD74B1A8AAC1F00640E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD7491A8AAC1F00640E2E /* Main.storyboard */; };
 		1A7CD74D1A8AAC1F00640E2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD74C1A8AAC1F00640E2E /* Images.xcassets */; };
 		1A7CD7501A8AAC1F00640E2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD74E1A8AAC1F00640E2E /* LaunchScreen.xib */; };
 		1A7CD75C1A8AAC1F00640E2E /* SMLPetFeederTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD75B1A8AAC1F00640E2E /* SMLPetFeederTests.m */; };
+		1A7CD7671A8AAD9C00640E2E /* SMLPetCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7661A8AAD9C00640E2E /* SMLPetCard.m */; };
+		1A7CD7A91A8AB1C600640E2E /* PetFeeder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7A71A8AB1C600640E2E /* PetFeeder.xcdatamodeld */; };
+		1A7CD7AD1A8AB27300640E2E /* SMLDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7AC1A8AB27300640E2E /* SMLDataController.m */; };
+		1A7CD7B01A8AB49A00640E2E /* SMLPet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7AF1A8AB49A00640E2E /* SMLPet.m */; };
+		1A7CD7B31A8AB49A00640E2E /* SMLFeedingEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7B21A8AB49A00640E2E /* SMLFeedingEvent.m */; };
+		1A7CD7B71A8ABCE900640E2E /* SMLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7B61A8ABCE900640E2E /* SMLTableViewController.m */; };
+		1A7CD7BB1A8ABD3800640E2E /* SMLPetCardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7BA1A8ABD3800640E2E /* SMLPetCardViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A0281FD1A8BE3F2006AA051 /* SMLPetCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPetCardViewController.h; sourceTree = "<group>"; };
+		1A0281FE1A8BE3F2006AA051 /* SMLPetCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetCardViewController.m; sourceTree = "<group>"; };
 		1A7CD7361A8AAC1F00640E2E /* SMLPetFeeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMLPetFeeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7CD73A1A8AAC1F00640E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7CD73B1A8AAC1F00640E2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,8 +45,6 @@
 		1A7CD73E1A8AAC1F00640E2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1A7CD7401A8AAC1F00640E2E /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		1A7CD7411A8AAC1F00640E2E /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		1A7CD7431A8AAC1F00640E2E /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
-		1A7CD7441A8AAC1F00640E2E /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		1A7CD7461A8AAC1F00640E2E /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
 		1A7CD7471A8AAC1F00640E2E /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
 		1A7CD74A1A8AAC1F00640E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +53,19 @@
 		1A7CD7551A8AAC1F00640E2E /* SMLPetFeederTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMLPetFeederTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7CD75A1A8AAC1F00640E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7CD75B1A8AAC1F00640E2E /* SMLPetFeederTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMLPetFeederTests.m; sourceTree = "<group>"; };
+		1A7CD7651A8AAD9C00640E2E /* SMLPetCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPetCard.h; sourceTree = "<group>"; };
+		1A7CD7661A8AAD9C00640E2E /* SMLPetCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetCard.m; sourceTree = "<group>"; };
+		1A7CD7A81A8AB1C600640E2E /* PetFeeder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetFeeder.xcdatamodel; sourceTree = "<group>"; };
+		1A7CD7AB1A8AB27300640E2E /* SMLDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLDataController.h; sourceTree = "<group>"; };
+		1A7CD7AC1A8AB27300640E2E /* SMLDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLDataController.m; sourceTree = "<group>"; };
+		1A7CD7AE1A8AB49A00640E2E /* SMLPet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPet.h; sourceTree = "<group>"; };
+		1A7CD7AF1A8AB49A00640E2E /* SMLPet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPet.m; sourceTree = "<group>"; };
+		1A7CD7B11A8AB49A00640E2E /* SMLFeedingEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLFeedingEvent.h; sourceTree = "<group>"; };
+		1A7CD7B21A8AB49A00640E2E /* SMLFeedingEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLFeedingEvent.m; sourceTree = "<group>"; };
+		1A7CD7B51A8ABCE900640E2E /* SMLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLTableViewController.h; sourceTree = "<group>"; };
+		1A7CD7B61A8ABCE900640E2E /* SMLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLTableViewController.m; sourceTree = "<group>"; };
+		1A7CD7B91A8ABD3800640E2E /* SMLPetCardViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPetCardViewModel.h; sourceTree = "<group>"; };
+		1A7CD7BA1A8ABD3800640E2E /* SMLPetCardViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetCardViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,18 +107,21 @@
 		1A7CD7381A8AAC1F00640E2E /* SMLPetFeeder */ = {
 			isa = PBXGroup;
 			children = (
+				1A7CD7B41A8ABC8300640E2E /* Views */,
+				1A7CD7B81A8ABD0000640E2E /* ViewModels */,
+				1A7CD7A61A8AB1C600640E2E /* CoreData */,
 				1A7CD73D1A8AAC1F00640E2E /* AppDelegate.h */,
 				1A7CD73E1A8AAC1F00640E2E /* AppDelegate.m */,
 				1A7CD7401A8AAC1F00640E2E /* RootViewController.h */,
 				1A7CD7411A8AAC1F00640E2E /* RootViewController.m */,
-				1A7CD7431A8AAC1F00640E2E /* DataViewController.h */,
-				1A7CD7441A8AAC1F00640E2E /* DataViewController.m */,
 				1A7CD7461A8AAC1F00640E2E /* ModelController.h */,
 				1A7CD7471A8AAC1F00640E2E /* ModelController.m */,
 				1A7CD7491A8AAC1F00640E2E /* Main.storyboard */,
 				1A7CD74C1A8AAC1F00640E2E /* Images.xcassets */,
 				1A7CD74E1A8AAC1F00640E2E /* LaunchScreen.xib */,
 				1A7CD7391A8AAC1F00640E2E /* Supporting Files */,
+				1A7CD7651A8AAD9C00640E2E /* SMLPetCard.h */,
+				1A7CD7661A8AAD9C00640E2E /* SMLPetCard.m */,
 			);
 			path = SMLPetFeeder;
 			sourceTree = "<group>";
@@ -127,6 +150,40 @@
 				1A7CD75A1A8AAC1F00640E2E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A7CD7A61A8AB1C600640E2E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1A7CD7A71A8AB1C600640E2E /* PetFeeder.xcdatamodeld */,
+				1A7CD7AB1A8AB27300640E2E /* SMLDataController.h */,
+				1A7CD7AC1A8AB27300640E2E /* SMLDataController.m */,
+				1A7CD7B11A8AB49A00640E2E /* SMLFeedingEvent.h */,
+				1A7CD7B21A8AB49A00640E2E /* SMLFeedingEvent.m */,
+				1A7CD7AE1A8AB49A00640E2E /* SMLPet.h */,
+				1A7CD7AF1A8AB49A00640E2E /* SMLPet.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		1A7CD7B41A8ABC8300640E2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A0281FD1A8BE3F2006AA051 /* SMLPetCardViewController.h */,
+				1A0281FE1A8BE3F2006AA051 /* SMLPetCardViewController.m */,
+				1A7CD7B51A8ABCE900640E2E /* SMLTableViewController.h */,
+				1A7CD7B61A8ABCE900640E2E /* SMLTableViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A7CD7B81A8ABD0000640E2E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1A7CD7B91A8ABD3800640E2E /* SMLPetCardViewModel.h */,
+				1A7CD7BA1A8ABD3800640E2E /* SMLPetCardViewModel.m */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,10 +286,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A7CD7451A8AAC1F00640E2E /* DataViewController.m in Sources */,
+				1A7CD7AD1A8AB27300640E2E /* SMLDataController.m in Sources */,
 				1A7CD73F1A8AAC1F00640E2E /* AppDelegate.m in Sources */,
+				1A7CD7BB1A8ABD3800640E2E /* SMLPetCardViewModel.m in Sources */,
 				1A7CD7481A8AAC1F00640E2E /* ModelController.m in Sources */,
 				1A7CD73C1A8AAC1F00640E2E /* main.m in Sources */,
+				1A7CD7B01A8AB49A00640E2E /* SMLPet.m in Sources */,
+				1A7CD7B31A8AB49A00640E2E /* SMLFeedingEvent.m in Sources */,
+				1A0281FF1A8BE3F2006AA051 /* SMLPetCardViewController.m in Sources */,
+				1A7CD7B71A8ABCE900640E2E /* SMLTableViewController.m in Sources */,
+				1A7CD7671A8AAD9C00640E2E /* SMLPetCard.m in Sources */,
+				1A7CD7A91A8AB1C600640E2E /* PetFeeder.xcdatamodeld in Sources */,
 				1A7CD7421A8AAC1F00640E2E /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +488,7 @@
 				1A7CD7611A8AAC1F00640E2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A7CD7621A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "SMLPetFeederTests" */ = {
 			isa = XCConfigurationList;
@@ -432,8 +497,22 @@
 				1A7CD7641A8AAC1F00640E2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1A7CD7A71A8AB1C600640E2E /* PetFeeder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1A7CD7A81A8AB1C600640E2E /* PetFeeder.xcdatamodel */,
+			);
+			currentVersion = 1A7CD7A81A8AB1C600640E2E /* PetFeeder.xcdatamodel */;
+			path = PetFeeder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1A7CD72E1A8AAC1F00640E2E /* Project object */;
 }

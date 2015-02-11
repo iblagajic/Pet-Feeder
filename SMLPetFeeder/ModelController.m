@@ -7,7 +7,7 @@
 //
 
 #import "ModelController.h"
-#import "DataViewController.h"
+#import "SMLPetCardViewController.h"
 
 /*
  A controller object that manages a simple model -- a collection of month names.
@@ -36,19 +36,19 @@
     return self;
 }
 
-- (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard {
+- (SMLPetCardViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard {
     // Return the data view controller for the given index.
     if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
         return nil;
     }
 
     // Create a new view controller and pass suitable data.
-    DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
-    dataViewController.dataObject = self.pageData[index];
-    return dataViewController;
+    SMLPetCardViewController *SMLPetCardViewController = [storyboard instantiateViewControllerWithIdentifier:@"SMLPetCardViewController"];
+    SMLPetCardViewController.dataObject = self.pageData[index];
+    return SMLPetCardViewController;
 }
 
-- (NSUInteger)indexOfViewController:(DataViewController *)viewController {
+- (NSUInteger)indexOfViewController:(SMLPetCardViewController *)viewController {
     // Return the index of the given data view controller.
     // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
     return [self.pageData indexOfObject:viewController.dataObject];
@@ -58,7 +58,7 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    NSUInteger index = [self indexOfViewController:(DataViewController *)viewController];
+    NSUInteger index = [self indexOfViewController:(SMLPetCardViewController *)viewController];
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
     }
@@ -69,7 +69,7 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    NSUInteger index = [self indexOfViewController:(DataViewController *)viewController];
+    NSUInteger index = [self indexOfViewController:(SMLPetCardViewController *)viewController];
     if (index == NSNotFound) {
         return nil;
     }
