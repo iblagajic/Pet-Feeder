@@ -7,6 +7,7 @@
 //
 
 #import "SMLTableViewController.h"
+#import "SMLFeedingEvent.h"
 
 @interface SMLTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -29,20 +30,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - TableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.feedingEvents.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedingCell" forIndexPath:indexPath];
-    
-    // Configure the cell...
+    SMLFeedingEvent *feedingEvent = [self.feedingEvents objectAtIndex:indexPath.row];
+    cell.textLabel.text = feedingEvent.text;
     
     return cell;
 }

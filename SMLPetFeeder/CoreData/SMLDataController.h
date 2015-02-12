@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
 @interface SMLDataController : NSObject
+
+@property (nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

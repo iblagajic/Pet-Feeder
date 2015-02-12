@@ -7,7 +7,11 @@
 //
 
 #import "ModelController.h"
+#import "SMLDataController.h"
 #import "SMLPetCardViewController.h"
+#import "SMLPetCardViewModel.h"
+#import "SMLPet.h"
+#import "SMLFeedingEvent.h"
 
 /*
  A controller object that manages a simple model -- a collection of month names.
@@ -21,7 +25,9 @@
 
 @interface ModelController ()
 
-@property (readonly, strong, nonatomic) NSArray *pageData;
+@property (nonatomic) SMLDataController *dataController;
+@property (nonatomic) NSArray *cardModels;
+
 @end
 
 @implementation ModelController
@@ -29,29 +35,44 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        // Create the data model.
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        _pageData = [[dateFormatter monthSymbols] copy];
+        self.dataController = [SMLDataController new];
+        self.cardModels = @[[self newPetCardForPetWithName:@"Marino"],
+                            [self newPetCardForPetWithName:@"Micika"]];
     }
     return self;
 }
 
+- (SMLPetCardViewModel*)newPetCardForPetWithName:(NSString*)name {
+    SMLPet *pet = [NSEntityDescription insertNewObjectForEntityForName:@"SMLPet" inManagedObjectContext:self.dataController.managedObjectContext];
+    pet.name = name;
+    SMLFeedingEvent *feedingEvent = [NSEntityDescription insertNewObjectForEntityForName:@"SMLFeedingEvent" inManagedObjectContext:self.dataController.managedObjectContext];
+    feedingEvent.pet = pet;
+    feedingEvent.text = @"Breakfast, 15g";
+    feedingEvent.time = [NSDate new];
+    SMLFeedingEvent *feedingEvent2 = [NSEntityDescription insertNewObjectForEntityForName:@"SMLFeedingEvent" inManagedObjectContext:self.dataController.managedObjectContext];
+    feedingEvent2.pet = pet;
+    feedingEvent2.text = @"Lunch, 15g";
+    feedingEvent2.time = [[NSDate new] dateByAddingTimeInterval:3600*6];
+    SMLPetCardViewModel *petCardViewModel = [[SMLPetCardViewModel alloc] initWithPet:pet];
+    return petCardViewModel;
+}
+
 - (SMLPetCardViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard {
     // Return the data view controller for the given index.
-    if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
+    if (([self.cardModels count] == 0) || (index >= [self.cardModels count])) {
         return nil;
     }
 
     // Create a new view controller and pass suitable data.
     SMLPetCardViewController *SMLPetCardViewController = [storyboard instantiateViewControllerWithIdentifier:@"SMLPetCardViewController"];
-    SMLPetCardViewController.dataObject = self.pageData[index];
+    SMLPetCardViewController.viewModel = self.cardModels[index];
     return SMLPetCardViewController;
 }
 
 - (NSUInteger)indexOfViewController:(SMLPetCardViewController *)viewController {
     // Return the index of the given data view controller.
     // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
-    return [self.pageData indexOfObject:viewController.dataObject];
+    return [self.cardModels indexOfObject:viewController.viewModel];
 }
 
 #pragma mark - Page View Controller Data Source
@@ -75,10 +96,16 @@
     }
     
     index++;
-    if (index == [self.pageData count]) {
+    if (index == [self.cardModels count]) {
         return nil;
     }
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
+}
+
+#pragma mark - Public
+
+- (NSUInteger)numberOfCards {
+    return self.cardModels.count;
 }
 
 @end

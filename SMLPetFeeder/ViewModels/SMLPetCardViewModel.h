@@ -15,6 +15,7 @@
 
 @property (nonatomic, readonly) NSString *petName;
 @property (nonatomic, readonly) UIImage *petImage;
+@property (nonatomic, readonly) NSArray *cellModels;
 
 - (instancetype)initWithPet:(SMLPet*)pet;
 

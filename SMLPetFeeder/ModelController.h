@@ -14,6 +14,7 @@
 
 - (SMLPetCardViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
 - (NSUInteger)indexOfViewController:(SMLPetCardViewController *)viewController;
+- (NSUInteger)numberOfCards;
 
 @end
 

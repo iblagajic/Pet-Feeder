@@ -10,17 +10,20 @@
 #import "ModelController.h"
 #import "SMLPetCardViewController.h"
 
-@interface RootViewController ()
+@interface RootViewController () <UIPageViewControllerDelegate>
 
-@property (readonly, strong, nonatomic) ModelController *modelController;
+@property (nonatomic) UIPageViewController *pageViewController;
+@property (nonatomic) IBOutlet UIPageControl *pageControl;
+@property (nonatomic) ModelController *modelController;
 @end
 
 @implementation RootViewController
 
-@synthesize modelController = _modelController;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.pageControl.pageIndicatorTintColor = [UIColor darkGrayColor];
+    self.pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
     // Do any additional setup after loading the view, typically from a nib.
     // Configure the page view controller and add it as a child view controller.
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
@@ -43,11 +46,8 @@
 
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    self.pageControl.numberOfPages = self.modelController.numberOfCards;
 }
 
 - (ModelController *)modelController {
@@ -59,7 +59,7 @@
     return _modelController;
 }
 
-#pragma mark - UIPageViewController delegate methods
+#pragma mark - UIPageViewControllerDelegate
 
 - (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation {
     // Set the spine position to "min" and the page view controller's view controllers array to contain just one view controller. Setting the spine position to 'UIPageViewControllerSpineLocationMid' in landscape orientation sets the doubleSided property to YES, so set it to NO here.
@@ -70,5 +70,22 @@
     self.pageViewController.doubleSided = NO;
     return UIPageViewControllerSpineLocationMin;
 }
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
+    SMLPetCardViewController *currentViewController = self.pageViewController.viewControllers[0];
+    self.pageControl.currentPage = [self.modelController indexOfViewController:currentViewController];
+}
+
+//#pragma mark - UIPageViewControllerDataSource
+//
+//- (UIViewController*)pageViewController:(UIPageViewController*)pageViewController viewControllerAfterViewController:(SMLPetCardViewController*)viewController {
+//    NSInteger index = [self.modelController indexOfViewController:viewController];
+//    return [self.modelController viewControllerAtIndex:index+1 storyboard:self.storyboard];
+//}
+//
+//- (UIViewController*)pageViewController:(UIPageViewController*)pageViewController viewControllerBeforeViewController:(SMLPetCardViewController*)viewController {
+//    NSInteger index = [self.modelController indexOfViewController:viewController];
+//    return [self.modelController viewControllerAtIndex:index-1 storyboard:self.storyboard];
+//}
 
 @end

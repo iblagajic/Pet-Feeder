@@ -10,4 +10,6 @@
 
 @interface SMLTableViewController : UITableViewController
 
+@property (nonatomic) NSArray *feedingEvents;
+
 @end

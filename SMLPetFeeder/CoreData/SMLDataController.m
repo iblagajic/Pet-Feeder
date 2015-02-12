@@ -11,7 +11,6 @@
 
 @interface SMLDataController ()
 
-@property (nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
@@ -20,10 +19,6 @@
 @implementation SMLDataController
 
 #pragma mark - Core Data stack
-
-@synthesize managedObjectContext = _managedObjectContext;
-@synthesize managedObjectModel = _managedObjectModel;
-@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
@@ -38,7 +33,7 @@
 }
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-    if (_persistentStoreCoordinator != nil) {
+    if (!_persistentStoreCoordinator) {
         _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
         NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Test.sqlite"];
         NSError *error = nil;
@@ -61,7 +56,7 @@
 
 
 - (NSManagedObjectContext *)managedObjectContext {
-    if (_managedObjectContext != nil) {
+    if (!_managedObjectContext) {
         NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
         if (!coordinator) {
             return nil;
