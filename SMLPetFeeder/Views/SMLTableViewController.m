@@ -8,6 +8,7 @@
 
 #import "SMLTableViewController.h"
 #import "SMLFeedingEvent.h"
+#import "SMLFood.h"
 
 @interface SMLTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -43,8 +44,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedingCell" forIndexPath:indexPath];
     SMLFeedingEvent *feedingEvent = [self.feedingEvents objectAtIndex:indexPath.row];
-    cell.textLabel.text = feedingEvent.text;
-    
+    cell.textLabel.text = feedingEvent.food.name;
     return cell;
 }
 

@@ -15,7 +15,7 @@
 
 @property (nonatomic) UIPageViewController *pageViewController;
 @property (nonatomic) IBOutlet UIPageControl *pageControl;
-@property (nonatomic) SMLModelController *SMLModelController;
+@property (nonatomic) SMLModelController *modelController;
 @end
 
 @implementation SMLRootViewController
@@ -28,7 +28,7 @@
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.delegate = self;
 
-    SMLPetCardViewController *startingViewController = [self viewControllerAtIndex:0 storyboard:self.storyboard];
+    UIViewController *startingViewController = [self viewControllerAtIndex:0 storyboard:self.storyboard];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 
@@ -46,14 +46,14 @@
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
     
-    self.pageControl.numberOfPages = self.SMLModelController.numberOfCards;
+    self.pageControl.numberOfPages = self.modelController.numberOfCards;
 }
 
-- (SMLModelController *)SMLModelController {
-    if (!_SMLModelController) {
-        _SMLModelController = [SMLModelController new];
+- (SMLModelController*)modelController {
+    if (!_modelController) {
+        _modelController = [SMLModelController new];
     }
-    return _SMLModelController;
+    return _modelController;
 }
 
 #pragma mark - UIPageViewControllerDelegate
@@ -70,7 +70,7 @@
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
     SMLPetCardViewController *currentViewController = self.pageViewController.viewControllers[0];
-    self.pageControl.currentPage = [self.SMLModelController indexOfViewModel:currentViewController.viewModel];
+    self.pageControl.currentPage = [self.modelController indexOfViewModel:currentViewController.viewModel];
 }
 
 #pragma mark - UIPageViewControllerDataSource
@@ -98,22 +98,22 @@
 #pragma mark - Helpers
 
 - (UIViewController*)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard {
-    if (index == self.SMLModelController.numberOfCards) {
+    if (index == self.modelController.numberOfCards) {
         return [storyboard instantiateViewControllerWithIdentifier:@"SMLAddPetViewController"];
     }
-    if (index > self.SMLModelController.numberOfCards) {
+    if (index > self.modelController.numberOfCards) {
         return nil;
     }
     SMLPetCardViewController *petCardViewController = [storyboard instantiateViewControllerWithIdentifier:@"SMLPetCardViewController"];
-    petCardViewController.viewModel = [self.SMLModelController viewModelAtIndex:index];
+    petCardViewController.viewModel = [self.modelController viewModelAtIndex:index];
     return petCardViewController;
 }
 
 - (NSUInteger)indexOfViewController:(UIViewController*)viewController {
     if ([viewController isKindOfClass:[SMLAddPetViewController class]]) {
-        return self.SMLModelController.numberOfCards;
+        return self.modelController.numberOfCards;
     }
-    return [self.SMLModelController indexOfViewModel:[(SMLPetCardViewController*)viewController viewModel]];
+    return [self.modelController indexOfViewModel:[(SMLPetCardViewController*)viewController viewModel]];
 }
 
 @end
