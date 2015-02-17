@@ -170,10 +170,52 @@
             </objects>
             <point key="canvasLocation" x="933" y="476"/>
         </scene>
+        <!--Add Pet View Controller-->
+        <scene sceneID="3nn-aa-N99">
+            <objects>
+                <viewController storyboardIdentifier="SMLAddPetViewController" id="TGv-FV-TVY" customClass="SMLAddPetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kco-E9-HTL"/>
+                        <viewControllerLayoutGuide type="bottom" id="59z-ii-gNB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jN1-ra-BhO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-4j-YXj" customClass="SMLRoundedButton">
+                                <rect key="frame" x="220" y="220" width="160" height="160"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="ATy-ay-SJ1"/>
+                                    <constraint firstAttribute="width" constant="160" id="u18-4C-7R7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="100"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPet:" destination="TGv-FV-TVY" eventType="touchUpInside" id="I6e-cJ-6tx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="5w7-4j-YXj" secondAttribute="centerX" id="Wbo-Rl-PSJ"/>
+                            <constraint firstAttribute="centerY" secondItem="5w7-4j-YXj" secondAttribute="centerY" id="gnT-FZ-bQi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="plusButton" destination="5w7-4j-YXj" id="q6n-e7-p2n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sq8-bU-a7K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557" y="471"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="3GU-QQ-JyJ">
             <objects>
-                <viewController id="PxF-Ax-wPy" customClass="RootViewController" sceneMemberID="viewController">
+                <viewController id="PxF-Ax-wPy" customClass="SMLRootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="17i-ZA-3zy"/>
                         <viewControllerLayoutGuide type="bottom" id="8Yh-h8-jIR"/>

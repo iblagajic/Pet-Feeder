@@ -1,5 +1,5 @@
 //
-//  RootViewController.h
+//  SMLRootViewController.h
 //  SMLPetFeeder
 //
 //  Created by Ivan Blagajić on 10/02/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewController : UIViewController
+@interface SMLRootViewController : UIViewController
 
 @end
 

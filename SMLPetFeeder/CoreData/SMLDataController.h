@@ -16,6 +16,7 @@
 
 @property (nonatomic) NSManagedObjectContext *managedObjectContext;
 
+- (NSArray*)allPets;
 - (SMLPet*)addNewPetWithName:(NSString*)petName;
 - (BOOL)updatePet:(SMLPet*)pet withImage:(UIImage*)image;
 - (void)updatePet:(SMLPet*)pet withName:(NSString*)name;

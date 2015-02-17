@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="SMLFeedingEvent" representedClassName="SMLFeedingEvent" syncable="YES">
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="food" maxCount="1" deletionRule="Nullify" destinationEntity="SMLFood" inverseName="events" inverseEntity="SMLFood" syncable="YES"/>
         <relationship name="pet" maxCount="1" deletionRule="Nullify" destinationEntity="SMLPet" inverseName="feedingEvents" inverseEntity="SMLPet" syncable="YES"/>
-        <relationship name="time" maxCount="1" deletionRule="Nullify" destinationEntity="SMLTime" inverseName="events" inverseEntity="SMLTime" syncable="YES"/>
     </entity>
     <entity name="SMLFood" representedClassName="SMLFood" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,14 +15,9 @@
         <attribute name="ordinal" attributeType="Integer 16" syncable="YES"/>
         <relationship name="feedingEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SMLFeedingEvent" inverseName="pet" inverseEntity="SMLFeedingEvent" syncable="YES"/>
     </entity>
-    <entity name="SMLTime" representedClassName="SMLTime" syncable="YES">
-        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SMLFeedingEvent" inverseName="time" inverseEntity="SMLFeedingEvent" syncable="YES"/>
-    </entity>
     <elements>
         <element name="SMLFeedingEvent" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="SMLPet" positionX="-54" positionY="-9" width="128" height="103"/>
-        <element name="SMLTime" positionX="-63" positionY="27" width="128" height="73"/>
         <element name="SMLFood" positionX="-36" positionY="45" width="128" height="73"/>
     </elements>
 </model>

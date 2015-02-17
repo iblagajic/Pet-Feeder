@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class SMLFood, SMLPet, SMLTime;
+@class SMLFood, SMLPet;
 
 @interface SMLFeedingEvent : NSManagedObject
 
+@property (nonatomic, retain) NSDate * time;
 @property (nonatomic, retain) SMLPet *pet;
-@property (nonatomic, retain) SMLTime *time;
 @property (nonatomic, retain) SMLFood *food;
 
 @end

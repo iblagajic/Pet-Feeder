@@ -1,39 +1,38 @@
 //
-//  RootViewController.m
+//  SMLRootViewController.m
 //  SMLPetFeeder
 //
 //  Created by Ivan Blagajić on 10/02/15.
 //  Copyright (c) 2015 Ivan Blagajić. All rights reserved.
 //
 
-#import "RootViewController.h"
-#import "ModelController.h"
+#import "SMLRootViewController.h"
+#import "SMLModelController.h"
 #import "SMLPetCardViewController.h"
+#import "SMLAddPetViewController.h"
 
-@interface RootViewController () <UIPageViewControllerDelegate>
+@interface SMLRootViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (nonatomic) UIPageViewController *pageViewController;
 @property (nonatomic) IBOutlet UIPageControl *pageControl;
-@property (nonatomic) ModelController *modelController;
+@property (nonatomic) SMLModelController *SMLModelController;
 @end
 
-@implementation RootViewController
+@implementation SMLRootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.pageControl.pageIndicatorTintColor = [UIColor darkGrayColor];
     self.pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
-    // Do any additional setup after loading the view, typically from a nib.
-    // Configure the page view controller and add it as a child view controller.
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.delegate = self;
 
-    SMLPetCardViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+    SMLPetCardViewController *startingViewController = [self viewControllerAtIndex:0 storyboard:self.storyboard];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 
-    self.pageViewController.dataSource = self.modelController;
+    self.pageViewController.dataSource = self;
 
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
@@ -47,16 +46,14 @@
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
     
-    self.pageControl.numberOfPages = self.modelController.numberOfCards;
+    self.pageControl.numberOfPages = self.SMLModelController.numberOfCards;
 }
 
-- (ModelController *)modelController {
-    // Return the model controller object, creating it if necessary.
-    // In more complex implementations, the model controller may be passed to the view controller.
-    if (!_modelController) {
-        _modelController = [[ModelController alloc] init];
+- (SMLModelController *)SMLModelController {
+    if (!_SMLModelController) {
+        _SMLModelController = [SMLModelController new];
     }
-    return _modelController;
+    return _SMLModelController;
 }
 
 #pragma mark - UIPageViewControllerDelegate
@@ -73,19 +70,50 @@
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
     SMLPetCardViewController *currentViewController = self.pageViewController.viewControllers[0];
-    self.pageControl.currentPage = [self.modelController indexOfViewController:currentViewController];
+    self.pageControl.currentPage = [self.SMLModelController indexOfViewModel:currentViewController.viewModel];
 }
 
-//#pragma mark - UIPageViewControllerDataSource
-//
-//- (UIViewController*)pageViewController:(UIPageViewController*)pageViewController viewControllerAfterViewController:(SMLPetCardViewController*)viewController {
-//    NSInteger index = [self.modelController indexOfViewController:viewController];
-//    return [self.modelController viewControllerAtIndex:index+1 storyboard:self.storyboard];
-//}
-//
-//- (UIViewController*)pageViewController:(UIPageViewController*)pageViewController viewControllerBeforeViewController:(SMLPetCardViewController*)viewController {
-//    NSInteger index = [self.modelController indexOfViewController:viewController];
-//    return [self.modelController viewControllerAtIndex:index-1 storyboard:self.storyboard];
-//}
+#pragma mark - UIPageViewControllerDataSource
+
+- (UIViewController *)pageViewController:(UIPageViewController*)pageViewController viewControllerBeforeViewController:(SMLPetCardViewController*)viewController
+{
+    NSUInteger index = [self indexOfViewController:viewController];
+    if ((index == 0) || (index == NSNotFound)) {
+        return nil;
+    }
+    
+    index--;
+    return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController*)pageViewController viewControllerAfterViewController:(UIViewController*)viewController
+{
+    NSUInteger index = [self indexOfViewController:viewController];
+    if (index == NSNotFound) {
+        return nil;
+    }
+    return [self viewControllerAtIndex:index++ storyboard:viewController.storyboard];
+}
+
+#pragma mark - Helpers
+
+- (UIViewController*)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard {
+    if (index == self.SMLModelController.numberOfCards) {
+        return [storyboard instantiateViewControllerWithIdentifier:@"SMLAddPetViewController"];
+    }
+    if (index > self.SMLModelController.numberOfCards) {
+        return nil;
+    }
+    SMLPetCardViewController *petCardViewController = [storyboard instantiateViewControllerWithIdentifier:@"SMLPetCardViewController"];
+    petCardViewController.viewModel = [self.SMLModelController viewModelAtIndex:index];
+    return petCardViewController;
+}
+
+- (NSUInteger)indexOfViewController:(UIViewController*)viewController {
+    if ([viewController isKindOfClass:[SMLAddPetViewController class]]) {
+        return self.SMLModelController.numberOfCards;
+    }
+    return [self.SMLModelController indexOfViewModel:[(SMLPetCardViewController*)viewController viewModel]];
+}
 
 @end

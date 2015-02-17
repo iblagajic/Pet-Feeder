@@ -9,13 +9,12 @@
 #import "SMLFeedingEvent.h"
 #import "SMLFood.h"
 #import "SMLPet.h"
-#import "SMLTime.h"
 
 
 @implementation SMLFeedingEvent
 
-@dynamic pet;
 @dynamic time;
+@dynamic pet;
 @dynamic food;
 
 @end
