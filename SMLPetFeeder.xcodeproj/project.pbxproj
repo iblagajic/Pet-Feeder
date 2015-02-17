@@ -15,7 +15,6 @@
 		1A4B930E1A932A7B00952AE4 /* SMLFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B930D1A932A7B00952AE4 /* SMLFood.m */; };
 		1A4B93111A932A7C00952AE4 /* SMLFeedingEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B93101A932A7C00952AE4 /* SMLFeedingEvent.m */; };
 		1A4B93141A932A7C00952AE4 /* SMLPet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B93131A932A7C00952AE4 /* SMLPet.m */; };
-		1A4B93171A932F6200952AE4 /* SMLRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B93161A932F6200952AE4 /* SMLRoundedButton.m */; };
 		1A4B931A1A9330C200952AE4 /* SMLAddPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B93191A9330C200952AE4 /* SMLAddPetViewController.m */; };
 		1A7CD73C1A8AAC1F00640E2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD73B1A8AAC1F00640E2E /* main.m */; };
 		1A7CD73F1A8AAC1F00640E2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD73E1A8AAC1F00640E2E /* AppDelegate.m */; };
@@ -60,8 +59,6 @@
 		1A4B93101A932A7C00952AE4 /* SMLFeedingEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLFeedingEvent.m; sourceTree = "<group>"; };
 		1A4B93121A932A7C00952AE4 /* SMLPet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPet.h; sourceTree = "<group>"; };
 		1A4B93131A932A7C00952AE4 /* SMLPet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPet.m; sourceTree = "<group>"; };
-		1A4B93151A932F6200952AE4 /* SMLRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLRoundedButton.h; sourceTree = "<group>"; };
-		1A4B93161A932F6200952AE4 /* SMLRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLRoundedButton.m; sourceTree = "<group>"; };
 		1A4B93181A9330C200952AE4 /* SMLAddPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLAddPetViewController.h; sourceTree = "<group>"; };
 		1A4B93191A9330C200952AE4 /* SMLAddPetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLAddPetViewController.m; sourceTree = "<group>"; };
 		1A7CD7361A8AAC1F00640E2E /* SMLPetFeeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMLPetFeeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,8 +112,6 @@
 				1A0282021A8C19AA006AA051 /* SMLStandardLabel.m */,
 				1AC8218E1A8C9660002A57F9 /* SMLStandardTableViewCell.h */,
 				1AC8218F1A8C9660002A57F9 /* SMLStandardTableViewCell.m */,
-				1A4B93151A932F6200952AE4 /* SMLRoundedButton.h */,
-				1A4B93161A932F6200952AE4 /* SMLRoundedButton.m */,
 			);
 			path = StyledViews;
 			sourceTree = "<group>";
@@ -339,7 +334,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A4B93171A932F6200952AE4 /* SMLRoundedButton.m in Sources */,
 				1A4B930E1A932A7B00952AE4 /* SMLFood.m in Sources */,
 				1A7CD7AD1A8AB27300640E2E /* SMLDataController.m in Sources */,
 				1A7CD73F1A8AAC1F00640E2E /* AppDelegate.m in Sources */,
