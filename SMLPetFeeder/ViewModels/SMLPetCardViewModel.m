@@ -7,25 +7,30 @@
 //
 
 #import "SMLPetCardViewModel.h"
-#import "SMLPet.h"
+#import "SMLPet+Ingestion.h"
 #import "SMLFeedingEvent.h"
 #import "SMLFeedingEventViewModel.h"
+#import "SMLDataController.h"
 
 @interface SMLPetCardViewModel ()
 
 @property (nonatomic) SMLPet *pet;
+@property (nonatomic) SMLDataController *dataController;
 
 @end
 
 @implementation SMLPetCardViewModel
 
-- (instancetype)initWithPet:(SMLPet*)pet {
+- (instancetype)initWithPet:(SMLPet*)pet dataController:(SMLDataController*)dataController {
     self = [super init];
     if (self) {
         self.pet = pet;
+        self.dataController = dataController;
     }
     return self;
 }
+
+#pragma mark - Model
 
 - (NSString*)petName {
     return self.pet.name;
@@ -48,6 +53,16 @@
         [array addObject:viewModel];
     }
     return array;
+}
+
+#pragma mark - Updates
+
+- (void)updateName:(NSString*)name {
+    [self.dataController updatePet:self.pet withName:name];
+}
+
+- (void)updateImage:(UIImage*)image {
+    [self.dataController updatePet:self.pet withImage:image];
 }
 
 @end

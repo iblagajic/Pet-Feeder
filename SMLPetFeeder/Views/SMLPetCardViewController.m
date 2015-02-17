@@ -10,10 +10,8 @@
 #import "SMLPetCardViewModel.h"
 #import "SMLTableViewDataSource.h"
 
-@interface SMLPetCardViewController ()
+@interface SMLPetCardViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
-@property (nonatomic) IBOutlet UIView *containerView;
-@property (nonatomic) IBOutlet UIImageView *backgroundBlurredImageView;
 @property (nonatomic) IBOutlet UIImageView *petImageView;
 @property (nonatomic) IBOutlet UILabel *petNameLabel;
 @property (nonatomic) IBOutlet UITableView *feedingTableView;
@@ -44,18 +42,51 @@
 
 - (void)setupView {
     self.view.backgroundColor = [UIColor clearColor];
-    self.containerView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.6];
-    self.containerView.layer.cornerRadius = 5.0;
-    self.petImageView.backgroundColor = [UIColor whiteColor];
-    self.petImageView.layer.cornerRadius = CGRectGetWidth(self.petImageView.frame)/2;
-    self.petImageView.layer.masksToBounds = YES;
-    self.petImageView.layer.borderColor = [UIColor blackColor].CGColor;
-    self.petImageView.layer.borderWidth = 1.0;
     
     self.petNameLabel.text = self.viewModel.petName;
     
+    self.petImageView.backgroundColor = [UIColor whiteColor];
+    self.petImageView.layer.cornerRadius = CGRectGetWidth(self.petImageView.frame)/2;
+    self.petImageView.layer.masksToBounds = YES;
+    self.petImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.petImageView.layer.borderWidth = 1.0;
+    
+    self.feedButton.layer.cornerRadius = CGRectGetWidth(self.feedButton.frame)/2;
+    self.feedButton.layer.masksToBounds = YES;
+    self.feedButton.layer.borderColor = [UIColor blackColor].CGColor;
+    self.feedButton.layer.borderWidth = 2.0;
+    
     self.feedingTableView.dataSource = self.tableViewDataSource;
     self.feedingTableView.delegate = self.tableViewDataSource;
+}
+
+#pragma mark - Actions
+
+- (IBAction)updateImage:(id)sender {
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (IBAction)updateName:(id)sender {
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Add Pet" message:@"Add new pet name." preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"Selina";
+    }];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Add" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UITextField *textField = alertController.textFields[0];
+        [self.viewModel updateName:textField.text];
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary*)info {
+    self.petImageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -12,6 +12,8 @@
 #import "SMLPetCardViewModel.h"
 #import "SMLPet.h"
 #import "SMLFeedingEvent.h"
+#import "SMLFood.h"
+#import "SMLTime.h"
 
 /*
  A controller object that manages a simple model -- a collection of month names.
@@ -47,13 +49,19 @@
     pet.name = name;
     SMLFeedingEvent *feedingEvent = [NSEntityDescription insertNewObjectForEntityForName:@"SMLFeedingEvent" inManagedObjectContext:self.dataController.managedObjectContext];
     feedingEvent.pet = pet;
-    feedingEvent.text = @"Breakfast, 15g";
-    feedingEvent.time = [NSDate new];
+    SMLFood *food = [NSEntityDescription insertNewObjectForEntityForName:@"SMLFood" inManagedObjectContext:self.dataController.managedObjectContext];
+    food.name = @"Breakfast, 15g";
+    feedingEvent.food = food;
+    SMLTime *time = [NSEntityDescription insertNewObjectForEntityForName:@"SMLTime" inManagedObjectContext:self.dataController.managedObjectContext];
+    time.time = [NSDate new];
+    feedingEvent.time = time;
+    
     SMLFeedingEvent *feedingEvent2 = [NSEntityDescription insertNewObjectForEntityForName:@"SMLFeedingEvent" inManagedObjectContext:self.dataController.managedObjectContext];
     feedingEvent2.pet = pet;
-    feedingEvent2.text = @"Lunch, 15g";
-    feedingEvent2.time = [[NSDate new] dateByAddingTimeInterval:3600*6];
-    SMLPetCardViewModel *petCardViewModel = [[SMLPetCardViewModel alloc] initWithPet:pet];
+    feedingEvent2.food = food;
+    feedingEvent2.time = time;
+    
+    SMLPetCardViewModel *petCardViewModel = [[SMLPetCardViewModel alloc] initWithPet:pet dataController:self.dataController];
     return petCardViewModel;
 }
 

@@ -9,6 +9,8 @@
 #import "SMLDataController.h"
 #import <CoreData/CoreData.h>
 
+#import "SMLPet+Ingestion.h"
+
 @interface SMLDataController ()
 
 @property (nonatomic) NSManagedObjectModel *managedObjectModel;
@@ -69,15 +71,40 @@
 
 #pragma mark - Core Data Saving support
 
-- (void)saveContext {
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-    if (managedObjectContext != nil) {
-        NSError *error = nil;
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-//            abort();
-        }
+- (BOOL)saveContext {
+    NSError *err;
+    if ([self.managedObjectContext hasChanges]
+        && [self.managedObjectContext save:&err]) {
+        NSLog(@"Error saving context: %@", err.localizedDescription);
+        return NO;
     }
+    return YES;
+}
+
+#pragma mark - Fetch
+
+- (NSArray*)allPets {
+    return [SMLPet allPetsInContext:self.managedObjectContext];
+}
+
+#pragma mark - Add
+
+- (SMLPet*)addNewPetWithName:(NSString*)petName {
+    SMLPet *pet = [SMLPet addPetWithName:petName context:self.managedObjectContext];
+    if ([self saveContext]) {
+        return pet;
+    }
+    return nil;
+}
+
+#pragma mark - Update
+
+- (BOOL)updatePet:(SMLPet*)pet withImage:(UIImage*)image {
+    return [SMLPet updatePet:pet withImage:image context:self.managedObjectContext];
+}
+
+- (void)updatePet:(SMLPet*)pet withName:(NSString*)name {
+    [SMLPet updatePet:pet withName:name context:self.managedObjectContext];
 }
 
 @end

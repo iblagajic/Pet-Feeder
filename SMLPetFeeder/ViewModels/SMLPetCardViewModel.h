@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @class SMLPet;
+@class SMLDataController;
 
 @interface SMLPetCardViewModel : NSObject
 
@@ -17,6 +18,9 @@
 @property (nonatomic, readonly) UIImage *petImage;
 @property (nonatomic, readonly) NSArray *cellModels;
 
-- (instancetype)initWithPet:(SMLPet*)pet;
+- (instancetype)initWithPet:(SMLPet*)pet dataController:(SMLDataController*)dataController;
+
+- (void)updateName:(NSString*)name;
+- (void)updateImage:(UIImage*)image;
 
 @end

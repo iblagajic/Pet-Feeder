@@ -8,6 +8,8 @@
 
 #import "SMLFeedingEventViewModel.h"
 #import "SMLFeedingEvent.h"
+#import "SMLTime.h"
+#import "SMLFood.h"
 
 @interface SMLFeedingEventViewModel ()
 
@@ -26,11 +28,11 @@
 }
 
 - (NSString*)title {
-    return self.feedingEvent.text;
+    return self.feedingEvent.food.name;
 }
 
 - (NSString*)subtitle {
-    return [self.feedingEvent.time descriptionWithLocale:[NSLocale currentLocale]];
+    return [self.feedingEvent.time.time descriptionWithLocale:[NSLocale currentLocale]];
 }
 
 @end
