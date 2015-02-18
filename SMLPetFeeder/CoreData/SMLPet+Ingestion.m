@@ -8,13 +8,13 @@
 
 #import "SMLPet+Ingestion.h"
 
-#define kEntityName @"SMLPet"
+static NSString * const SMLEntityName = @"SMLPet";
 
 @implementation SMLPet (Ingestion)
 
 + (SMLPet*)addPetWithName:(NSString*)name context:(NSManagedObjectContext*)context {
     SMLPet *newPet = [SMLPet newPetInContext:context];
-    NSInteger ordinal = [SMLPet petsWithName:nil context:context].count;
+    NSInteger ordinal = [SMLPet allPetsInContext:context].count;
     newPet.name = name;
     newPet.ordinal = @(ordinal);
     return newPet;
@@ -47,11 +47,11 @@
 #pragma mark - Helpers
 
 + (SMLPet*)newPetInContext:(NSManagedObjectContext*)context {
-    return [NSEntityDescription insertNewObjectForEntityForName:kEntityName inManagedObjectContext:context];
+    return [NSEntityDescription insertNewObjectForEntityForName:SMLEntityName inManagedObjectContext:context];
 }
 
 + (NSArray*)petsWithName:(NSString*)name context:(NSManagedObjectContext*)context {
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:kEntityName];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:SMLEntityName];
     // If name is provided, filter. If not, return all.
     if (name) {
         request.predicate = [NSPredicate predicateWithFormat:@"name = %@", name];

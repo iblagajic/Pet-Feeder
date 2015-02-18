@@ -9,6 +9,9 @@
 #import "SMLPetCardViewController.h"
 #import "SMLPetCardViewModel.h"
 #import "SMLTableViewDataSource.h"
+#import "UIViewController+SML.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "EXTScope.h"
 
 @interface SMLPetCardViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -27,37 +30,45 @@
     [self setupView];
 }
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-}
-
 #pragma mark - Setup
 
 - (void)setViewModel:(SMLPetCardViewModel *)viewModel {
     _viewModel = viewModel;
     
-    self.tableViewDataSource = [SMLTableViewDataSource new];
-    self.tableViewDataSource.cellModels = self.viewModel.cellModels;
+    self.tableViewDataSource = [[SMLTableViewDataSource alloc] initWithViewModel:viewModel];
+    
+    @weakify(self);
+    [self.viewModel.updatedContent subscribeNext:^(NSNumber *index) {
+        @strongify(self);
+        [self updateView];
+    }];
 }
 
 - (void)setupView {
     self.view.backgroundColor = [UIColor clearColor];
     
-    self.petNameLabel.text = self.viewModel.petName;
-    
     self.petImageView.backgroundColor = [UIColor whiteColor];
     self.petImageView.layer.cornerRadius = CGRectGetWidth(self.petImageView.frame)/2;
     self.petImageView.layer.masksToBounds = YES;
-    self.petImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.petImageView.layer.borderColor = [UIColor blackColor].CGColor;
     self.petImageView.layer.borderWidth = 1.0;
     
     self.feedButton.layer.cornerRadius = CGRectGetWidth(self.feedButton.frame)/2;
     self.feedButton.layer.masksToBounds = YES;
-    self.feedButton.layer.borderColor = [UIColor blackColor].CGColor;
+    self.feedButton.layer.borderColor = [UIColor whiteColor].CGColor;
     self.feedButton.layer.borderWidth = 2.0;
     
     self.feedingTableView.dataSource = self.tableViewDataSource;
     self.feedingTableView.delegate = self.tableViewDataSource;
+    
+    [self updateView];
+}
+
+#pragma mark - Update
+
+- (void)updateView {
+    self.petNameLabel.text = self.viewModel.petName;
+    [self.feedingTableView reloadData];
 }
 
 #pragma mark - Actions
@@ -82,11 +93,42 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+- (IBAction)feed:(id)sender {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Choose Food" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    for (UIAlertAction *action in self.viewModel.mealAlertActions) {
+        [alertController addAction:action];
+    }
+    [alertController addAction:[UIAlertAction actionWithTitle:@"New" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self showAddNewMealAlert];
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary*)info {
     self.petImageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Helpers
+
+- (void)showAddNewMealAlert {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Add New Meal" message:@"Please enter meal description (e.g. \"Dry, 20g\")" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"Dry food, 20g";
+    }];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Add" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UITextField *textField = alertController.textFields[0];
+        if ([textField.text isEqualToString:@""]) {
+            [self showErrorAlertWithMessage:@"You didn't enter meal description."];
+        } else {
+            [self.viewModel addFeedingEventWithMealText:textField.text];
+        }
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 @end

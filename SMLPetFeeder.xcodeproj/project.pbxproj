@@ -1,1569 +1,645 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>02CA0778971C4B87F8AC479E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>10C3FC8FA340AA2D7ED372CE</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-SMLPetFeeder.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>1A0281FD1A8BE3F2006AA051</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLPetCardViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A0281FE1A8BE3F2006AA051</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLPetCardViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A0281FF1A8BE3F2006AA051</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A0281FE1A8BE3F2006AA051</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A0282001A8C1960006AA051</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A0282011A8C19AA006AA051</string>
-				<string>1A0282021A8C19AA006AA051</string>
-				<string>1AC8218E1A8C9660002A57F9</string>
-				<string>1AC8218F1A8C9660002A57F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>StyledViews</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A0282011A8C19AA006AA051</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLStandardLabel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A0282021A8C19AA006AA051</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLStandardLabel.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A0282031A8C19AA006AA051</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A0282021A8C19AA006AA051</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A0282071A8C884E006AA051</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A0282081A8C884E006AA051</string>
-				<string>1A0282091A8C884E006AA051</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Common</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A0282081A8C884E006AA051</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLTableViewDataSource.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A0282091A8C884E006AA051</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLTableViewDataSource.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A02820A1A8C884E006AA051</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A0282091A8C884E006AA051</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A02820B1A8C8D40006AA051</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLBasicCellModel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A02820D1A8C8E3F006AA051</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLFeedingEventViewModel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A02820E1A8C8E3F006AA051</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLFeedingEventViewModel.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A02820F1A8C8E3F006AA051</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A02820E1A8C8E3F006AA051</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A4B92D31A927E0C00952AE4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLPet+Ingestion.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A4B92D41A927E0C00952AE4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLPet+Ingestion.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A4B92D51A927E0C00952AE4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A4B92D41A927E0C00952AE4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A4B930C1A932A7B00952AE4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLFood.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A4B930D1A932A7B00952AE4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLFood.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A4B930E1A932A7B00952AE4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A4B930D1A932A7B00952AE4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A4B930F1A932A7C00952AE4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLFeedingEvent.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A4B93101A932A7C00952AE4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLFeedingEvent.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A4B93111A932A7C00952AE4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A4B93101A932A7C00952AE4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A4B93121A932A7C00952AE4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLPet.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A4B93131A932A7C00952AE4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLPet.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A4B93141A932A7C00952AE4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A4B93131A932A7C00952AE4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A4B93181A9330C200952AE4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLAddPetViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A4B93191A9330C200952AE4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLAddPetViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A4B931A1A9330C200952AE4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A4B93191A9330C200952AE4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A7CD72D1A8AAC1F00640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A7CD7381A8AAC1F00640E2E</string>
-				<string>1A7CD7581A8AAC1F00640E2E</string>
-				<string>1A7CD7371A8AAC1F00640E2E</string>
-				<string>6EF4D842C97203BFEC9AC4E4</string>
-				<string>2D5ADBB68F9699C8D13662A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD72E1A8AAC1F00640E2E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0610</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Ivan Blagaji&#263;</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>1A7CD7351A8AAC1F00640E2E</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1.1</string>
-					</dict>
-					<key>1A7CD7541A8AAC1F00640E2E</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1.1</string>
-						<key>TestTargetID</key>
-						<string>1A7CD7351A8AAC1F00640E2E</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>1A7CD7311A8AAC1F00640E2E</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>1A7CD72D1A8AAC1F00640E2E</string>
-			<key>productRefGroup</key>
-			<string>1A7CD7371A8AAC1F00640E2E</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>1A7CD7351A8AAC1F00640E2E</string>
-				<string>1A7CD7541A8AAC1F00640E2E</string>
-			</array>
-		</dict>
-		<key>1A7CD7311A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>1A7CD75D1A8AAC1F00640E2E</string>
-				<string>1A7CD75E1A8AAC1F00640E2E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>1A7CD7321A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>1A4B930E1A932A7B00952AE4</string>
-				<string>1A7CD7AD1A8AB27300640E2E</string>
-				<string>1A7CD73F1A8AAC1F00640E2E</string>
-				<string>1A0282031A8C19AA006AA051</string>
-				<string>1A7CD7BB1A8ABD3800640E2E</string>
-				<string>1A4B92D51A927E0C00952AE4</string>
-				<string>1A7CD7481A8AAC1F00640E2E</string>
-				<string>1A7CD73C1A8AAC1F00640E2E</string>
-				<string>1A0281FF1A8BE3F2006AA051</string>
-				<string>1A02820F1A8C8E3F006AA051</string>
-				<string>1A7CD7B71A8ABCE900640E2E</string>
-				<string>1A4B931A1A9330C200952AE4</string>
-				<string>1AC821901A8C9660002A57F9</string>
-				<string>1A4B93141A932A7C00952AE4</string>
-				<string>1A4B93111A932A7C00952AE4</string>
-				<string>1A7CD7A91A8AB1C600640E2E</string>
-				<string>1A7CD7421A8AAC1F00640E2E</string>
-				<string>1A02820A1A8C884E006AA051</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1A7CD7331A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CC82D9E5DE338DBD2EB600EA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1A7CD7341A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>1A7CD74B1A8AAC1F00640E2E</string>
-				<string>1A7CD7501A8AAC1F00640E2E</string>
-				<string>1A7CD74D1A8AAC1F00640E2E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1A7CD7351A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>1A7CD75F1A8AAC1F00640E2E</string>
-			<key>buildPhases</key>
-			<array>
-				<string>9ACE36488365C9EBCFEDF8BF</string>
-				<string>1A7CD7321A8AAC1F00640E2E</string>
-				<string>1A7CD7331A8AAC1F00640E2E</string>
-				<string>1A7CD7341A8AAC1F00640E2E</string>
-				<string>02CA0778971C4B87F8AC479E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SMLPetFeeder</string>
-			<key>productName</key>
-			<string>SMLPetFeeder</string>
-			<key>productReference</key>
-			<string>1A7CD7361A8AAC1F00640E2E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>1A7CD7361A8AAC1F00640E2E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>SMLPetFeeder.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>1A7CD7371A8AAC1F00640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A7CD7361A8AAC1F00640E2E</string>
-				<string>1A7CD7551A8AAC1F00640E2E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7381A8AAC1F00640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A0282071A8C884E006AA051</string>
-				<string>1A0282001A8C1960006AA051</string>
-				<string>1A7CD7B41A8ABC8300640E2E</string>
-				<string>1A7CD7B81A8ABD0000640E2E</string>
-				<string>1A7CD7A61A8AB1C600640E2E</string>
-				<string>1A7CD73D1A8AAC1F00640E2E</string>
-				<string>1A7CD73E1A8AAC1F00640E2E</string>
-				<string>1A7CD7401A8AAC1F00640E2E</string>
-				<string>1A7CD7411A8AAC1F00640E2E</string>
-				<string>1A7CD7461A8AAC1F00640E2E</string>
-				<string>1A7CD7471A8AAC1F00640E2E</string>
-				<string>1A7CD7491A8AAC1F00640E2E</string>
-				<string>1A7CD74C1A8AAC1F00640E2E</string>
-				<string>1A7CD74E1A8AAC1F00640E2E</string>
-				<string>1A7CD7391A8AAC1F00640E2E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>SMLPetFeeder</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7391A8AAC1F00640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A7CD73A1A8AAC1F00640E2E</string>
-				<string>1A7CD73B1A8AAC1F00640E2E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD73A1A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD73B1A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD73C1A8AAC1F00640E2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A7CD73B1A8AAC1F00640E2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A7CD73D1A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD73E1A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD73F1A8AAC1F00640E2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A7CD73E1A8AAC1F00640E2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A7CD7401A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLRootViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7411A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLRootViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7421A8AAC1F00640E2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A7CD7411A8AAC1F00640E2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A7CD7461A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLModelController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7471A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLModelController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7481A8AAC1F00640E2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A7CD7471A8AAC1F00640E2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A7CD7491A8AAC1F00640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A7CD74A1A8AAC1F00640E2E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD74A1A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD74B1A8AAC1F00640E2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A7CD7491A8AAC1F00640E2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A7CD74C1A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD74D1A8AAC1F00640E2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A7CD74C1A8AAC1F00640E2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A7CD74E1A8AAC1F00640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A7CD74F1A8AAC1F00640E2E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD74F1A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7501A8AAC1F00640E2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A7CD74E1A8AAC1F00640E2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A7CD7511A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>1A7CD75C1A8AAC1F00640E2E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1A7CD7521A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1A7CD7531A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1A7CD7541A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>1A7CD7621A8AAC1F00640E2E</string>
-			<key>buildPhases</key>
-			<array>
-				<string>1A7CD7511A8AAC1F00640E2E</string>
-				<string>1A7CD7521A8AAC1F00640E2E</string>
-				<string>1A7CD7531A8AAC1F00640E2E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>1A7CD7571A8AAC1F00640E2E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SMLPetFeederTests</string>
-			<key>productName</key>
-			<string>SMLPetFeederTests</string>
-			<key>productReference</key>
-			<string>1A7CD7551A8AAC1F00640E2E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>1A7CD7551A8AAC1F00640E2E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>SMLPetFeederTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>1A7CD7561A8AAC1F00640E2E</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>1A7CD72E1A8AAC1F00640E2E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>1A7CD7351A8AAC1F00640E2E</string>
-			<key>remoteInfo</key>
-			<string>SMLPetFeeder</string>
-		</dict>
-		<key>1A7CD7571A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>1A7CD7351A8AAC1F00640E2E</string>
-			<key>targetProxy</key>
-			<string>1A7CD7561A8AAC1F00640E2E</string>
-		</dict>
-		<key>1A7CD7581A8AAC1F00640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A7CD75B1A8AAC1F00640E2E</string>
-				<string>1A7CD7591A8AAC1F00640E2E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>SMLPetFeederTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7591A8AAC1F00640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A7CD75A1A8AAC1F00640E2E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD75A1A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD75B1A8AAC1F00640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLPetFeederTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD75C1A8AAC1F00640E2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A7CD75B1A8AAC1F00640E2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A7CD75D1A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>1A7CD75E1A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>1A7CD75F1A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>1A7CD7601A8AAC1F00640E2E</string>
-				<string>1A7CD7611A8AAC1F00640E2E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>1A7CD7601A8AAC1F00640E2E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>242C45BF18590B9AD84A5237</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>SMLPetFeeder/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>1A7CD7611A8AAC1F00640E2E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>92C14DFA9D527BDF0F32352A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>SMLPetFeeder/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>1A7CD7621A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>1A7CD7631A8AAC1F00640E2E</string>
-				<string>1A7CD7641A8AAC1F00640E2E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>1A7CD7631A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>SMLPetFeederTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/SMLPetFeeder.app/SMLPetFeeder</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>1A7CD7641A8AAC1F00640E2E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>SMLPetFeederTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/SMLPetFeeder.app/SMLPetFeeder</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>1A7CD7A61A8AB1C600640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A4B93121A932A7C00952AE4</string>
-				<string>1A4B93131A932A7C00952AE4</string>
-				<string>1A4B930F1A932A7C00952AE4</string>
-				<string>1A4B93101A932A7C00952AE4</string>
-				<string>1A4B930C1A932A7B00952AE4</string>
-				<string>1A4B930D1A932A7B00952AE4</string>
-				<string>1A7CD7A71A8AB1C600640E2E</string>
-				<string>1A7CD7AB1A8AB27300640E2E</string>
-				<string>1A7CD7AC1A8AB27300640E2E</string>
-				<string>1A4B92D31A927E0C00952AE4</string>
-				<string>1A4B92D41A927E0C00952AE4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>CoreData</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7A71A8AB1C600640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A7CD7A81A8AB1C600640E2E</string>
-			</array>
-			<key>currentVersion</key>
-			<string>1A7CD7A81A8AB1C600640E2E</string>
-			<key>isa</key>
-			<string>XCVersionGroup</string>
-			<key>path</key>
-			<string>PetFeeder.xcdatamodeld</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>versionGroupType</key>
-			<string>wrapper.xcdatamodel</string>
-		</dict>
-		<key>1A7CD7A81A8AB1C600640E2E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.xcdatamodel</string>
-			<key>path</key>
-			<string>PetFeeder.xcdatamodel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7A91A8AB1C600640E2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A7CD7A71A8AB1C600640E2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A7CD7AB1A8AB27300640E2E</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLDataController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7AC1A8AB27300640E2E</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLDataController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7AD1A8AB27300640E2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A7CD7AC1A8AB27300640E2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A7CD7B41A8ABC8300640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A0281FD1A8BE3F2006AA051</string>
-				<string>1A0281FE1A8BE3F2006AA051</string>
-				<string>1A7CD7B51A8ABCE900640E2E</string>
-				<string>1A7CD7B61A8ABCE900640E2E</string>
-				<string>1A4B93181A9330C200952AE4</string>
-				<string>1A4B93191A9330C200952AE4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7B51A8ABCE900640E2E</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLTableViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7B61A8ABCE900640E2E</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLTableViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7B71A8ABCE900640E2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A7CD7B61A8ABCE900640E2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1A7CD7B81A8ABD0000640E2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A7CD7B91A8ABD3800640E2E</string>
-				<string>1A7CD7BA1A8ABD3800640E2E</string>
-				<string>1A02820B1A8C8D40006AA051</string>
-				<string>1A02820D1A8C8E3F006AA051</string>
-				<string>1A02820E1A8C8E3F006AA051</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ViewModels</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7B91A8ABD3800640E2E</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLPetCardViewModel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7BA1A8ABD3800640E2E</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLPetCardViewModel.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A7CD7BB1A8ABD3800640E2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A7CD7BA1A8ABD3800640E2E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1AC8218E1A8C9660002A57F9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SMLStandardTableViewCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1AC8218F1A8C9660002A57F9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SMLStandardTableViewCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1AC821901A8C9660002A57F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1AC8218F1A8C9660002A57F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>242C45BF18590B9AD84A5237</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-SMLPetFeeder.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2D5ADBB68F9699C8D13662A5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>10C3FC8FA340AA2D7ED372CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6EF4D842C97203BFEC9AC4E4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>242C45BF18590B9AD84A5237</string>
-				<string>92C14DFA9D527BDF0F32352A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>92C14DFA9D527BDF0F32352A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-SMLPetFeeder.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9ACE36488365C9EBCFEDF8BF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>CC82D9E5DE338DBD2EB600EA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>10C3FC8FA340AA2D7ED372CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>1A7CD72E1A8AAC1F00640E2E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A0281FF1A8BE3F2006AA051 /* SMLPetCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0281FE1A8BE3F2006AA051 /* SMLPetCardViewController.m */; };
+		1A0282031A8C19AA006AA051 /* SMLStandardLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0282021A8C19AA006AA051 /* SMLStandardLabel.m */; };
+		1A02820A1A8C884E006AA051 /* SMLTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0282091A8C884E006AA051 /* SMLTableViewDataSource.m */; };
+		1A02820F1A8C8E3F006AA051 /* SMLFeedingEventViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A02820E1A8C8E3F006AA051 /* SMLFeedingEventViewModel.m */; };
+		1A344B001A9518870018ADD0 /* SMLMeal+Ingestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A344AFF1A9518870018ADD0 /* SMLMeal+Ingestion.m */; };
+		1A344B031A95198D0018ADD0 /* SMLPet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A344B021A95198D0018ADD0 /* SMLPet.m */; };
+		1A344B061A95198D0018ADD0 /* SMLFeedingEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A344B051A95198D0018ADD0 /* SMLFeedingEvent.m */; };
+		1A344B091A95198D0018ADD0 /* SMLMeal.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A344B081A95198D0018ADD0 /* SMLMeal.m */; };
+		1A344B0C1A9527690018ADD0 /* SMLFeedingEvent+Ingestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A344B0B1A9527690018ADD0 /* SMLFeedingEvent+Ingestion.m */; };
+		1A344B0F1A9535FF0018ADD0 /* UIViewController+SML.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A344B0E1A9535FF0018ADD0 /* UIViewController+SML.m */; };
+		1A4B92D51A927E0C00952AE4 /* SMLPet+Ingestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B92D41A927E0C00952AE4 /* SMLPet+Ingestion.m */; };
+		1A4B931A1A9330C200952AE4 /* SMLAddPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B93191A9330C200952AE4 /* SMLAddPetViewController.m */; };
+		1A7CD73C1A8AAC1F00640E2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD73B1A8AAC1F00640E2E /* main.m */; };
+		1A7CD73F1A8AAC1F00640E2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD73E1A8AAC1F00640E2E /* AppDelegate.m */; };
+		1A7CD7421A8AAC1F00640E2E /* SMLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7411A8AAC1F00640E2E /* SMLRootViewController.m */; };
+		1A7CD7481A8AAC1F00640E2E /* SMLModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7471A8AAC1F00640E2E /* SMLModelController.m */; };
+		1A7CD74B1A8AAC1F00640E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD7491A8AAC1F00640E2E /* Main.storyboard */; };
+		1A7CD74D1A8AAC1F00640E2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD74C1A8AAC1F00640E2E /* Images.xcassets */; };
+		1A7CD7501A8AAC1F00640E2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD74E1A8AAC1F00640E2E /* LaunchScreen.xib */; };
+		1A7CD75C1A8AAC1F00640E2E /* SMLPetFeederTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD75B1A8AAC1F00640E2E /* SMLPetFeederTests.m */; };
+		1A7CD7A91A8AB1C600640E2E /* PetFeeder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7A71A8AB1C600640E2E /* PetFeeder.xcdatamodeld */; };
+		1A7CD7AD1A8AB27300640E2E /* SMLDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7AC1A8AB27300640E2E /* SMLDataController.m */; };
+		1A7CD7BB1A8ABD3800640E2E /* SMLPetCardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7BA1A8ABD3800640E2E /* SMLPetCardViewModel.m */; };
+		1AC821901A8C9660002A57F9 /* SMLStandardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8218F1A8C9660002A57F9 /* SMLStandardTableViewCell.m */; };
+		CC82D9E5DE338DBD2EB600EA /* libPods-SMLPetFeeder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C3FC8FA340AA2D7ED372CE /* libPods-SMLPetFeeder.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A7CD7561A8AAC1F00640E2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A7CD72E1A8AAC1F00640E2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A7CD7351A8AAC1F00640E2E;
+			remoteInfo = SMLPetFeeder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10C3FC8FA340AA2D7ED372CE /* libPods-SMLPetFeeder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMLPetFeeder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0281FD1A8BE3F2006AA051 /* SMLPetCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPetCardViewController.h; sourceTree = "<group>"; };
+		1A0281FE1A8BE3F2006AA051 /* SMLPetCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetCardViewController.m; sourceTree = "<group>"; };
+		1A0282011A8C19AA006AA051 /* SMLStandardLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLStandardLabel.h; sourceTree = "<group>"; };
+		1A0282021A8C19AA006AA051 /* SMLStandardLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLStandardLabel.m; sourceTree = "<group>"; };
+		1A0282081A8C884E006AA051 /* SMLTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLTableViewDataSource.h; sourceTree = "<group>"; };
+		1A0282091A8C884E006AA051 /* SMLTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLTableViewDataSource.m; sourceTree = "<group>"; };
+		1A02820B1A8C8D40006AA051 /* SMLBasicCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMLBasicCellModel.h; sourceTree = "<group>"; };
+		1A02820D1A8C8E3F006AA051 /* SMLFeedingEventViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLFeedingEventViewModel.h; sourceTree = "<group>"; };
+		1A02820E1A8C8E3F006AA051 /* SMLFeedingEventViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLFeedingEventViewModel.m; sourceTree = "<group>"; };
+		1A344AFE1A9518870018ADD0 /* SMLMeal+Ingestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMLMeal+Ingestion.h"; sourceTree = "<group>"; };
+		1A344AFF1A9518870018ADD0 /* SMLMeal+Ingestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SMLMeal+Ingestion.m"; sourceTree = "<group>"; };
+		1A344B011A95198D0018ADD0 /* SMLPet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPet.h; sourceTree = "<group>"; };
+		1A344B021A95198D0018ADD0 /* SMLPet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPet.m; sourceTree = "<group>"; };
+		1A344B041A95198D0018ADD0 /* SMLFeedingEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLFeedingEvent.h; sourceTree = "<group>"; };
+		1A344B051A95198D0018ADD0 /* SMLFeedingEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLFeedingEvent.m; sourceTree = "<group>"; };
+		1A344B071A95198D0018ADD0 /* SMLMeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLMeal.h; sourceTree = "<group>"; };
+		1A344B081A95198D0018ADD0 /* SMLMeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLMeal.m; sourceTree = "<group>"; };
+		1A344B0A1A9527690018ADD0 /* SMLFeedingEvent+Ingestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMLFeedingEvent+Ingestion.h"; sourceTree = "<group>"; };
+		1A344B0B1A9527690018ADD0 /* SMLFeedingEvent+Ingestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SMLFeedingEvent+Ingestion.m"; sourceTree = "<group>"; };
+		1A344B0D1A9535FF0018ADD0 /* UIViewController+SML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SML.h"; sourceTree = "<group>"; };
+		1A344B0E1A9535FF0018ADD0 /* UIViewController+SML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SML.m"; sourceTree = "<group>"; };
+		1A4B92D31A927E0C00952AE4 /* SMLPet+Ingestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMLPet+Ingestion.h"; sourceTree = "<group>"; };
+		1A4B92D41A927E0C00952AE4 /* SMLPet+Ingestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SMLPet+Ingestion.m"; sourceTree = "<group>"; };
+		1A4B93181A9330C200952AE4 /* SMLAddPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLAddPetViewController.h; sourceTree = "<group>"; };
+		1A4B93191A9330C200952AE4 /* SMLAddPetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLAddPetViewController.m; sourceTree = "<group>"; };
+		1A7CD7361A8AAC1F00640E2E /* SMLPetFeeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMLPetFeeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A7CD73A1A8AAC1F00640E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A7CD73B1A8AAC1F00640E2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A7CD73D1A8AAC1F00640E2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1A7CD73E1A8AAC1F00640E2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1A7CD7401A8AAC1F00640E2E /* SMLRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMLRootViewController.h; sourceTree = "<group>"; };
+		1A7CD7411A8AAC1F00640E2E /* SMLRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMLRootViewController.m; sourceTree = "<group>"; };
+		1A7CD7461A8AAC1F00640E2E /* SMLModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMLModelController.h; sourceTree = "<group>"; };
+		1A7CD7471A8AAC1F00640E2E /* SMLModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMLModelController.m; sourceTree = "<group>"; };
+		1A7CD74A1A8AAC1F00640E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A7CD74C1A8AAC1F00640E2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1A7CD74F1A8AAC1F00640E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1A7CD7551A8AAC1F00640E2E /* SMLPetFeederTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMLPetFeederTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A7CD75A1A8AAC1F00640E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A7CD75B1A8AAC1F00640E2E /* SMLPetFeederTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMLPetFeederTests.m; sourceTree = "<group>"; };
+		1A7CD7A81A8AB1C600640E2E /* PetFeeder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetFeeder.xcdatamodel; sourceTree = "<group>"; };
+		1A7CD7AB1A8AB27300640E2E /* SMLDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLDataController.h; sourceTree = "<group>"; };
+		1A7CD7AC1A8AB27300640E2E /* SMLDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLDataController.m; sourceTree = "<group>"; };
+		1A7CD7B91A8ABD3800640E2E /* SMLPetCardViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPetCardViewModel.h; sourceTree = "<group>"; };
+		1A7CD7BA1A8ABD3800640E2E /* SMLPetCardViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetCardViewModel.m; sourceTree = "<group>"; };
+		1AC8218E1A8C9660002A57F9 /* SMLStandardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLStandardTableViewCell.h; sourceTree = "<group>"; };
+		1AC8218F1A8C9660002A57F9 /* SMLStandardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLStandardTableViewCell.m; sourceTree = "<group>"; };
+		242C45BF18590B9AD84A5237 /* Pods-SMLPetFeeder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLPetFeeder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder.debug.xcconfig"; sourceTree = "<group>"; };
+		92C14DFA9D527BDF0F32352A /* Pods-SMLPetFeeder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLPetFeeder.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A7CD7331A8AAC1F00640E2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC82D9E5DE338DBD2EB600EA /* libPods-SMLPetFeeder.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A7CD7521A8AAC1F00640E2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A0282001A8C1960006AA051 /* StyledViews */ = {
+			isa = PBXGroup;
+			children = (
+				1A0282011A8C19AA006AA051 /* SMLStandardLabel.h */,
+				1A0282021A8C19AA006AA051 /* SMLStandardLabel.m */,
+				1AC8218E1A8C9660002A57F9 /* SMLStandardTableViewCell.h */,
+				1AC8218F1A8C9660002A57F9 /* SMLStandardTableViewCell.m */,
+			);
+			path = StyledViews;
+			sourceTree = "<group>";
+		};
+		1A0282071A8C884E006AA051 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1A0282081A8C884E006AA051 /* SMLTableViewDataSource.h */,
+				1A0282091A8C884E006AA051 /* SMLTableViewDataSource.m */,
+				1A344B0D1A9535FF0018ADD0 /* UIViewController+SML.h */,
+				1A344B0E1A9535FF0018ADD0 /* UIViewController+SML.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1A7CD72D1A8AAC1F00640E2E = {
+			isa = PBXGroup;
+			children = (
+				1A7CD7381A8AAC1F00640E2E /* SMLPetFeeder */,
+				1A7CD7581A8AAC1F00640E2E /* SMLPetFeederTests */,
+				1A7CD7371A8AAC1F00640E2E /* Products */,
+				6EF4D842C97203BFEC9AC4E4 /* Pods */,
+				2D5ADBB68F9699C8D13662A5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1A7CD7371A8AAC1F00640E2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A7CD7361A8AAC1F00640E2E /* SMLPetFeeder.app */,
+				1A7CD7551A8AAC1F00640E2E /* SMLPetFeederTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A7CD7381A8AAC1F00640E2E /* SMLPetFeeder */ = {
+			isa = PBXGroup;
+			children = (
+				1A0282071A8C884E006AA051 /* Common */,
+				1A0282001A8C1960006AA051 /* StyledViews */,
+				1A7CD7B41A8ABC8300640E2E /* Views */,
+				1A7CD7B81A8ABD0000640E2E /* ViewModels */,
+				1A7CD7A61A8AB1C600640E2E /* CoreData */,
+				1A7CD73D1A8AAC1F00640E2E /* AppDelegate.h */,
+				1A7CD73E1A8AAC1F00640E2E /* AppDelegate.m */,
+				1A7CD7401A8AAC1F00640E2E /* SMLRootViewController.h */,
+				1A7CD7411A8AAC1F00640E2E /* SMLRootViewController.m */,
+				1A7CD7461A8AAC1F00640E2E /* SMLModelController.h */,
+				1A7CD7471A8AAC1F00640E2E /* SMLModelController.m */,
+				1A7CD7491A8AAC1F00640E2E /* Main.storyboard */,
+				1A7CD74C1A8AAC1F00640E2E /* Images.xcassets */,
+				1A7CD74E1A8AAC1F00640E2E /* LaunchScreen.xib */,
+				1A7CD7391A8AAC1F00640E2E /* Supporting Files */,
+			);
+			path = SMLPetFeeder;
+			sourceTree = "<group>";
+		};
+		1A7CD7391A8AAC1F00640E2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A7CD73A1A8AAC1F00640E2E /* Info.plist */,
+				1A7CD73B1A8AAC1F00640E2E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A7CD7581A8AAC1F00640E2E /* SMLPetFeederTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A7CD75B1A8AAC1F00640E2E /* SMLPetFeederTests.m */,
+				1A7CD7591A8AAC1F00640E2E /* Supporting Files */,
+			);
+			path = SMLPetFeederTests;
+			sourceTree = "<group>";
+		};
+		1A7CD7591A8AAC1F00640E2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A7CD75A1A8AAC1F00640E2E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A7CD7A61A8AB1C600640E2E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1A344B071A95198D0018ADD0 /* SMLMeal.h */,
+				1A344B081A95198D0018ADD0 /* SMLMeal.m */,
+				1A344B041A95198D0018ADD0 /* SMLFeedingEvent.h */,
+				1A344B051A95198D0018ADD0 /* SMLFeedingEvent.m */,
+				1A344B011A95198D0018ADD0 /* SMLPet.h */,
+				1A344B021A95198D0018ADD0 /* SMLPet.m */,
+				1A7CD7A71A8AB1C600640E2E /* PetFeeder.xcdatamodeld */,
+				1A7CD7AB1A8AB27300640E2E /* SMLDataController.h */,
+				1A7CD7AC1A8AB27300640E2E /* SMLDataController.m */,
+				1A4B92D31A927E0C00952AE4 /* SMLPet+Ingestion.h */,
+				1A4B92D41A927E0C00952AE4 /* SMLPet+Ingestion.m */,
+				1A344AFE1A9518870018ADD0 /* SMLMeal+Ingestion.h */,
+				1A344AFF1A9518870018ADD0 /* SMLMeal+Ingestion.m */,
+				1A344B0A1A9527690018ADD0 /* SMLFeedingEvent+Ingestion.h */,
+				1A344B0B1A9527690018ADD0 /* SMLFeedingEvent+Ingestion.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		1A7CD7B41A8ABC8300640E2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A0281FD1A8BE3F2006AA051 /* SMLPetCardViewController.h */,
+				1A0281FE1A8BE3F2006AA051 /* SMLPetCardViewController.m */,
+				1A4B93181A9330C200952AE4 /* SMLAddPetViewController.h */,
+				1A4B93191A9330C200952AE4 /* SMLAddPetViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A7CD7B81A8ABD0000640E2E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1A7CD7B91A8ABD3800640E2E /* SMLPetCardViewModel.h */,
+				1A7CD7BA1A8ABD3800640E2E /* SMLPetCardViewModel.m */,
+				1A02820B1A8C8D40006AA051 /* SMLBasicCellModel.h */,
+				1A02820D1A8C8E3F006AA051 /* SMLFeedingEventViewModel.h */,
+				1A02820E1A8C8E3F006AA051 /* SMLFeedingEventViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2D5ADBB68F9699C8D13662A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10C3FC8FA340AA2D7ED372CE /* libPods-SMLPetFeeder.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EF4D842C97203BFEC9AC4E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				242C45BF18590B9AD84A5237 /* Pods-SMLPetFeeder.debug.xcconfig */,
+				92C14DFA9D527BDF0F32352A /* Pods-SMLPetFeeder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A7CD7351A8AAC1F00640E2E /* SMLPetFeeder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A7CD75F1A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "SMLPetFeeder" */;
+			buildPhases = (
+				9ACE36488365C9EBCFEDF8BF /* Check Pods Manifest.lock */,
+				1A7CD7321A8AAC1F00640E2E /* Sources */,
+				1A7CD7331A8AAC1F00640E2E /* Frameworks */,
+				1A7CD7341A8AAC1F00640E2E /* Resources */,
+				02CA0778971C4B87F8AC479E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMLPetFeeder;
+			productName = SMLPetFeeder;
+			productReference = 1A7CD7361A8AAC1F00640E2E /* SMLPetFeeder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A7CD7541A8AAC1F00640E2E /* SMLPetFeederTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A7CD7621A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "SMLPetFeederTests" */;
+			buildPhases = (
+				1A7CD7511A8AAC1F00640E2E /* Sources */,
+				1A7CD7521A8AAC1F00640E2E /* Frameworks */,
+				1A7CD7531A8AAC1F00640E2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A7CD7571A8AAC1F00640E2E /* PBXTargetDependency */,
+			);
+			name = SMLPetFeederTests;
+			productName = SMLPetFeederTests;
+			productReference = 1A7CD7551A8AAC1F00640E2E /* SMLPetFeederTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A7CD72E1A8AAC1F00640E2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Ivan Blagajić";
+				TargetAttributes = {
+					1A7CD7351A8AAC1F00640E2E = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					1A7CD7541A8AAC1F00640E2E = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 1A7CD7351A8AAC1F00640E2E;
+					};
+				};
+			};
+			buildConfigurationList = 1A7CD7311A8AAC1F00640E2E /* Build configuration list for PBXProject "SMLPetFeeder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A7CD72D1A8AAC1F00640E2E;
+			productRefGroup = 1A7CD7371A8AAC1F00640E2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A7CD7351A8AAC1F00640E2E /* SMLPetFeeder */,
+				1A7CD7541A8AAC1F00640E2E /* SMLPetFeederTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A7CD7341A8AAC1F00640E2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A7CD74B1A8AAC1F00640E2E /* Main.storyboard in Resources */,
+				1A7CD7501A8AAC1F00640E2E /* LaunchScreen.xib in Resources */,
+				1A7CD74D1A8AAC1F00640E2E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A7CD7531A8AAC1F00640E2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02CA0778971C4B87F8AC479E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ACE36488365C9EBCFEDF8BF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A7CD7321A8AAC1F00640E2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A7CD7AD1A8AB27300640E2E /* SMLDataController.m in Sources */,
+				1A344B001A9518870018ADD0 /* SMLMeal+Ingestion.m in Sources */,
+				1A344B061A95198D0018ADD0 /* SMLFeedingEvent.m in Sources */,
+				1A7CD73F1A8AAC1F00640E2E /* AppDelegate.m in Sources */,
+				1A0282031A8C19AA006AA051 /* SMLStandardLabel.m in Sources */,
+				1A7CD7BB1A8ABD3800640E2E /* SMLPetCardViewModel.m in Sources */,
+				1A4B92D51A927E0C00952AE4 /* SMLPet+Ingestion.m in Sources */,
+				1A7CD7481A8AAC1F00640E2E /* SMLModelController.m in Sources */,
+				1A7CD73C1A8AAC1F00640E2E /* main.m in Sources */,
+				1A0281FF1A8BE3F2006AA051 /* SMLPetCardViewController.m in Sources */,
+				1A02820F1A8C8E3F006AA051 /* SMLFeedingEventViewModel.m in Sources */,
+				1A344B091A95198D0018ADD0 /* SMLMeal.m in Sources */,
+				1A344B0C1A9527690018ADD0 /* SMLFeedingEvent+Ingestion.m in Sources */,
+				1A344B0F1A9535FF0018ADD0 /* UIViewController+SML.m in Sources */,
+				1A4B931A1A9330C200952AE4 /* SMLAddPetViewController.m in Sources */,
+				1A344B031A95198D0018ADD0 /* SMLPet.m in Sources */,
+				1AC821901A8C9660002A57F9 /* SMLStandardTableViewCell.m in Sources */,
+				1A7CD7A91A8AB1C600640E2E /* PetFeeder.xcdatamodeld in Sources */,
+				1A7CD7421A8AAC1F00640E2E /* SMLRootViewController.m in Sources */,
+				1A02820A1A8C884E006AA051 /* SMLTableViewDataSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A7CD7511A8AAC1F00640E2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A7CD75C1A8AAC1F00640E2E /* SMLPetFeederTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A7CD7571A8AAC1F00640E2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A7CD7351A8AAC1F00640E2E /* SMLPetFeeder */;
+			targetProxy = 1A7CD7561A8AAC1F00640E2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1A7CD7491A8AAC1F00640E2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A7CD74A1A8AAC1F00640E2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1A7CD74E1A8AAC1F00640E2E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A7CD74F1A8AAC1F00640E2E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A7CD75D1A8AAC1F00640E2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1A7CD75E1A8AAC1F00640E2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A7CD7601A8AAC1F00640E2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 242C45BF18590B9AD84A5237 /* Pods-SMLPetFeeder.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SMLPetFeeder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1A7CD7611A8AAC1F00640E2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C14DFA9D527BDF0F32352A /* Pods-SMLPetFeeder.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SMLPetFeeder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1A7CD7631A8AAC1F00640E2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SMLPetFeederTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMLPetFeeder.app/SMLPetFeeder";
+			};
+			name = Debug;
+		};
+		1A7CD7641A8AAC1F00640E2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SMLPetFeederTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMLPetFeeder.app/SMLPetFeeder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A7CD7311A8AAC1F00640E2E /* Build configuration list for PBXProject "SMLPetFeeder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A7CD75D1A8AAC1F00640E2E /* Debug */,
+				1A7CD75E1A8AAC1F00640E2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A7CD75F1A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "SMLPetFeeder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A7CD7601A8AAC1F00640E2E /* Debug */,
+				1A7CD7611A8AAC1F00640E2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A7CD7621A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "SMLPetFeederTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A7CD7631A8AAC1F00640E2E /* Debug */,
+				1A7CD7641A8AAC1F00640E2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1A7CD7A71A8AB1C600640E2E /* PetFeeder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1A7CD7A81A8AB1C600640E2E /* PetFeeder.xcdatamodel */,
+			);
+			currentVersion = 1A7CD7A81A8AB1C600640E2E /* PetFeeder.xcdatamodel */;
+			path = PetFeeder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1A7CD72E1A8AAC1F00640E2E /* Project object */;
+}

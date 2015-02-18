@@ -8,7 +8,7 @@
 
 #import "SMLFeedingEventViewModel.h"
 #import "SMLFeedingEvent.h"
-#import "SMLFood.h"
+#import "SMLMeal.h"
 
 @interface SMLFeedingEventViewModel ()
 
@@ -27,7 +27,7 @@
 }
 
 - (NSString*)title {
-    return self.feedingEvent.food.name;
+    return self.feedingEvent.meal.text;
 }
 
 - (NSString*)subtitle {

@@ -1,5 +1,5 @@
 //
-//  SMLPet.h
+//  SMLMeal.h
 //  SMLPetFeeder
 //
 //  Created by Ivan Blagajić on 18/02/15.
@@ -11,15 +11,14 @@
 
 @class SMLFeedingEvent;
 
-@interface SMLPet : NSManagedObject
+@interface SMLMeal : NSManagedObject
 
-@property (nonatomic, retain) NSString * image;
-@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * text;
 @property (nonatomic, retain) NSNumber * ordinal;
 @property (nonatomic, retain) NSSet *feedingEvents;
 @end
 
-@interface SMLPet (CoreDataGeneratedAccessors)
+@interface SMLMeal (CoreDataGeneratedAccessors)
 
 - (void)addFeedingEventsObject:(SMLFeedingEvent *)value;
 - (void)removeFeedingEventsObject:(SMLFeedingEvent *)value;

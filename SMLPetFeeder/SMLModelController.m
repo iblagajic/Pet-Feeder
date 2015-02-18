@@ -12,7 +12,7 @@
 #import "SMLPetCardViewModel.h"
 #import "SMLPet.h"
 #import "SMLFeedingEvent.h"
-#import "SMLFood.h"
+#import "SMLMeal.h"
 #import "SMLAddPetViewController.h"
 
 /*

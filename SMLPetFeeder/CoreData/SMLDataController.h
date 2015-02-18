@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import <UIKit/UIKit.h>
 
-@class SMLPet;
+@class SMLPet, SMLMeal, SMLFeedingEvent;
 
 @interface SMLDataController : NSObject
 
@@ -21,5 +21,9 @@
 - (void)removePet:(SMLPet*)pet;
 - (BOOL)updatePet:(SMLPet*)pet withImage:(UIImage*)image;
 - (void)updatePet:(SMLPet*)pet withName:(NSString*)name;
+- (NSArray*)allMeals;
+- (SMLMeal*)addNewMealWithText:(NSString*)text;
+- (NSArray*)feedingEventsForPet:(SMLPet*)pet count:(NSInteger)count;
+- (SMLFeedingEvent*)addNewFeedingEventWithMeal:(SMLMeal*)meal forPet:(SMLPet*)pet;
 
 @end

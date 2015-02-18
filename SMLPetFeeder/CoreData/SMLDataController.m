@@ -10,6 +10,8 @@
 #import <CoreData/CoreData.h>
 
 #import "SMLPet+Ingestion.h"
+#import "SMLMeal+Ingestion.h"
+#import "SMLFeedingEvent+Ingestion.h"
 
 @interface SMLDataController ()
 
@@ -98,7 +100,7 @@
     return nil;
 }
 
-#pragma mark - Remove
+#pragma mark Remove
 
 - (void)removePet:(SMLPet*)pet {
     [self.managedObjectContext deleteObject:pet];
@@ -113,6 +115,44 @@
 
 - (void)updatePet:(SMLPet*)pet withName:(NSString*)name {
     [SMLPet updatePet:pet withName:name context:self.managedObjectContext];
+}
+
+#pragma mark - Meal
+#pragma mark Fetch
+
+- (NSArray*)allMeals {
+    return [SMLMeal allMealsInContext:self.managedObjectContext];
+}
+
+#pragma mark Add
+
+- (SMLMeal*)addNewMealWithText:(NSString*)text {
+    SMLMeal *meal = [SMLMeal addMealWithText:text context:self.managedObjectContext];
+    if ([self saveContext]) {
+        return meal;
+    }
+    return nil;
+}
+
+#pragma mark - Feeding Event
+#pragma mark Fetch
+
+- (NSArray*)feedingEventsForPet:(SMLPet*)pet count:(NSInteger)count {
+    NSArray *feedingEvents = [SMLFeedingEvent feedingEventsForPet:pet inContext:self.managedObjectContext];
+    if (count) {
+        feedingEvents = [feedingEvents subarrayWithRange:NSMakeRange(0, count)];
+    }
+    return feedingEvents;
+}
+
+#pragma mark Add
+
+- (SMLFeedingEvent*)addNewFeedingEventWithMeal:(SMLMeal*)meal forPet:(SMLPet*)pet {
+    SMLFeedingEvent *feedingEvent = [SMLFeedingEvent addFeedingEventForPet:pet meal:meal context:self.managedObjectContext];
+    if ([self saveContext]) {
+        return feedingEvent;
+    }
+    return nil;
 }
 
 @end

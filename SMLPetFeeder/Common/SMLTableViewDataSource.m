@@ -9,13 +9,20 @@
 #import "SMLTableViewDataSource.h"
 #import "SMLBasicCellModel.h"
 #import "SMLStandardTableViewCell.h"
+#import "SMLPetCardViewModel.h"
+
+@interface SMLTableViewDataSource ()
+
+@property (nonatomic) SMLPetCardViewModel *viewModel;
+
+@end
 
 @implementation SMLTableViewDataSource
 
-- (instancetype)initWithCellModels:(NSArray*)cellModels {
+- (instancetype)initWithViewModel:(SMLPetCardViewModel*)viewModel; {
     self = [super init];
     if (self) {
-        self.cellModels = cellModels;
+        self.viewModel = viewModel;
     }
     return self;
 }
@@ -23,12 +30,12 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.cellModels.count;
+    return self.viewModel.cellModels.count;
 }
 
 - (SMLStandardTableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     SMLStandardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedingCell"];
-    cell.cellModel = (id<SMLBasicCellModel>)[self.cellModels objectAtIndex:indexPath.row];
+    cell.cellModel = (id<SMLBasicCellModel>)[self.viewModel.cellModels objectAtIndex:indexPath.row];
     return cell;
 }
 

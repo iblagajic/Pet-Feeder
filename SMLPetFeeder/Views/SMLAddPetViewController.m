@@ -8,6 +8,7 @@
 
 #import "SMLAddPetViewController.h"
 #import "SMLModelController.h"
+#import "UIViewController+SML.h"
 
 @interface SMLAddPetViewController ()
 
@@ -39,21 +40,12 @@
     }];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Add" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        if (![[(UITextField*)alertController.textFields[0] text] isEqualToString:@""]) {
-            [self.modelController addNewPetWithName:[(UITextField*)alertController.textFields[0] text]];
-        } else {
+        if ([[(UITextField*)alertController.textFields[0] text] isEqualToString:@""]) {
             [self showErrorAlertWithMessage:@"You can't create nameless pet!"];
-            
+        } else {
+            [self.modelController addNewPetWithName:[(UITextField*)alertController.textFields[0] text]];
         }
     }]];
-    [self presentViewController:alertController animated:YES completion:nil];
-}
-
-#pragma mark - Helpers
-
-- (void)showErrorAlertWithMessage:(NSString*)message {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:message preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil]];
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
