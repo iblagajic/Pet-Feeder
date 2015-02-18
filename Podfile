@@ -3,7 +3,8 @@
 
 target 'SMLPetFeeder' do
 
-pod 'ReactiveCocoa', '2.1.8'
+pod 'ReactiveCocoa'
+pod 'libextobjc'
 
 end
 

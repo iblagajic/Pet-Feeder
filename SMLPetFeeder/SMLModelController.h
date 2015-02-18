@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @class SMLPetCardViewModel;
 
 @interface SMLModelController : NSObject
+
+@property (nonatomic, readonly) RACSubject *updatedContent;
 
 - (NSUInteger)numberOfCards;
 - (SMLPetCardViewModel*)viewModelAtIndex:(NSUInteger)index;

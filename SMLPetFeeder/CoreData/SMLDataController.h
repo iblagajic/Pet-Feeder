@@ -18,6 +18,7 @@
 
 - (NSArray*)allPets;
 - (SMLPet*)addNewPetWithName:(NSString*)petName;
+- (void)removePet:(SMLPet*)pet;
 - (BOOL)updatePet:(SMLPet*)pet withImage:(UIImage*)image;
 - (void)updatePet:(SMLPet*)pet withName:(NSString*)name;
 

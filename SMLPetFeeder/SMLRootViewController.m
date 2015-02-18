@@ -10,6 +10,10 @@
 #import "SMLModelController.h"
 #import "SMLPetCardViewController.h"
 #import "SMLAddPetViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "EXTScope.h"
+
+typedef void(^SimpleBlock)();
 
 @interface SMLRootViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
@@ -22,38 +26,87 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.view.backgroundColor = [UIColor whiteColor];
+    
     self.pageControl.pageIndicatorTintColor = [UIColor darkGrayColor];
     self.pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+    
+    [self setupModelController];
+    
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    self.pageViewController.view.frame = self.view.bounds;
     self.pageViewController.delegate = self;
-
-    UIViewController *startingViewController = [self viewControllerAtIndex:0 storyboard:self.storyboard];
-    NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-
     self.pageViewController.dataSource = self;
+    
+    [self refreshPageViewControllerWithViewControllerAtIndex:0 animated:NO];
 
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
 
-    // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
-    CGRect pageViewRect = self.view.bounds;
-    self.pageViewController.view.frame = pageViewRect;
-
     [self.pageViewController didMoveToParentViewController:self];
 
-    // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
-    
-    self.pageControl.numberOfPages = self.modelController.numberOfCards;
 }
 
-- (SMLModelController*)modelController {
-    if (!_modelController) {
-        _modelController = [SMLModelController new];
+#pragma mark - Setup
+
+- (void)setupModelController {
+    self.modelController = [SMLModelController new];
+    @weakify(self);
+    [self.modelController.updatedContent subscribeNext:^(NSNumber *index) {
+        @strongify(self);
+        [self refreshPageViewControllerWithViewControllerAtIndex:index.integerValue animated:YES];
+    }];
+}
+
+#pragma mark - Refresh
+
+- (void)refreshPageViewControllerWithViewControllerAtIndex:(NSInteger)index animated:(BOOL)animated {
+    SimpleBlock block = ^(){
+        UIViewController *startingViewController = [self viewControllerAtIndex:index storyboard:self.storyboard];
+        NSArray *viewControllers = @[startingViewController];
+        [self.pageViewController setViewControllers:viewControllers
+                                          direction:UIPageViewControllerNavigationDirectionForward
+                                           animated:NO
+                                         completion:nil];
+        self.pageControl.numberOfPages = self.modelController.numberOfCards+1;
+    };
+    
+    if (animated) {
+        [self fadeOutView:self.pageViewController.view
+               completion:^{
+                   block();
+                   [self fadeInView:self.pageViewController.view
+                         completion:nil];
+               }];
+    } else {
+        block();
     }
-    return _modelController;
+}
+
+- (void)fadeOutView:(UIView*)view completion:(SimpleBlock)completion {
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         view.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished) {
+                         if (completion) {
+                             completion();
+                         }
+                     }];
+}
+
+- (void)fadeInView:(UIView*)view completion:(SimpleBlock)completion {
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         view.alpha = 1.0;
+                     }
+                     completion:^(BOOL finished) {
+                         if (completion) {
+                             completion();
+                         }
+                     }];
 }
 
 #pragma mark - UIPageViewControllerDelegate
@@ -69,8 +122,12 @@
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
-    SMLPetCardViewController *currentViewController = self.pageViewController.viewControllers[0];
-    self.pageControl.currentPage = [self.modelController indexOfViewModel:currentViewController.viewModel];
+    UIViewController *currentViewController = self.pageViewController.viewControllers[0];
+    if ([currentViewController isKindOfClass:[SMLAddPetViewController class]]) {
+        self.pageControl.currentPage = self.modelController.numberOfCards;
+        return;
+    }
+    self.pageControl.currentPage = [self.modelController indexOfViewModel:[(SMLPetCardViewController*)currentViewController viewModel]];
 }
 
 #pragma mark - UIPageViewControllerDataSource
@@ -92,14 +149,17 @@
     if (index == NSNotFound) {
         return nil;
     }
-    return [self viewControllerAtIndex:index++ storyboard:viewController.storyboard];
+    index++;
+    return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
 }
 
 #pragma mark - Helpers
 
 - (UIViewController*)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard {
     if (index == self.modelController.numberOfCards) {
-        return [storyboard instantiateViewControllerWithIdentifier:@"SMLAddPetViewController"];
+        SMLAddPetViewController *addPetViewController = [storyboard instantiateViewControllerWithIdentifier:@"SMLAddPetViewController"];
+        addPetViewController.modelController = self.modelController;
+        return addPetViewController;
     }
     if (index > self.modelController.numberOfCards) {
         return nil;

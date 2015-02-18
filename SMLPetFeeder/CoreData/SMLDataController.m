@@ -74,7 +74,7 @@
 - (BOOL)saveContext {
     NSError *err;
     if ([self.managedObjectContext hasChanges]
-        && [self.managedObjectContext save:&err]) {
+        && ![self.managedObjectContext save:&err]) {
         NSLog(@"Error saving context: %@", err.localizedDescription);
         return NO;
     }
@@ -96,6 +96,13 @@
         return pet;
     }
     return nil;
+}
+
+#pragma mark - Remove
+
+- (void)removePet:(SMLPet*)pet {
+    [self.managedObjectContext deleteObject:pet];
+    [self saveContext];
 }
 
 #pragma mark Update

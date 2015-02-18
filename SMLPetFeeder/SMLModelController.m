@@ -30,6 +30,8 @@
 @property (nonatomic) SMLDataController *dataController;
 @property (nonatomic) NSArray *cardModels;
 
+@property (nonatomic) RACSubject *updatedContent;
+
 @end
 
 @implementation SMLModelController
@@ -40,7 +42,9 @@
     self = [super init];
     if (self) {
         self.dataController = [SMLDataController new];
-        self.cardModels = [self.dataController allPets];
+        self.cardModels = [self cardModelsWithPets:[self.dataController allPets]];
+        
+        self.updatedContent = [[RACSubject subject] setNameWithFormat:@"SMLModelController updatedContent"];
     }
     return self;
 }
@@ -61,7 +65,26 @@
 
 - (void)addNewPetWithName:(NSString*)name {
     [self.dataController addNewPetWithName:name];
-    self.cardModels = [self.dataController allPets];
+    self.cardModels = [self cardModelsWithPets:[self.dataController allPets]];
+    [self.updatedContent sendNext:@(self.cardModels.count-1)];
+}
+
+- (void)removePetForViewModel:(SMLPetCardViewModel*)viewModel {
+    NSInteger index = [self indexOfViewModel:viewModel];
+    [self.dataController removePet:viewModel.pet];
+    self.cardModels = [self cardModelsWithPets:[self.dataController allPets]];
+    [self.updatedContent sendNext:@(MIN(self.cardModels.count, index))];
+}
+
+#pragma mark - Helpers
+
+- (NSArray*)cardModelsWithPets:(NSArray*)pets {
+    NSMutableArray *cardModels = [NSMutableArray new];
+    for (SMLPet *pet in pets) {
+        SMLPetCardViewModel *petCardViewModel = [[SMLPetCardViewModel alloc] initWithPet:pet dataController:self.dataController];
+        [cardModels addObject:petCardViewModel];
+    }
+    return cardModels;
 }
 
 @end
