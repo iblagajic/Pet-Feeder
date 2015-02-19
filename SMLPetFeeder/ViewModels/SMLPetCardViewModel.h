@@ -23,7 +23,7 @@
 @property (nonatomic, readonly) NSArray *cellModels;
 @property (nonatomic, readonly) NSArray *mealAlertActions;
 
-- (instancetype)initWithPet:(SMLPet*)pet dataController:(SMLDataController*)dataController;
+- (instancetype)initWithPet:(SMLPet*)pet dataController:(SMLDataController*)dataController dateFormatter:(NSDateFormatter*)dateFormatter;
 
 - (void)addFeedingEventWithMealText:(NSString*)mealText;
 - (void)updateName:(NSString*)name;

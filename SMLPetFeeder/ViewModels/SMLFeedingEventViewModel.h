@@ -13,6 +13,6 @@
 
 @interface SMLFeedingEventViewModel : NSObject <SMLBasicCellModel>
 
-- (instancetype)initWithFeedingEvent:(SMLFeedingEvent*)feedingEvent;
+- (instancetype)initWithFeedingEvent:(SMLFeedingEvent*)feedingEvent dateFormatter:(NSDateFormatter*)dateFormatter;
 
 @end

@@ -1,13 +1,13 @@
 //
-//  SMLStandardLabel.h
+//  SMLImageView.h
 //  SMLPetFeeder
 //
-//  Created by Ivan Blagajić on 12/02/15.
+//  Created by Ivan Blagajić on 19/02/15.
 //  Copyright (c) 2015 Ivan Blagajić. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface SMLStandardLabel : UILabel
+@interface SMLImageView : UIImageView
 
 @end

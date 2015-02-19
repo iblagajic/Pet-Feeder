@@ -33,7 +33,8 @@ static NSString * const SMLEntityName = @"SMLPet";
     NSString * basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;;
     NSData * binaryImageData = UIImagePNGRepresentation(image);
     NSString *imageName = [pet.name stringByAppendingString:@".png"];
-    BOOL success = [binaryImageData writeToFile:[basePath stringByAppendingPathComponent:imageName] atomically:YES];
+    NSString *path = [basePath stringByAppendingPathComponent:imageName];
+    BOOL success = [binaryImageData writeToFile:path atomically:YES];
     if (success) {
         pet.image = imageName;
     }

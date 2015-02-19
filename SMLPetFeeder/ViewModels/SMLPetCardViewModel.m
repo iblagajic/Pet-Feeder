@@ -18,6 +18,7 @@
 @property (nonatomic) SMLPet *pet;
 @property (nonatomic) SMLDataController *dataController;
 @property (nonatomic) NSArray *cellModels;
+@property (nonatomic) NSDateFormatter *dateFormatter;
 
 @property (nonatomic) RACSubject *updatedContent;
 
@@ -25,12 +26,13 @@
 
 @implementation SMLPetCardViewModel
 
-- (instancetype)initWithPet:(SMLPet*)pet dataController:(SMLDataController*)dataController {
+- (instancetype)initWithPet:(SMLPet*)pet dataController:(SMLDataController*)dataController dateFormatter:(NSDateFormatter*)dateFormatter {
     self = [super init];
     if (self) {
         self.pet = pet;
         self.dataController = dataController;
         self.updatedContent = [[RACSubject subject] setNameWithFormat:@"SMLPetCardViewModel updatedContent"];
+        self.dateFormatter = dateFormatter;
         [self loadCellModels];
     }
     return self;
@@ -44,7 +46,13 @@
 }
 
 - (UIImage*)petImage {
-    return [UIImage imageWithContentsOfFile:self.pet.image];
+    NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString * basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;;
+    if (!basePath) {
+        return nil;
+    }
+    NSString *path = [basePath stringByAppendingPathComponent:self.pet.image];
+    return [UIImage imageWithContentsOfFile:path];
 }
 
 #pragma mark Feeding Events
@@ -59,7 +67,7 @@
 - (void)loadCellModels {
     NSMutableArray *array = [NSMutableArray new];
     for (SMLFeedingEvent *feedingEvent in self.feedingEvents) {
-        SMLFeedingEventViewModel *viewModel = [[SMLFeedingEventViewModel alloc] initWithFeedingEvent:feedingEvent];
+        SMLFeedingEventViewModel *viewModel = [[SMLFeedingEventViewModel alloc] initWithFeedingEvent:feedingEvent dateFormatter:self.dateFormatter];
         [array addObject:viewModel];
     }
     self.cellModels = array;

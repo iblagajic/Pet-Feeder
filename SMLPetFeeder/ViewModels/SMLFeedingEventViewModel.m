@@ -13,15 +13,17 @@
 @interface SMLFeedingEventViewModel ()
 
 @property (nonatomic) SMLFeedingEvent *feedingEvent;
+@property (nonatomic) NSDateFormatter *dateFormatter;
 
 @end
 
 @implementation SMLFeedingEventViewModel
 
-- (instancetype)initWithFeedingEvent:(SMLFeedingEvent*)feedingEvent {
+- (instancetype)initWithFeedingEvent:(SMLFeedingEvent*)feedingEvent dateFormatter:(NSDateFormatter*)dateFormatter {
     self = [super init];
     if (self) {
         self.feedingEvent = feedingEvent;
+        self.dateFormatter = dateFormatter;
     }
     return self;
 }
@@ -31,7 +33,7 @@
 }
 
 - (NSString*)subtitle {
-    return [self.feedingEvent.time descriptionWithLocale:[NSLocale currentLocale]];
+    return [self.dateFormatter stringFromDate:self.feedingEvent.time];
 }
 
 @end

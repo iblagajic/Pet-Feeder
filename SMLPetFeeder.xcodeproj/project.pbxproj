@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A0281FF1A8BE3F2006AA051 /* SMLPetCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0281FE1A8BE3F2006AA051 /* SMLPetCardViewController.m */; };
-		1A0282031A8C19AA006AA051 /* SMLStandardLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0282021A8C19AA006AA051 /* SMLStandardLabel.m */; };
 		1A02820A1A8C884E006AA051 /* SMLTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0282091A8C884E006AA051 /* SMLTableViewDataSource.m */; };
 		1A02820F1A8C8E3F006AA051 /* SMLFeedingEventViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A02820E1A8C8E3F006AA051 /* SMLFeedingEventViewModel.m */; };
 		1A344B001A9518870018ADD0 /* SMLMeal+Ingestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A344AFF1A9518870018ADD0 /* SMLMeal+Ingestion.m */; };
@@ -30,6 +29,7 @@
 		1A7CD7A91A8AB1C600640E2E /* PetFeeder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7A71A8AB1C600640E2E /* PetFeeder.xcdatamodeld */; };
 		1A7CD7AD1A8AB27300640E2E /* SMLDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7AC1A8AB27300640E2E /* SMLDataController.m */; };
 		1A7CD7BB1A8ABD3800640E2E /* SMLPetCardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7BA1A8ABD3800640E2E /* SMLPetCardViewModel.m */; };
+		1AAC39061A964E3400596D14 /* SMLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAC39051A964E3400596D14 /* SMLImageView.m */; };
 		1AC821901A8C9660002A57F9 /* SMLStandardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8218F1A8C9660002A57F9 /* SMLStandardTableViewCell.m */; };
 		CC82D9E5DE338DBD2EB600EA /* libPods-SMLPetFeeder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C3FC8FA340AA2D7ED372CE /* libPods-SMLPetFeeder.a */; };
 /* End PBXBuildFile section */
@@ -48,8 +48,6 @@
 		10C3FC8FA340AA2D7ED372CE /* libPods-SMLPetFeeder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMLPetFeeder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0281FD1A8BE3F2006AA051 /* SMLPetCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPetCardViewController.h; sourceTree = "<group>"; };
 		1A0281FE1A8BE3F2006AA051 /* SMLPetCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetCardViewController.m; sourceTree = "<group>"; };
-		1A0282011A8C19AA006AA051 /* SMLStandardLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLStandardLabel.h; sourceTree = "<group>"; };
-		1A0282021A8C19AA006AA051 /* SMLStandardLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLStandardLabel.m; sourceTree = "<group>"; };
 		1A0282081A8C884E006AA051 /* SMLTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLTableViewDataSource.h; sourceTree = "<group>"; };
 		1A0282091A8C884E006AA051 /* SMLTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLTableViewDataSource.m; sourceTree = "<group>"; };
 		1A02820B1A8C8D40006AA051 /* SMLBasicCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMLBasicCellModel.h; sourceTree = "<group>"; };
@@ -91,6 +89,8 @@
 		1A7CD7AC1A8AB27300640E2E /* SMLDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLDataController.m; sourceTree = "<group>"; };
 		1A7CD7B91A8ABD3800640E2E /* SMLPetCardViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPetCardViewModel.h; sourceTree = "<group>"; };
 		1A7CD7BA1A8ABD3800640E2E /* SMLPetCardViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetCardViewModel.m; sourceTree = "<group>"; };
+		1AAC39041A964E3400596D14 /* SMLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLImageView.h; sourceTree = "<group>"; };
+		1AAC39051A964E3400596D14 /* SMLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLImageView.m; sourceTree = "<group>"; };
 		1AC8218E1A8C9660002A57F9 /* SMLStandardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLStandardTableViewCell.h; sourceTree = "<group>"; };
 		1AC8218F1A8C9660002A57F9 /* SMLStandardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLStandardTableViewCell.m; sourceTree = "<group>"; };
 		242C45BF18590B9AD84A5237 /* Pods-SMLPetFeeder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLPetFeeder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,8 +119,6 @@
 		1A0282001A8C1960006AA051 /* StyledViews */ = {
 			isa = PBXGroup;
 			children = (
-				1A0282011A8C19AA006AA051 /* SMLStandardLabel.h */,
-				1A0282021A8C19AA006AA051 /* SMLStandardLabel.m */,
 				1AC8218E1A8C9660002A57F9 /* SMLStandardTableViewCell.h */,
 				1AC8218F1A8C9660002A57F9 /* SMLStandardTableViewCell.m */,
 			);
@@ -134,6 +132,8 @@
 				1A0282091A8C884E006AA051 /* SMLTableViewDataSource.m */,
 				1A344B0D1A9535FF0018ADD0 /* UIViewController+SML.h */,
 				1A344B0E1A9535FF0018ADD0 /* UIViewController+SML.m */,
+				1AAC39041A964E3400596D14 /* SMLImageView.h */,
+				1AAC39051A964E3400596D14 /* SMLImageView.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -407,7 +407,6 @@
 				1A344B001A9518870018ADD0 /* SMLMeal+Ingestion.m in Sources */,
 				1A344B061A95198D0018ADD0 /* SMLFeedingEvent.m in Sources */,
 				1A7CD73F1A8AAC1F00640E2E /* AppDelegate.m in Sources */,
-				1A0282031A8C19AA006AA051 /* SMLStandardLabel.m in Sources */,
 				1A7CD7BB1A8ABD3800640E2E /* SMLPetCardViewModel.m in Sources */,
 				1A4B92D51A927E0C00952AE4 /* SMLPet+Ingestion.m in Sources */,
 				1A7CD7481A8AAC1F00640E2E /* SMLModelController.m in Sources */,
@@ -415,6 +414,7 @@
 				1A0281FF1A8BE3F2006AA051 /* SMLPetCardViewController.m in Sources */,
 				1A02820F1A8C8E3F006AA051 /* SMLFeedingEventViewModel.m in Sources */,
 				1A344B091A95198D0018ADD0 /* SMLMeal.m in Sources */,
+				1AAC39061A964E3400596D14 /* SMLImageView.m in Sources */,
 				1A344B0C1A9527690018ADD0 /* SMLFeedingEvent+Ingestion.m in Sources */,
 				1A344B0F1A9535FF0018ADD0 /* UIViewController+SML.m in Sources */,
 				1A4B931A1A9330C200952AE4 /* SMLAddPetViewController.m in Sources */,
@@ -548,6 +548,7 @@
 				INFOPLIST_FILE = SMLPetFeeder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "24f8598d-4390-484c-bd74-c777448d1640";
 			};
 			name = Debug;
 		};
@@ -559,6 +560,7 @@
 				INFOPLIST_FILE = SMLPetFeeder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "24f8598d-4390-484c-bd74-c777448d1640";
 			};
 			name = Release;
 		};

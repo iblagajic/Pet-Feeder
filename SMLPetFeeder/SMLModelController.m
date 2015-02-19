@@ -15,20 +15,11 @@
 #import "SMLMeal.h"
 #import "SMLAddPetViewController.h"
 
-/*
- A controller object that manages a simple model -- a collection of month names.
- 
- The controller serves as the data source for the page view controller; it therefore implements pageViewController:viewControllerBeforeViewController: and pageViewController:viewControllerAfterViewController:.
- It also implements a custom method, viewControllerAtIndex: which is useful in the implementation of the data source methods, and in the initial configuration of the application.
- 
- There is no need to actually create view controllers for each page in advance -- indeed doing so incurs unnecessary overhead. Given the data model, these methods create, configure, and return a new view controller on demand.
- */
-
-
 @interface SMLModelController ()
 
 @property (nonatomic) SMLDataController *dataController;
 @property (nonatomic) NSArray *cardModels;
+@property (nonatomic) NSDateFormatter *dateFormatter;
 
 @property (nonatomic) RACSubject *updatedContent;
 
@@ -42,6 +33,8 @@
     self = [super init];
     if (self) {
         self.dataController = [SMLDataController new];
+        self.dateFormatter = [NSDateFormatter new];
+        self.dateFormatter.dateFormat = @"eee, dd'th' hh:mma";
         self.cardModels = [self cardModelsWithPets:[self.dataController allPets]];
         
         self.updatedContent = [[RACSubject subject] setNameWithFormat:@"SMLModelController updatedContent"];
@@ -56,7 +49,10 @@
 }
 
 - (SMLPetCardViewModel*)viewModelAtIndex:(NSUInteger)index {
-    return self.cardModels[index];
+    if (self.cardModels.count > index) {
+        return self.cardModels[index];
+    }
+    return nil;
 }
 
 - (NSUInteger)indexOfViewModel:(SMLPetCardViewModel*)viewModel {
@@ -81,7 +77,7 @@
 - (NSArray*)cardModelsWithPets:(NSArray*)pets {
     NSMutableArray *cardModels = [NSMutableArray new];
     for (SMLPet *pet in pets) {
-        SMLPetCardViewModel *petCardViewModel = [[SMLPetCardViewModel alloc] initWithPet:pet dataController:self.dataController];
+        SMLPetCardViewModel *petCardViewModel = [[SMLPetCardViewModel alloc] initWithPet:pet dataController:self.dataController dateFormatter:self.dateFormatter];
         [cardModels addObject:petCardViewModel];
     }
     return cardModels;

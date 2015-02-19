@@ -35,9 +35,7 @@
 
 - (void)setupView {
     self.backgroundColor = [UIColor clearColor];
-    self.titleLabel.font = [UIFont boldSystemFontOfSize:18.0];
     self.titleLabel.textColor = [UIColor whiteColor];
-    self.subtitleLabel.font = [UIFont systemFontOfSize:18.0];
     self.subtitleLabel.textColor = [UIColor colorWithWhite:1.0 alpha:0.9];
 }
 

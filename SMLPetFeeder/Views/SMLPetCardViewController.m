@@ -47,6 +47,8 @@
 - (void)setupView {
     self.view.backgroundColor = [UIColor clearColor];
     
+    self.petNameLabel.textColor = [UIColor whiteColor];
+    
     self.petImageView.backgroundColor = [UIColor whiteColor];
     self.petImageView.layer.cornerRadius = CGRectGetWidth(self.petImageView.frame)/2;
     self.petImageView.layer.masksToBounds = YES;
@@ -68,16 +70,20 @@
 
 - (void)updateView {
     self.petNameLabel.text = self.viewModel.petName;
+    self.petImageView.image = self.viewModel.petImage;
     [self.feedingTableView reloadData];
 }
 
 #pragma mark - Actions
 
-- (IBAction)updateImage:(id)sender {
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    imagePicker.delegate = self;
-    [self presentViewController:imagePicker animated:YES completion:nil];
+- (IBAction)updateImage:(UILongPressGestureRecognizer*)sender {
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        imagePicker.allowsEditing = YES;
+        imagePicker.delegate = self;
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
 }
 
 - (IBAction)updateName:(id)sender {
@@ -108,7 +114,7 @@
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary*)info {
-    self.petImageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self.viewModel updateImage:[info objectForKey:UIImagePickerControllerEditedImage]];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

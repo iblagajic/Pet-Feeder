@@ -8,6 +8,7 @@
 
 #import "SMLRootViewController.h"
 #import "SMLModelController.h"
+#import "SMLPetCardViewModel.h"
 #import "SMLPetCardViewController.h"
 #import "SMLAddPetViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
@@ -18,6 +19,7 @@ typedef void(^SimpleBlock)();
 @interface SMLRootViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (nonatomic) UIPageViewController *pageViewController;
+@property (nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (nonatomic) IBOutlet UIPageControl *pageControl;
 @property (nonatomic) SMLModelController *modelController;
 @end
@@ -29,8 +31,8 @@ typedef void(^SimpleBlock)();
 
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.pageControl.pageIndicatorTintColor = [UIColor darkGrayColor];
-    self.pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+    self.pageControl.pageIndicatorTintColor = [UIColor grayColor];
+    self.pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     
     [self setupModelController];
     
@@ -40,6 +42,10 @@ typedef void(^SimpleBlock)();
     self.pageViewController.dataSource = self;
     
     [self refreshPageViewControllerWithViewControllerAtIndex:0 animated:NO];
+    UIImage *image = [self.modelController viewModelAtIndex:0].petImage;
+    if (image) {
+        self.backgroundImageView.image = image;
+    }
 
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
@@ -56,7 +62,12 @@ typedef void(^SimpleBlock)();
     @weakify(self);
     [self.modelController.updatedContent subscribeNext:^(NSNumber *index) {
         @strongify(self);
-        [self refreshPageViewControllerWithViewControllerAtIndex:index.integerValue animated:YES];
+        if (index) {
+            [self refreshPageViewControllerWithViewControllerAtIndex:index.integerValue animated:YES];
+        } else {
+            UIViewController *currentViewController = self.pageViewController.viewControllers[0];
+            [self refreshBackgroundForViewModelAtIndex:[self.modelController indexOfViewModel:[(SMLPetCardViewController*)currentViewController viewModel]]];
+        }
     }];
 }
 
@@ -83,6 +94,16 @@ typedef void(^SimpleBlock)();
     } else {
         block();
     }
+}
+
+- (void)refreshBackgroundForViewModelAtIndex:(NSInteger)index {
+//    [self fadeOutView:self.backgroundImageView completion:^{
+        UIImage *image = [self.modelController viewModelAtIndex:index].petImage;
+        if (image) {
+            self.backgroundImageView.image = image;
+        }
+//        [self fadeInView:self.backgroundImageView completion:nil];
+//    }];
 }
 
 - (void)fadeOutView:(UIView*)view completion:(SimpleBlock)completion {
@@ -112,7 +133,6 @@ typedef void(^SimpleBlock)();
 #pragma mark - UIPageViewControllerDelegate
 
 - (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation {
-    // Set the spine position to "min" and the page view controller's view controllers array to contain just one view controller. Setting the spine position to 'UIPageViewControllerSpineLocationMid' in landscape orientation sets the doubleSided property to YES, so set it to NO here.
     UIViewController *currentViewController = self.pageViewController.viewControllers[0];
     NSArray *viewControllers = @[currentViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
@@ -127,7 +147,9 @@ typedef void(^SimpleBlock)();
         self.pageControl.currentPage = self.modelController.numberOfCards;
         return;
     }
-    self.pageControl.currentPage = [self.modelController indexOfViewModel:[(SMLPetCardViewController*)currentViewController viewModel]];
+    NSInteger index = [self.modelController indexOfViewModel:[(SMLPetCardViewController*)currentViewController viewModel]];
+    self.pageControl.currentPage = index;
+    [self refreshBackgroundForViewModelAtIndex:index];
 }
 
 #pragma mark - UIPageViewControllerDataSource

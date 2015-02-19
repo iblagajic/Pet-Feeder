@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SMLStandardLabel.h"
 #import "SMLBasicCellModel.h"
 
 @interface SMLStandardTableViewCell : UITableViewCell
 
 @property (nonatomic) id<SMLBasicCellModel> cellModel;
-@property (nonatomic) IBOutlet SMLStandardLabel *titleLabel;
-@property (nonatomic) IBOutlet SMLStandardLabel *subtitleLabel;
+@property (nonatomic) IBOutlet UILabel *titleLabel;
+@property (nonatomic) IBOutlet UILabel *subtitleLabel;
 
 @end

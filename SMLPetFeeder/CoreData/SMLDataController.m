@@ -110,11 +110,16 @@
 #pragma mark Update
 
 - (BOOL)updatePet:(SMLPet*)pet withImage:(UIImage*)image {
-    return [SMLPet updatePet:pet withImage:image context:self.managedObjectContext];
+    BOOL success = [SMLPet updatePet:pet withImage:image context:self.managedObjectContext];
+    if (success && [self saveContext]) {
+        return success;
+    }
+    return success;
 }
 
 - (void)updatePet:(SMLPet*)pet withName:(NSString*)name {
     [SMLPet updatePet:pet withName:name context:self.managedObjectContext];
+    [self saveContext];
 }
 
 #pragma mark - Meal
