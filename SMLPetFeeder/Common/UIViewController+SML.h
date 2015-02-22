@@ -10,6 +10,10 @@
 
 @interface UIViewController (SML)
 
+@property (nonatomic, readonly) id viewModel;
+
 - (void)showErrorAlertWithMessage:(NSString*)message;
+- (void)fadeInView:(UIView*)view completion:(SimpleBlock)completion;
+- (void)fadeOutView:(UIView*)view completion:(SimpleBlock)completion;
 
 @end

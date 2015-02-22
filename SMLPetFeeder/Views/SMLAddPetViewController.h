@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class SMLModelController;
+@class SMLModelController, SMLPetCardViewModel;
 
 @interface SMLAddPetViewController : UIViewController
 
 @property (nonatomic) SMLModelController *modelController;
+@property (nonatomic) SMLPetCardViewModel *viewModel;
 
 @end

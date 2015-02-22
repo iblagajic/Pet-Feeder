@@ -16,6 +16,7 @@
 @interface SMLPetCardViewModel : NSObject
 
 @property (nonatomic, readonly) RACSubject *updatedContent;
+@property (nonatomic, readonly) RACSubject *updatedImage;
 
 @property (nonatomic, readonly) SMLPet *pet;
 @property (nonatomic, readonly) NSString *petName;

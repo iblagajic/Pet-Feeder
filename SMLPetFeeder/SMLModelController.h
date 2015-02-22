@@ -14,10 +14,14 @@
 @interface SMLModelController : NSObject
 
 @property (nonatomic, readonly) RACSubject *updatedContent;
+@property (nonatomic, readonly) RACSubject *updatedImage;
 
-- (NSUInteger)numberOfCards;
-- (SMLPetCardViewModel*)viewModelAtIndex:(NSUInteger)index;
-- (NSUInteger)indexOfViewModel:(SMLPetCardViewModel*)viewController;
+@property (nonatomic, readonly) NSUInteger numberOfCards;
+
+- (SMLPetCardViewModel*)modelAtIndex:(NSUInteger)index;
+- (SMLPetCardViewModel*)modelBeforeViewModel:(SMLPetCardViewModel*)viewModel;
+- (SMLPetCardViewModel*)modelAfterViewModel:(SMLPetCardViewModel*)viewModel;
+- (NSUInteger)indexOfViewModel:(SMLPetCardViewModel*)viewModel;
 - (void)addNewPetWithName:(NSString*)name;
 
 @end

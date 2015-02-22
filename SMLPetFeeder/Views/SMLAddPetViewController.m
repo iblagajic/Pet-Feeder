@@ -31,6 +31,10 @@
     self.plusButton.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.3];
 }
 
+- (void)setViewModel:(SMLPetCardViewModel *)viewModel {
+    _viewModel = viewModel;
+}
+
 #pragma mark - Actions
 
 - (IBAction)addPet:(id)sender {

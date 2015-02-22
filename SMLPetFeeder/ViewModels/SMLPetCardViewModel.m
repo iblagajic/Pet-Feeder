@@ -21,6 +21,7 @@
 @property (nonatomic) NSDateFormatter *dateFormatter;
 
 @property (nonatomic) RACSubject *updatedContent;
+@property (nonatomic) RACSubject *updatedImage;
 
 @end
 
@@ -32,6 +33,7 @@
         self.pet = pet;
         self.dataController = dataController;
         self.updatedContent = [[RACSubject subject] setNameWithFormat:@"SMLPetCardViewModel updatedContent"];
+        self.updatedImage = [[RACSubject subject] setNameWithFormat:@"SMLPetCardViewModel updatedImage"];
         self.dateFormatter = dateFormatter;
         [self loadCellModels];
     }
@@ -106,7 +108,7 @@
 
 - (void)updateImage:(UIImage*)image {
     [self.dataController updatePet:self.pet withImage:image];
-    [self.updatedContent sendNext:nil];
+    [self.updatedImage sendNext:nil];
 }
 
 @end
