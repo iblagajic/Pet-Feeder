@@ -44,7 +44,7 @@
     }];
     [self.viewModel.updatedImage subscribeNext:^(id x) {
         @strongify(self);
-        [self updateView];
+        [self updateImage];
     }];
 }
 
@@ -70,14 +70,18 @@
     [self addParallaxEffect];
     
     [self updateView];
+    [self updateImage];
 }
 
 #pragma mark - Update
 
 - (void)updateView {
     self.petNameLabel.text = self.viewModel.petName;
-    self.petImageView.image = self.viewModel.petImage;
     [self.feedingTableView reloadData];
+}
+
+- (void)updateImage {
+    self.petImageView.image = self.viewModel.petImage;
 }
 
 #pragma mark - Actions
