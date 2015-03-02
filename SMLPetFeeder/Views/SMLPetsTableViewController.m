@@ -12,10 +12,12 @@
 #import "SMLPetViewModel.h"
 #import "UIViewController+SML.h"
 #import "SMLCardsViewController.h"
+#import "SMLTableViewDataSource.h"
 
 @interface SMLPetsTableViewController ()
 
 @property (nonatomic) SMLAppModelController *viewModel;
+@property (nonatomic) SMLTableViewDataSource *tableViewDataSource;
 
 @end
 
@@ -30,6 +32,8 @@
 
 - (void)setupModelController {
     self.viewModel = [SMLAppModelController new];
+    self.tableViewDataSource = [[SMLTableViewDataSource alloc] initWithViewModel:self.viewModel];
+    self.tableView.dataSource = self.tableViewDataSource;
     @weakify(self);
     [self.viewModel.addedPet subscribeNext:^(NSNumber *index) {
         @strongify(self);
@@ -43,35 +47,13 @@
     }];
 }
 
-#pragma mark - UITableViewDataSource
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.viewModel.petsCount;
-}
-
-- (SMLStandardTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SMLStandardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PetCell" forIndexPath:indexPath];
-    
-    cell.cellModel = [self.viewModel modelAtIndex:indexPath.row];
-    
-    return cell;
-}
+#pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         return [super tableView:tableView heightForRowAtIndexPath:indexPath]+20;
     }
     return [super tableView:tableView heightForRowAtIndexPath:indexPath];
-}
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (UITableViewCellEditingStyleDelete) {
-        [self.viewModel removePetAtIndex:indexPath.row];
-    }
 }
 
 #pragma mark - Actions
@@ -97,7 +79,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(SMLStandardTableViewCell*)senderCell {
     if ([segue.identifier isEqualToString:@"ShowPet"]) {
         SMLCardsViewController *destinationViewControlller = segue.destinationViewController;
-        self.viewModel.currentPetModel = senderCell.cellModel;
+        self.viewModel.currentPetModel = (SMLPetViewModel*)senderCell.cellModel;
         destinationViewControlller.viewModel = self.viewModel;
     }
 }
@@ -105,7 +87,7 @@
 #pragma mark - Overrides
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    if (self.viewModel.petsCount == 0) {
+    if (self.viewModel.count == 0) {
         return UIStatusBarStyleLightContent;
     } else {
         return UIStatusBarStyleDefault;

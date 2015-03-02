@@ -61,6 +61,14 @@
     return [UIImage imageWithContentsOfFile:path];
 }
 
+- (NSUInteger)count {
+    return self.cellModels.count;
+}
+
+- (SMLFeedingEventViewModel*)modelAtIndex:(NSUInteger)index {
+    return self.cellModels[index];
+}
+
 #pragma mark Feeding Events
 
 - (NSArray*)feedingEvents {

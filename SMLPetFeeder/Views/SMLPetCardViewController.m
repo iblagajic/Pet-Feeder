@@ -25,12 +25,6 @@
 
 @implementation SMLPetCardViewController
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.view layoutIfNeeded];
-    [self setupView];
-}
-
 #pragma mark - Setup
 
 - (void)setViewModel:(SMLPetViewModel *)viewModel {
@@ -47,6 +41,7 @@
         @strongify(self);
         [self updateImage];
     }];
+    [self setupView];
 }
 
 - (void)setupView {
@@ -66,7 +61,6 @@
 //    self.feedButton.layer.borderWidth = 2.0;
     
     self.feedingTableView.dataSource = self.tableViewDataSource;
-    self.feedingTableView.delegate = self.tableViewDataSource;
     
     [self addParallaxEffect];
     

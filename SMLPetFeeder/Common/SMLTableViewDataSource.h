@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SMLStandardTableViewModel.h"
 
 @class SMLPetViewModel;
 
-@interface SMLTableViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
+@interface SMLTableViewDataSource : NSObject <UITableViewDataSource>
 
-- (instancetype)initWithViewModel:(SMLPetViewModel*)viewModel;
+- (instancetype)initWithViewModel:(id<SMLStandardTableViewModel>)viewModel;
 
 @end

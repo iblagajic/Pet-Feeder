@@ -10,11 +10,13 @@
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "SMLBasicCellModel.h"
+#import "SMLStandardTableViewModel.h"
 
 @class SMLPet;
 @class SMLDataController;
+@class SMLFeedingEventViewModel;
 
-@interface SMLPetViewModel : NSObject <SMLBasicCellModel>
+@interface SMLPetViewModel : NSObject <SMLBasicCellModel, SMLStandardTableViewModel>
 
 @property (nonatomic, readonly) RACSubject *updatedContent;
 @property (nonatomic, readonly) RACSubject *updatedImage;
@@ -22,10 +24,12 @@
 @property (nonatomic, readonly) SMLPet *pet;
 @property (nonatomic, readonly) NSString *petName;
 @property (nonatomic, readonly) UIImage *petImage;
-@property (nonatomic, readonly) NSArray *cellModels;
 @property (nonatomic, readonly) NSArray *mealAlertActions;
 
 - (instancetype)initWithPet:(SMLPet*)pet dataController:(SMLDataController*)dataController dateFormatter:(NSDateFormatter*)dateFormatter;
+
+- (NSUInteger)count;
+- (SMLFeedingEventViewModel*)modelAtIndex:(NSUInteger)index;
 
 - (void)addFeedingEventWithMealText:(NSString*)mealText;
 - (void)updateName:(NSString*)name;

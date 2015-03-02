@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "SMLStandardTableViewModel.h"
 
 @class SMLPetViewModel;
 
-@interface SMLAppModelController : NSObject
+@interface SMLAppModelController : NSObject <SMLStandardTableViewModel>
 
 @property (nonatomic) SMLPetViewModel *currentPetModel;
 
@@ -20,13 +21,13 @@
 @property (nonatomic, readonly) RACSubject *removedPet;
 @property (nonatomic, readonly) RACSubject *updatedImage;
 
-- (NSUInteger)petsCount;
+- (NSUInteger)count;
 - (SMLPetViewModel*)modelAtIndex:(NSUInteger)index;
 - (SMLPetViewModel*)modelBeforeViewModel:(SMLPetViewModel*)viewModel;
 - (SMLPetViewModel*)modelAfterViewModel:(SMLPetViewModel*)viewModel;
 - (NSUInteger)indexOfViewModel:(SMLPetViewModel*)viewModel;
 - (void)addNewPetWithName:(NSString*)name;
-- (void)removePetAtIndex:(NSUInteger)index;
+- (void)removeObjectAtIndex:(NSUInteger)index;
 
 @end
 

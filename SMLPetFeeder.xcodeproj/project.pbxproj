@@ -17,7 +17,6 @@
 		1A344B0C1A9527690018ADD0 /* SMLFeedingEvent+Ingestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A344B0B1A9527690018ADD0 /* SMLFeedingEvent+Ingestion.m */; };
 		1A344B0F1A9535FF0018ADD0 /* UIViewController+SML.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A344B0E1A9535FF0018ADD0 /* UIViewController+SML.m */; };
 		1A4B92D51A927E0C00952AE4 /* SMLPet+Ingestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B92D41A927E0C00952AE4 /* SMLPet+Ingestion.m */; };
-		1A4B931A1A9330C200952AE4 /* SMLAddPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B93191A9330C200952AE4 /* SMLAddPetViewController.m */; };
 		1A7CD73C1A8AAC1F00640E2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD73B1A8AAC1F00640E2E /* main.m */; };
 		1A7CD73F1A8AAC1F00640E2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD73E1A8AAC1F00640E2E /* AppDelegate.m */; };
 		1A7CD7481A8AAC1F00640E2E /* SMLAppModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7471A8AAC1F00640E2E /* SMLAppModelController.m */; };
@@ -68,8 +67,6 @@
 		1A344B0E1A9535FF0018ADD0 /* UIViewController+SML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SML.m"; sourceTree = "<group>"; };
 		1A4B92D31A927E0C00952AE4 /* SMLPet+Ingestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMLPet+Ingestion.h"; sourceTree = "<group>"; };
 		1A4B92D41A927E0C00952AE4 /* SMLPet+Ingestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SMLPet+Ingestion.m"; sourceTree = "<group>"; };
-		1A4B93181A9330C200952AE4 /* SMLAddPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLAddPetViewController.h; sourceTree = "<group>"; };
-		1A4B93191A9330C200952AE4 /* SMLAddPetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLAddPetViewController.m; sourceTree = "<group>"; };
 		1A7CD7361A8AAC1F00640E2E /* SMLPetFeeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMLPetFeeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7CD73A1A8AAC1F00640E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7CD73B1A8AAC1F00640E2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +87,7 @@
 		1A7CD7BA1A8ABD3800640E2E /* SMLPetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetViewModel.m; sourceTree = "<group>"; };
 		1A8512AE1A9A378C00117C43 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1A8512AF1A9A37B000117C43 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		1A9E66691AA4E5710046B77F /* SMLStandardTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLStandardTableViewModel.h; sourceTree = "<group>"; };
 		1AAC39041A964E3400596D14 /* SMLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLImageView.h; sourceTree = "<group>"; };
 		1AAC39051A964E3400596D14 /* SMLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLImageView.m; sourceTree = "<group>"; };
 		1AC8218E1A8C9660002A57F9 /* SMLStandardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLStandardTableViewCell.h; sourceTree = "<group>"; };
@@ -242,8 +240,6 @@
 				1AE019CB1AA3238B00E67315 /* SMLCardsViewController.m */,
 				1A0281FD1A8BE3F2006AA051 /* SMLPetCardViewController.h */,
 				1A0281FE1A8BE3F2006AA051 /* SMLPetCardViewController.m */,
-				1A4B93181A9330C200952AE4 /* SMLAddPetViewController.h */,
-				1A4B93191A9330C200952AE4 /* SMLAddPetViewController.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +252,7 @@
 				1A02820B1A8C8D40006AA051 /* SMLBasicCellModel.h */,
 				1A02820D1A8C8E3F006AA051 /* SMLFeedingEventViewModel.h */,
 				1A02820E1A8C8E3F006AA051 /* SMLFeedingEventViewModel.m */,
+				1A9E66691AA4E5710046B77F /* SMLStandardTableViewModel.h */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -426,7 +423,6 @@
 				1AAC39061A964E3400596D14 /* SMLImageView.m in Sources */,
 				1A344B0C1A9527690018ADD0 /* SMLFeedingEvent+Ingestion.m in Sources */,
 				1A344B0F1A9535FF0018ADD0 /* UIViewController+SML.m in Sources */,
-				1A4B931A1A9330C200952AE4 /* SMLAddPetViewController.m in Sources */,
 				1AE019CC1AA3238B00E67315 /* SMLCardsViewController.m in Sources */,
 				1A344B031A95198D0018ADD0 /* SMLPet.m in Sources */,
 				1AC821901A8C9660002A57F9 /* SMLStandardTableViewCell.m in Sources */,

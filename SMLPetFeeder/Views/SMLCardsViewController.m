@@ -16,6 +16,7 @@
 @interface SMLCardsViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (nonatomic) UIPageViewController *pageViewController;
+@property (nonatomic) IBOutlet UIView *container;
 @property (nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (nonatomic) IBOutlet UIPageControl *pageControl;
 
@@ -45,12 +46,12 @@
     self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithWhite:0.0 alpha:0.9];
     
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    self.pageViewController.view.frame = self.view.bounds;
+    self.pageViewController.view.frame = self.container.bounds;
     self.pageViewController.delegate = self;
     self.pageViewController.dataSource = self;
     
     [self addChildViewController:self.pageViewController];
-    [self.view addSubview:self.pageViewController.view];
+    [self.container addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
 }
 
@@ -83,7 +84,7 @@
                                           direction:UIPageViewControllerNavigationDirectionForward
                                            animated:NO
                                          completion:nil];
-        self.pageControl.numberOfPages = self.viewModel.petsCount;
+        self.pageControl.numberOfPages = self.viewModel.count;
     };
     
     if (animated) {
@@ -127,6 +128,12 @@
 - (UIViewController *)pageViewController:(UIPageViewController*)pageViewController viewControllerAfterViewController:(SMLPetCardViewController*)viewController {
     SMLPetViewModel *nextModel = [self.viewModel modelAfterViewModel:viewController.viewModel];
     return [self viewControllerForViewModel:nextModel storyboard:viewController.storyboard];
+}
+
+#pragma mark - Actions
+
+- (IBAction)edit:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Helpers

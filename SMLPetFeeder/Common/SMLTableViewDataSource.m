@@ -9,17 +9,16 @@
 #import "SMLTableViewDataSource.h"
 #import "SMLBasicCellModel.h"
 #import "SMLStandardTableViewCell.h"
-#import "SMLPetViewModel.h"
 
 @interface SMLTableViewDataSource ()
 
-@property (nonatomic) SMLPetViewModel *viewModel;
+@property (nonatomic) id<SMLStandardTableViewModel> viewModel;
 
 @end
 
 @implementation SMLTableViewDataSource
 
-- (instancetype)initWithViewModel:(SMLPetViewModel*)viewModel; {
+- (instancetype)initWithViewModel:(id<SMLStandardTableViewModel>)viewModel; {
     self = [super init];
     if (self) {
         self.viewModel = viewModel;
@@ -30,13 +29,21 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.viewModel.cellModels.count;
+    return self.viewModel.count;
 }
 
 - (SMLStandardTableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-    SMLStandardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedingCell"];
-    cell.cellModel = (id<SMLBasicCellModel>)[self.viewModel.cellModels objectAtIndex:indexPath.row];
+    SMLStandardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell"];
+    cell.cellModel = (id<SMLBasicCellModel>)[self.viewModel modelAtIndex:indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.viewModel respondsToSelector:@selector(removeObjectAtIndex:)]) {
+        if (UITableViewCellEditingStyleDelete) {
+            [self.viewModel removeObjectAtIndex:indexPath.row];
+        }
+    }
 }
 
 @end

@@ -13,7 +13,6 @@
 #import "SMLPet.h"
 #import "SMLFeedingEvent.h"
 #import "SMLMeal.h"
-#import "SMLAddPetViewController.h"
 
 @interface SMLAppModelController ()
 
@@ -56,7 +55,7 @@
 
 #pragma mark - Public
 
-- (NSUInteger)petsCount {
+- (NSUInteger)count {
     return self.cardModels.count;
 }
 
@@ -93,7 +92,7 @@
     [self.addedPet sendNext:@(self.cardModels.count-1)];
 }
 
-- (void)removePetAtIndex:(NSUInteger)index {
+- (void)removeObjectAtIndex:(NSUInteger)index {
     SMLPetViewModel *petModel = [self modelAtIndex:index];
     [self.dataController removePet:petModel.pet];
     self.cardModels = [self cardModelsWithPets:[self.dataController allPets]];
