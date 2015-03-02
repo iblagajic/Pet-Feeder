@@ -16,5 +16,6 @@
 @optional
 
 @property (nonatomic, readonly) NSString *subtitle;
+@property (nonatomic, readonly) UIImage *image;
 
 @end

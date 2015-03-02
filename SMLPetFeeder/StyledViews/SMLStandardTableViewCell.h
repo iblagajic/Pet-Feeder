@@ -14,5 +14,6 @@
 @property (nonatomic) id<SMLBasicCellModel> cellModel;
 @property (nonatomic) IBOutlet UILabel *titleLabel;
 @property (nonatomic) IBOutlet UILabel *subtitleLabel;
+@property (nonatomic) IBOutlet UIImageView *roundImageView;
 
 @end

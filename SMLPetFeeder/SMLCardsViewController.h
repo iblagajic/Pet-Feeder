@@ -1,5 +1,5 @@
 //
-//  SMLRootViewController.h
+//  SMLCardsViewController.h
 //  SMLPetFeeder
 //
 //  Created by Ivan Blagajić on 10/02/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SMLRootViewController : UIViewController
+@interface SMLCardsViewController : UIViewController
 
 @end
 

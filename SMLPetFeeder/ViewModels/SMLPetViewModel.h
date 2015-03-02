@@ -1,5 +1,5 @@
 //
-//  SMLPetCardViewModel.h
+//  SMLPetViewModel.h
 //  SMLPetFeeder
 //
 //  Created by Ivan Blagajić on 10/02/15.
@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "SMLBasicCellModel.h"
 
 @class SMLPet;
 @class SMLDataController;
 
-@interface SMLPetCardViewModel : NSObject
+@interface SMLPetViewModel : NSObject <SMLBasicCellModel>
 
 @property (nonatomic, readonly) RACSubject *updatedContent;
 @property (nonatomic, readonly) RACSubject *updatedImage;

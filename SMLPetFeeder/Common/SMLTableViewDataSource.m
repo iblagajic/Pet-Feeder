@@ -9,17 +9,17 @@
 #import "SMLTableViewDataSource.h"
 #import "SMLBasicCellModel.h"
 #import "SMLStandardTableViewCell.h"
-#import "SMLPetCardViewModel.h"
+#import "SMLPetViewModel.h"
 
 @interface SMLTableViewDataSource ()
 
-@property (nonatomic) SMLPetCardViewModel *viewModel;
+@property (nonatomic) SMLPetViewModel *viewModel;
 
 @end
 
 @implementation SMLTableViewDataSource
 
-- (instancetype)initWithViewModel:(SMLPetCardViewModel*)viewModel; {
+- (instancetype)initWithViewModel:(SMLPetViewModel*)viewModel; {
     self = [super init];
     if (self) {
         self.viewModel = viewModel;
@@ -37,12 +37,6 @@
     SMLStandardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedingCell"];
     cell.cellModel = (id<SMLBasicCellModel>)[self.viewModel.cellModels objectAtIndex:indexPath.row];
     return cell;
-}
-
-#pragma mark - UITableViewDelegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44.0;
 }
 
 @end

@@ -1,20 +1,20 @@
 //
 //
-//  SMLRootViewController.m
+//  SMLCardsViewController.m
 //  SMLPetFeeder
 //
 //  Created by Ivan Blagajić on 10/02/15.
 //  Copyright (c) 2015 Ivan Blagajić. All rights reserved.
 //
 
-#import "SMLRootViewController.h"
+#import "SMLCardsViewController.h"
 #import "UIViewController+SML.h"
 #import "SMLModelController.h"
 #import "SMLPetCardViewModel.h"
 #import "SMLPetCardViewController.h"
 #import "SMLAddPetViewController.h"
 
-@interface SMLRootViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface SMLCardsViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (nonatomic) UIPageViewController *pageViewController;
 @property (nonatomic) IBOutlet UIImageView *backgroundImageView;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation SMLRootViewController
+@implementation SMLCardsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

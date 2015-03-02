@@ -20,17 +20,18 @@
 		1A4B931A1A9330C200952AE4 /* SMLAddPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B93191A9330C200952AE4 /* SMLAddPetViewController.m */; };
 		1A7CD73C1A8AAC1F00640E2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD73B1A8AAC1F00640E2E /* main.m */; };
 		1A7CD73F1A8AAC1F00640E2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD73E1A8AAC1F00640E2E /* AppDelegate.m */; };
-		1A7CD7421A8AAC1F00640E2E /* SMLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7411A8AAC1F00640E2E /* SMLRootViewController.m */; };
-		1A7CD7481A8AAC1F00640E2E /* SMLModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7471A8AAC1F00640E2E /* SMLModelController.m */; };
+		1A7CD7481A8AAC1F00640E2E /* SMLAppModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7471A8AAC1F00640E2E /* SMLAppModelController.m */; };
 		1A7CD74B1A8AAC1F00640E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD7491A8AAC1F00640E2E /* Main.storyboard */; };
 		1A7CD74D1A8AAC1F00640E2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD74C1A8AAC1F00640E2E /* Images.xcassets */; };
 		1A7CD7501A8AAC1F00640E2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD74E1A8AAC1F00640E2E /* LaunchScreen.xib */; };
 		1A7CD75C1A8AAC1F00640E2E /* SMLPetFeederTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD75B1A8AAC1F00640E2E /* SMLPetFeederTests.m */; };
 		1A7CD7A91A8AB1C600640E2E /* PetFeeder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7A71A8AB1C600640E2E /* PetFeeder.xcdatamodeld */; };
 		1A7CD7AD1A8AB27300640E2E /* SMLDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7AC1A8AB27300640E2E /* SMLDataController.m */; };
-		1A7CD7BB1A8ABD3800640E2E /* SMLPetCardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7BA1A8ABD3800640E2E /* SMLPetCardViewModel.m */; };
+		1A7CD7BB1A8ABD3800640E2E /* SMLPetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7BA1A8ABD3800640E2E /* SMLPetViewModel.m */; };
 		1AAC39061A964E3400596D14 /* SMLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAC39051A964E3400596D14 /* SMLImageView.m */; };
 		1AC821901A8C9660002A57F9 /* SMLStandardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8218F1A8C9660002A57F9 /* SMLStandardTableViewCell.m */; };
+		1AE019CC1AA3238B00E67315 /* SMLCardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE019CB1AA3238B00E67315 /* SMLCardsViewController.m */; };
+		1AE019CF1AA323C200E67315 /* SMLPetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE019CE1AA323C200E67315 /* SMLPetsTableViewController.m */; };
 		CC82D9E5DE338DBD2EB600EA /* libPods-SMLPetFeeder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C3FC8FA340AA2D7ED372CE /* libPods-SMLPetFeeder.a */; };
 /* End PBXBuildFile section */
 
@@ -74,10 +75,8 @@
 		1A7CD73B1A8AAC1F00640E2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A7CD73D1A8AAC1F00640E2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A7CD73E1A8AAC1F00640E2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1A7CD7401A8AAC1F00640E2E /* SMLRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMLRootViewController.h; sourceTree = "<group>"; };
-		1A7CD7411A8AAC1F00640E2E /* SMLRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMLRootViewController.m; sourceTree = "<group>"; };
-		1A7CD7461A8AAC1F00640E2E /* SMLModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMLModelController.h; sourceTree = "<group>"; };
-		1A7CD7471A8AAC1F00640E2E /* SMLModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMLModelController.m; sourceTree = "<group>"; };
+		1A7CD7461A8AAC1F00640E2E /* SMLAppModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMLAppModelController.h; sourceTree = "<group>"; };
+		1A7CD7471A8AAC1F00640E2E /* SMLAppModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMLAppModelController.m; sourceTree = "<group>"; };
 		1A7CD74A1A8AAC1F00640E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A7CD74C1A8AAC1F00640E2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1A7CD74F1A8AAC1F00640E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -87,14 +86,18 @@
 		1A7CD7A81A8AB1C600640E2E /* PetFeeder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetFeeder.xcdatamodel; sourceTree = "<group>"; };
 		1A7CD7AB1A8AB27300640E2E /* SMLDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLDataController.h; sourceTree = "<group>"; };
 		1A7CD7AC1A8AB27300640E2E /* SMLDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLDataController.m; sourceTree = "<group>"; };
-		1A7CD7B91A8ABD3800640E2E /* SMLPetCardViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPetCardViewModel.h; sourceTree = "<group>"; };
-		1A7CD7BA1A8ABD3800640E2E /* SMLPetCardViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetCardViewModel.m; sourceTree = "<group>"; };
+		1A7CD7B91A8ABD3800640E2E /* SMLPetViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPetViewModel.h; sourceTree = "<group>"; };
+		1A7CD7BA1A8ABD3800640E2E /* SMLPetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetViewModel.m; sourceTree = "<group>"; };
 		1A8512AE1A9A378C00117C43 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1A8512AF1A9A37B000117C43 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		1AAC39041A964E3400596D14 /* SMLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLImageView.h; sourceTree = "<group>"; };
 		1AAC39051A964E3400596D14 /* SMLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLImageView.m; sourceTree = "<group>"; };
 		1AC8218E1A8C9660002A57F9 /* SMLStandardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLStandardTableViewCell.h; sourceTree = "<group>"; };
 		1AC8218F1A8C9660002A57F9 /* SMLStandardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLStandardTableViewCell.m; sourceTree = "<group>"; };
+		1AE019CA1AA3238B00E67315 /* SMLCardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLCardsViewController.h; sourceTree = "<group>"; };
+		1AE019CB1AA3238B00E67315 /* SMLCardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLCardsViewController.m; sourceTree = "<group>"; };
+		1AE019CD1AA323C200E67315 /* SMLPetsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPetsTableViewController.h; sourceTree = "<group>"; };
+		1AE019CE1AA323C200E67315 /* SMLPetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetsTableViewController.m; sourceTree = "<group>"; };
 		242C45BF18590B9AD84A5237 /* Pods-SMLPetFeeder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLPetFeeder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder.debug.xcconfig"; sourceTree = "<group>"; };
 		92C14DFA9D527BDF0F32352A /* Pods-SMLPetFeeder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLPetFeeder.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,10 +174,8 @@
 				1A7CD7A61A8AB1C600640E2E /* CoreData */,
 				1A7CD73D1A8AAC1F00640E2E /* AppDelegate.h */,
 				1A7CD73E1A8AAC1F00640E2E /* AppDelegate.m */,
-				1A7CD7401A8AAC1F00640E2E /* SMLRootViewController.h */,
-				1A7CD7411A8AAC1F00640E2E /* SMLRootViewController.m */,
-				1A7CD7461A8AAC1F00640E2E /* SMLModelController.h */,
-				1A7CD7471A8AAC1F00640E2E /* SMLModelController.m */,
+				1A7CD7461A8AAC1F00640E2E /* SMLAppModelController.h */,
+				1A7CD7471A8AAC1F00640E2E /* SMLAppModelController.m */,
 				1A7CD7491A8AAC1F00640E2E /* Main.storyboard */,
 				1A7CD74C1A8AAC1F00640E2E /* Images.xcassets */,
 				1A7CD74E1A8AAC1F00640E2E /* LaunchScreen.xib */,
@@ -235,6 +236,10 @@
 		1A7CD7B41A8ABC8300640E2E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1AE019CD1AA323C200E67315 /* SMLPetsTableViewController.h */,
+				1AE019CE1AA323C200E67315 /* SMLPetsTableViewController.m */,
+				1AE019CA1AA3238B00E67315 /* SMLCardsViewController.h */,
+				1AE019CB1AA3238B00E67315 /* SMLCardsViewController.m */,
 				1A0281FD1A8BE3F2006AA051 /* SMLPetCardViewController.h */,
 				1A0281FE1A8BE3F2006AA051 /* SMLPetCardViewController.m */,
 				1A4B93181A9330C200952AE4 /* SMLAddPetViewController.h */,
@@ -246,8 +251,8 @@
 		1A7CD7B81A8ABD0000640E2E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				1A7CD7B91A8ABD3800640E2E /* SMLPetCardViewModel.h */,
-				1A7CD7BA1A8ABD3800640E2E /* SMLPetCardViewModel.m */,
+				1A7CD7B91A8ABD3800640E2E /* SMLPetViewModel.h */,
+				1A7CD7BA1A8ABD3800640E2E /* SMLPetViewModel.m */,
 				1A02820B1A8C8D40006AA051 /* SMLBasicCellModel.h */,
 				1A02820D1A8C8E3F006AA051 /* SMLFeedingEventViewModel.h */,
 				1A02820E1A8C8E3F006AA051 /* SMLFeedingEventViewModel.m */,
@@ -411,9 +416,9 @@
 				1A344B001A9518870018ADD0 /* SMLMeal+Ingestion.m in Sources */,
 				1A344B061A95198D0018ADD0 /* SMLFeedingEvent.m in Sources */,
 				1A7CD73F1A8AAC1F00640E2E /* AppDelegate.m in Sources */,
-				1A7CD7BB1A8ABD3800640E2E /* SMLPetCardViewModel.m in Sources */,
+				1A7CD7BB1A8ABD3800640E2E /* SMLPetViewModel.m in Sources */,
 				1A4B92D51A927E0C00952AE4 /* SMLPet+Ingestion.m in Sources */,
-				1A7CD7481A8AAC1F00640E2E /* SMLModelController.m in Sources */,
+				1A7CD7481A8AAC1F00640E2E /* SMLAppModelController.m in Sources */,
 				1A7CD73C1A8AAC1F00640E2E /* main.m in Sources */,
 				1A0281FF1A8BE3F2006AA051 /* SMLPetCardViewController.m in Sources */,
 				1A02820F1A8C8E3F006AA051 /* SMLFeedingEventViewModel.m in Sources */,
@@ -422,10 +427,11 @@
 				1A344B0C1A9527690018ADD0 /* SMLFeedingEvent+Ingestion.m in Sources */,
 				1A344B0F1A9535FF0018ADD0 /* UIViewController+SML.m in Sources */,
 				1A4B931A1A9330C200952AE4 /* SMLAddPetViewController.m in Sources */,
+				1AE019CC1AA3238B00E67315 /* SMLCardsViewController.m in Sources */,
 				1A344B031A95198D0018ADD0 /* SMLPet.m in Sources */,
 				1AC821901A8C9660002A57F9 /* SMLStandardTableViewCell.m in Sources */,
 				1A7CD7A91A8AB1C600640E2E /* PetFeeder.xcdatamodeld in Sources */,
-				1A7CD7421A8AAC1F00640E2E /* SMLRootViewController.m in Sources */,
+				1AE019CF1AA323C200E67315 /* SMLPetsTableViewController.m in Sources */,
 				1A02820A1A8C884E006AA051 /* SMLTableViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

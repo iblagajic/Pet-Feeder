@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class SMLPetCardViewModel;
+@class SMLPetViewModel;
 
 @interface SMLTableViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-- (instancetype)initWithViewModel:(SMLPetCardViewModel*)viewModel;
+- (instancetype)initWithViewModel:(SMLPetViewModel*)viewModel;
 
 @end

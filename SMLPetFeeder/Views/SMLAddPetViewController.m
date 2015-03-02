@@ -7,7 +7,7 @@
 //
 
 #import "SMLAddPetViewController.h"
-#import "SMLModelController.h"
+#import "SMLAppModelController.h"
 #import "UIViewController+SML.h"
 
 @interface SMLAddPetViewController ()
@@ -31,7 +31,7 @@
     self.plusButton.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.3];
 }
 
-- (void)setViewModel:(SMLPetCardViewModel *)viewModel {
+- (void)setViewModel:(SMLPetViewModel *)viewModel {
     _viewModel = viewModel;
 }
 

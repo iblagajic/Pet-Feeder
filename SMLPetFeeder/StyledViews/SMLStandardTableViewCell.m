@@ -10,17 +10,10 @@
 
 @implementation SMLStandardTableViewCell
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self setupView];
-    }
-    return self;
-}
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    [self setupView];
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.roundImageView.layer.cornerRadius = CGRectGetHeight(self.roundImageView.bounds)/2;
+    self.roundImageView.clipsToBounds = YES;
 }
 
 #pragma mark - Setup
@@ -31,12 +24,9 @@
     if ([self.cellModel respondsToSelector:@selector(subtitle)]) {
         self.subtitleLabel.text = self.cellModel.subtitle;
     }
-}
-
-- (void)setupView {
-    self.backgroundColor = [UIColor clearColor];
-    self.titleLabel.textColor = [UIColor whiteColor];
-    self.subtitleLabel.textColor = [UIColor colorWithWhite:1.0 alpha:0.9];
+    if ([self.cellModel respondsToSelector:@selector(image)]) {
+        self.roundImageView.image = self.cellModel.image;
+    }
 }
 
 @end
