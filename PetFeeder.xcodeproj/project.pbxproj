@@ -67,7 +67,7 @@
 		1A344B0E1A9535FF0018ADD0 /* UIViewController+SML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SML.m"; sourceTree = "<group>"; };
 		1A4B92D31A927E0C00952AE4 /* SMLPet+Ingestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMLPet+Ingestion.h"; sourceTree = "<group>"; };
 		1A4B92D41A927E0C00952AE4 /* SMLPet+Ingestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SMLPet+Ingestion.m"; sourceTree = "<group>"; };
-		1A7CD7361A8AAC1F00640E2E /* SMLPetFeeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMLPetFeeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A7CD7361A8AAC1F00640E2E /* PetFeeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetFeeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7CD73A1A8AAC1F00640E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7CD73B1A8AAC1F00640E2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A7CD73D1A8AAC1F00640E2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		1A7CD74A1A8AAC1F00640E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A7CD74C1A8AAC1F00640E2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1A7CD74F1A8AAC1F00640E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1A7CD7551A8AAC1F00640E2E /* SMLPetFeederTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMLPetFeederTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A7CD7551A8AAC1F00640E2E /* PetFeederTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetFeederTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7CD75A1A8AAC1F00640E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7CD75B1A8AAC1F00640E2E /* SMLPetFeederTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMLPetFeederTests.m; sourceTree = "<group>"; };
 		1A7CD7A81A8AB1C600640E2E /* PetFeeder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetFeeder.xcdatamodel; sourceTree = "<group>"; };
@@ -156,8 +156,8 @@
 		1A7CD7371A8AAC1F00640E2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A7CD7361A8AAC1F00640E2E /* SMLPetFeeder.app */,
-				1A7CD7551A8AAC1F00640E2E /* SMLPetFeederTests.xctest */,
+				1A7CD7361A8AAC1F00640E2E /* PetFeeder.app */,
+				1A7CD7551A8AAC1F00640E2E /* PetFeederTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,9 +277,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A7CD7351A8AAC1F00640E2E /* SMLPetFeeder */ = {
+		1A7CD7351A8AAC1F00640E2E /* PetFeeder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A7CD75F1A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "SMLPetFeeder" */;
+			buildConfigurationList = 1A7CD75F1A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "PetFeeder" */;
 			buildPhases = (
 				9ACE36488365C9EBCFEDF8BF /* Check Pods Manifest.lock */,
 				1A7CD7321A8AAC1F00640E2E /* Sources */,
@@ -291,14 +291,14 @@
 			);
 			dependencies = (
 			);
-			name = SMLPetFeeder;
+			name = PetFeeder;
 			productName = SMLPetFeeder;
-			productReference = 1A7CD7361A8AAC1F00640E2E /* SMLPetFeeder.app */;
+			productReference = 1A7CD7361A8AAC1F00640E2E /* PetFeeder.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1A7CD7541A8AAC1F00640E2E /* SMLPetFeederTests */ = {
+		1A7CD7541A8AAC1F00640E2E /* PetFeederTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A7CD7621A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "SMLPetFeederTests" */;
+			buildConfigurationList = 1A7CD7621A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "PetFeederTests" */;
 			buildPhases = (
 				1A7CD7511A8AAC1F00640E2E /* Sources */,
 				1A7CD7521A8AAC1F00640E2E /* Frameworks */,
@@ -309,9 +309,9 @@
 			dependencies = (
 				1A7CD7571A8AAC1F00640E2E /* PBXTargetDependency */,
 			);
-			name = SMLPetFeederTests;
+			name = PetFeederTests;
 			productName = SMLPetFeederTests;
-			productReference = 1A7CD7551A8AAC1F00640E2E /* SMLPetFeederTests.xctest */;
+			productReference = 1A7CD7551A8AAC1F00640E2E /* PetFeederTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -332,7 +332,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1A7CD7311A8AAC1F00640E2E /* Build configuration list for PBXProject "SMLPetFeeder" */;
+			buildConfigurationList = 1A7CD7311A8AAC1F00640E2E /* Build configuration list for PBXProject "PetFeeder" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -345,8 +345,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A7CD7351A8AAC1F00640E2E /* SMLPetFeeder */,
-				1A7CD7541A8AAC1F00640E2E /* SMLPetFeederTests */,
+				1A7CD7351A8AAC1F00640E2E /* PetFeeder */,
+				1A7CD7541A8AAC1F00640E2E /* PetFeederTests */,
 			);
 		};
 /* End PBXProject section */
@@ -445,7 +445,7 @@
 /* Begin PBXTargetDependency section */
 		1A7CD7571A8AAC1F00640E2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1A7CD7351A8AAC1F00640E2E /* SMLPetFeeder */;
+			target = 1A7CD7351A8AAC1F00640E2E /* PetFeeder */;
 			targetProxy = 1A7CD7561A8AAC1F00640E2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -554,7 +554,7 @@
 				GCC_PREFIX_HEADER = SMLPetFeeder/PrefixHeader.pch;
 				INFOPLIST_FILE = SMLPetFeeder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PetFeeder;
 				PROVISIONING_PROFILE = "24f8598d-4390-484c-bd74-c777448d1640";
 			};
 			name = Debug;
@@ -567,7 +567,7 @@
 				GCC_PREFIX_HEADER = SMLPetFeeder/PrefixHeader.pch;
 				INFOPLIST_FILE = SMLPetFeeder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PetFeeder;
 				PROVISIONING_PROFILE = "24f8598d-4390-484c-bd74-c777448d1640";
 			};
 			name = Release;
@@ -586,7 +586,7 @@
 				);
 				INFOPLIST_FILE = SMLPetFeederTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PetFeederTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMLPetFeeder.app/SMLPetFeeder";
 			};
 			name = Debug;
@@ -601,7 +601,7 @@
 				);
 				INFOPLIST_FILE = SMLPetFeederTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PetFeederTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMLPetFeeder.app/SMLPetFeeder";
 			};
 			name = Release;
@@ -609,7 +609,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A7CD7311A8AAC1F00640E2E /* Build configuration list for PBXProject "SMLPetFeeder" */ = {
+		1A7CD7311A8AAC1F00640E2E /* Build configuration list for PBXProject "PetFeeder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A7CD75D1A8AAC1F00640E2E /* Debug */,
@@ -618,7 +618,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A7CD75F1A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "SMLPetFeeder" */ = {
+		1A7CD75F1A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "PetFeeder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A7CD7601A8AAC1F00640E2E /* Debug */,
@@ -627,7 +627,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A7CD7621A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "SMLPetFeederTests" */ = {
+		1A7CD7621A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "PetFeederTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A7CD7631A8AAC1F00640E2E /* Debug */,

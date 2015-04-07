@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1A7CD7351A8AAC1F00640E2E"
-               BuildableName = "SMLPetFeeder.app"
-               BlueprintName = "SMLPetFeeder"
-               ReferencedContainer = "container:SMLPetFeeder.xcodeproj">
+               BuildableName = "PetFeeder.app"
+               BlueprintName = "PetFeeder"
+               ReferencedContainer = "container:PetFeeder.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1A7CD7541A8AAC1F00640E2E"
-               BuildableName = "SMLPetFeederTests.xctest"
-               BlueprintName = "SMLPetFeederTests"
-               ReferencedContainer = "container:SMLPetFeeder.xcodeproj">
+               BuildableName = "PetFeederTests.xctest"
+               BlueprintName = "PetFeederTests"
+               ReferencedContainer = "container:PetFeeder.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1A7CD7541A8AAC1F00640E2E"
-               BuildableName = "SMLPetFeederTests.xctest"
-               BlueprintName = "SMLPetFeederTests"
-               ReferencedContainer = "container:SMLPetFeeder.xcodeproj">
+               BuildableName = "PetFeederTests.xctest"
+               BlueprintName = "PetFeederTests"
+               ReferencedContainer = "container:PetFeeder.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1A7CD7351A8AAC1F00640E2E"
-            BuildableName = "SMLPetFeeder.app"
-            BlueprintName = "SMLPetFeeder"
-            ReferencedContainer = "container:SMLPetFeeder.xcodeproj">
+            BuildableName = "PetFeeder.app"
+            BlueprintName = "PetFeeder"
+            ReferencedContainer = "container:PetFeeder.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -72,13 +72,14 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1A7CD7351A8AAC1F00640E2E"
-            BuildableName = "SMLPetFeeder.app"
-            BlueprintName = "SMLPetFeeder"
-            ReferencedContainer = "container:SMLPetFeeder.xcodeproj">
+            BuildableName = "PetFeeder.app"
+            BlueprintName = "PetFeeder"
+            ReferencedContainer = "container:PetFeeder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -90,13 +91,14 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1A7CD7351A8AAC1F00640E2E"
-            BuildableName = "SMLPetFeeder.app"
-            BlueprintName = "SMLPetFeeder"
-            ReferencedContainer = "container:SMLPetFeeder.xcodeproj">
+            BuildableName = "PetFeeder.app"
+            BlueprintName = "PetFeeder"
+            ReferencedContainer = "container:PetFeeder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
