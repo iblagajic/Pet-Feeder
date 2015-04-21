@@ -7,7 +7,6 @@
 //
 
 #import "SMLPet.h"
-#import <UIKit/UIKit.h>
 
 @class SMLFeedingEvent;
 

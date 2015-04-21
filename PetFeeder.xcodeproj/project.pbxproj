@@ -559,6 +559,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = SMLPetFeeder/PrefixHeader.pch;
 				INFOPLIST_FILE = SMLPetFeeder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PetFeeder;
 				PROVISIONING_PROFILE = "24f8598d-4390-484c-bd74-c777448d1640";
@@ -572,6 +573,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = SMLPetFeeder/PrefixHeader.pch;
 				INFOPLIST_FILE = SMLPetFeeder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PetFeeder;
 				PROVISIONING_PROFILE = "24f8598d-4390-484c-bd74-c777448d1640";

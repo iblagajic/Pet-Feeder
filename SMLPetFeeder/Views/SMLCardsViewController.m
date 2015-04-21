@@ -8,7 +8,6 @@
 //
 
 #import "SMLCardsViewController.h"
-#import "UIViewController+SML.h"
 #import "SMLAppModelController.h"
 #import "SMLPetViewModel.h"
 #import "SMLPetCardViewController.h"
@@ -41,7 +40,9 @@
     self.pageControl.pageIndicatorTintColor = [UIColor colorWithWhite:0.0 alpha:0.2];
     self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithWhite:0.0 alpha:0.9];
     
-    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
+                                                              navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
+                                                                            options:nil];
     self.pageViewController.view.frame = self.container.bounds;
     self.pageViewController.delegate = self;
     self.pageViewController.dataSource = self;
@@ -74,7 +75,8 @@
 
 - (void)refreshPageViewControllerWithIndex:(NSInteger)index animated:(BOOL)animated {
     SimpleBlock block = ^(){
-        UIViewController *startingViewController = [self viewControllerForViewModel:[self.viewModel modelAtIndex:index] storyboard:self.storyboard];
+        UIViewController *startingViewController = [self viewControllerForViewModel:[self.viewModel modelAtIndex:index]
+                                                                         storyboard:self.storyboard];
         NSArray *viewControllers = @[startingViewController];
         [self.pageViewController setViewControllers:viewControllers
                                           direction:UIPageViewControllerNavigationDirectionForward
@@ -87,8 +89,7 @@
         [self fadeOutView:self.pageViewController.view
                completion:^{
                    block();
-                   [self fadeInView:self.pageViewController.view
-                         completion:nil];
+                   [self fadeInView:self.pageViewController.view];
                }];
     } else {
         block();
@@ -108,7 +109,10 @@
 
 #pragma mark - UIPageViewControllerDelegate
 
-- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
+- (void)pageViewController:(UIPageViewController *)pageViewController
+        didFinishAnimating:(BOOL)finished
+   previousViewControllers:(NSArray *)previousViewControllers
+       transitionCompleted:(BOOL)completed {
     self.viewModel.currentPetModel = self.currentViewModel;
     [self refreshBackground];
     [self refreshPageControl];
@@ -116,12 +120,14 @@
 
 #pragma mark - UIPageViewControllerDataSource
 
-- (UIViewController *)pageViewController:(UIPageViewController*)pageViewController viewControllerBeforeViewController:(SMLPetCardViewController*)viewController {
+- (UIViewController *)pageViewController:(UIPageViewController*)pageViewController
+      viewControllerBeforeViewController:(SMLPetCardViewController*)viewController {
     SMLPetViewModel *previousViewModel = [self.viewModel modelBeforeViewModel:viewController.viewModel];
     return [self viewControllerForViewModel:previousViewModel storyboard:viewController.storyboard];
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController*)pageViewController viewControllerAfterViewController:(SMLPetCardViewController*)viewController {
+- (UIViewController *)pageViewController:(UIPageViewController*)pageViewController
+       viewControllerAfterViewController:(SMLPetCardViewController*)viewController {
     SMLPetViewModel *nextModel = [self.viewModel modelAfterViewModel:viewController.viewModel];
     return [self viewControllerForViewModel:nextModel storyboard:viewController.storyboard];
 }
@@ -129,7 +135,7 @@
 #pragma mark - Actions
 
 - (IBAction)edit:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated];
 }
 
 #pragma mark - Helpers

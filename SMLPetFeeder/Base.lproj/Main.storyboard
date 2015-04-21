@@ -95,7 +95,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="497.59999999999997" y="450.61333333333334"/>
+            <point key="canvasLocation" x="563" y="449"/>
         </scene>
         <!--Pets Table View Controller-->
         <scene sceneID="EXm-BZ-iK1">
@@ -109,8 +109,8 @@
                             <rect key="frame" x="0.0" y="110" width="320" height="64"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibx-CZ-0fT">
-                                    <rect key="frame" x="268" y="28" width="64" height="28"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibx-CZ-0fT">
+                                    <rect key="frame" x="128" y="28" width="64" height="28"/>
                                     <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
                                     <state key="normal" title="Add Pet">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -260,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPC-vx-IW7" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96.533333333333331" y="450.61333333333334"/>
+            <point key="canvasLocation" x="165" y="449"/>
         </scene>
     </scenes>
     <resources>

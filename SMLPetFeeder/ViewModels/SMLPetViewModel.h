@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "SMLBasicCellModel.h"
 #import "SMLStandardTableViewModel.h"
 

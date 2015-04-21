@@ -27,7 +27,9 @@
 
 @implementation SMLPetViewModel
 
-- (instancetype)initWithPet:(SMLPet*)pet dataController:(SMLDataController*)dataController dateFormatter:(NSDateFormatter*)dateFormatter {
+- (instancetype)initWithPet:(SMLPet*)pet
+             dataController:(SMLDataController*)dataController
+              dateFormatter:(NSDateFormatter*)dateFormatter {
     self = [super init];
     if (self) {
         self.pet = pet;
@@ -81,7 +83,8 @@
 - (void)loadCellModels {
     NSMutableArray *array = [NSMutableArray new];
     for (SMLFeedingEvent *feedingEvent in self.feedingEvents) {
-        SMLFeedingEventViewModel *viewModel = [[SMLFeedingEventViewModel alloc] initWithFeedingEvent:feedingEvent dateFormatter:self.dateFormatter];
+        SMLFeedingEventViewModel *viewModel = [[SMLFeedingEventViewModel alloc] initWithFeedingEvent:feedingEvent
+                                                                                       dateFormatter:self.dateFormatter];
         [array addObject:viewModel];
     }
     self.cellModels = array;
@@ -103,7 +106,9 @@
 - (NSArray*)mealAlertActions {
     NSMutableArray *actions = [NSMutableArray new];
     for (SMLMeal *meal in self.dataController.allMeals) {
-        UIAlertAction *action = [UIAlertAction actionWithTitle:meal.text style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UIAlertAction *action = [UIAlertAction actionWithTitle:meal.text
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction *action) {
             [self addFeedingEventWithMeal:meal];
         }];
         [actions addObject:action];

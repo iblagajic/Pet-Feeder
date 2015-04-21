@@ -8,11 +8,9 @@
 
 #import "SMLAppModelController.h"
 #import "SMLDataController.h"
-#import "SMLPetCardViewController.h"
 #import "SMLPetViewModel.h"
-#import "SMLPet.h"
-#import "SMLFeedingEvent.h"
-#import "SMLMeal.h"
+
+@class SMLPet;
 
 @interface SMLAppModelController ()
 
@@ -104,7 +102,9 @@
 - (NSArray*)cardModelsWithPets:(NSArray*)pets {
     NSMutableArray *cardModels = [NSMutableArray new];
     for (SMLPet *pet in pets) {
-        SMLPetViewModel *petCardViewModel = [[SMLPetViewModel alloc] initWithPet:pet dataController:self.dataController dateFormatter:self.dateFormatter];
+        SMLPetViewModel *petCardViewModel = [[SMLPetViewModel alloc] initWithPet:pet
+                                                                  dataController:self.dataController
+                                                                   dateFormatter:self.dateFormatter];
         [petCardViewModel.updatedImage subscribeNext:^(id x) {
             [self.updatedImage sendNext:@([self.cardModels indexOfObject:petCardViewModel])];
         }];

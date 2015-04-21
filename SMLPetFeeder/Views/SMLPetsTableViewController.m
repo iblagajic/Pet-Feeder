@@ -9,8 +9,6 @@
 #import "SMLPetsTableViewController.h"
 #import "SMLAppModelController.h"
 #import "SMLStandardTableViewCell.h"
-#import "SMLPetViewModel.h"
-#import "UIViewController+SML.h"
 #import "SMLCardsViewController.h"
 #import "SMLTableViewDataSource.h"
 
@@ -118,7 +116,7 @@
     [editAlertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
                                                             style:UIAlertActionStyleCancel
                                                           handler:^(UIAlertAction *action) {
-                                                              [self dismissViewControllerAnimated:YES completion:nil];
+                                                              [self dismissViewControllerAnimated];
                                                           }]];
     [self presentViewControllerAnimated:editAlertController];
 }

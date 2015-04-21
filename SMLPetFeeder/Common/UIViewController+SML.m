@@ -18,6 +18,10 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+- (void)fadeInView:(UIView*)view {
+    [self fadeInView:view completion:nil];
+}
+
 - (void)fadeInView:(UIView*)view completion:(SimpleBlock)completion {
     [UIView animateWithDuration:0.3
                      animations:^{
@@ -28,6 +32,10 @@
                              completion();
                          }
                      }];
+}
+
+- (void)fadeOutView:(UIView*)view {
+    [self fadeOutView:view completion:nil];
 }
 
 - (void)fadeOutView:(UIView*)view completion:(SimpleBlock)completion {
@@ -44,6 +52,10 @@
 
 - (void)presentViewControllerAnimated:(UIViewController *)viewController {
     [self presentViewController:viewController animated:YES completion:nil];
+}
+
+- (void)dismissViewControllerAnimated {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

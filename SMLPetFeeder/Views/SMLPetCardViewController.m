@@ -9,9 +9,6 @@
 #import "SMLPetCardViewController.h"
 #import "SMLPetViewModel.h"
 #import "SMLTableViewDataSource.h"
-#import "UIViewController+SML.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
-#import "EXTScope.h"
 
 @interface SMLPetCardViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -19,6 +16,7 @@
 @property (nonatomic) IBOutlet UILabel *petNameLabel;
 @property (nonatomic) IBOutlet UITableView *feedingTableView;
 @property (nonatomic) IBOutlet UIButton *feedButton;
+
 @property (nonatomic) SMLTableViewDataSource *tableViewDataSource;
 
 @end
@@ -85,46 +83,64 @@
 }
 
 - (IBAction)updateName:(id)sender {
-    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Add Pet" message:@"Add new pet name." preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Add Pet"
+                                                                              message:@"Add new pet name."
+                                                                       preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = @"Selina";
     }];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Add" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        UITextField *textField = alertController.textFields[0];
-        [self.viewModel updateName:textField.text];
-    }]];
-    [self presentViewController:alertController animated:YES completion:nil];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                                        style:UIAlertActionStyleCancel
+                                                      handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Add"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction *action) {
+                                                          UITextField *textField = alertController.textFields[0];
+                                                          [self.viewModel updateName:textField.text];
+                                                      }]];
+    [self presentViewControllerAnimated:alertController];
 }
 
 - (IBAction)feed:(id)sender {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Choose Food" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Choose Food"
+                                                                             message:nil
+                                                                      preferredStyle:UIAlertControllerStyleActionSheet];
     for (UIAlertAction *action in self.viewModel.mealAlertActions) {
         [alertController addAction:action];
     }
-    [alertController addAction:[UIAlertAction actionWithTitle:@"New" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"New"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction *action) {
         [self showAddNewMealAlert];
     }]];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
-    [self presentViewController:alertController animated:YES completion:nil];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                                        style:UIAlertActionStyleCancel
+                                                      handler:nil]];
+    [self presentViewControllerAnimated:alertController];
 }
 
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary*)info {
     [self.viewModel updateImage:[info objectForKey:UIImagePickerControllerEditedImage]];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated];
 }
 
 #pragma mark - Helpers
 
 - (void)showAddNewMealAlert {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Add New Meal" message:@"Please enter meal description (e.g. \"Dry, 20g\")" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Add New Meal"
+                                                                             message:@"Please enter meal description (e.g. \"Dry, 20g\")"
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = @"Dry food, 20g";
     }];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Add" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                                        style:UIAlertActionStyleCancel
+                                                      handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Add"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction *action) {
         UITextField *textField = alertController.textFields[0];
         if ([textField.text isEqualToString:@""]) {
             [self showErrorAlertWithMessage:@"You didn't enter meal description."];
@@ -132,31 +148,21 @@
             [self.viewModel addFeedingEventWithMealText:textField.text];
         }
     }]];
-    [self presentViewController:alertController animated:YES completion:nil];
+    [self presentViewControllerAnimated:alertController];
 }
 
 - (void)addParallaxEffect {
-    // Set vertical effect
-    UIInterpolatingMotionEffect *verticalMotionEffect =
-    [[UIInterpolatingMotionEffect alloc]
-     initWithKeyPath:@"center.y"
-     type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    UIInterpolatingMotionEffect *verticalMotionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
     verticalMotionEffect.minimumRelativeValue = @(-10);
     verticalMotionEffect.maximumRelativeValue = @(10);
     
-    // Set horizontal effect
-    UIInterpolatingMotionEffect *horizontalMotionEffect =
-    [[UIInterpolatingMotionEffect alloc]
-     initWithKeyPath:@"center.x"
-     type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    UIInterpolatingMotionEffect *horizontalMotionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
     horizontalMotionEffect.minimumRelativeValue = @(-10);
     horizontalMotionEffect.maximumRelativeValue = @(10);
     
-    // Create group to combine both
     UIMotionEffectGroup *group = [UIMotionEffectGroup new];
     group.motionEffects = @[horizontalMotionEffect, verticalMotionEffect];
     
-    // Add both effects to your view
     [self.petImageView addMotionEffect:group];
 }
 

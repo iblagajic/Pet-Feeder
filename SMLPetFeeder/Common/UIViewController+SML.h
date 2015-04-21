@@ -13,8 +13,11 @@
 @property (nonatomic, readonly) id viewModel;
 
 - (void)showErrorAlertWithMessage:(NSString*)message;
+- (void)fadeInView:(UIView*)view;
 - (void)fadeInView:(UIView*)view completion:(SimpleBlock)completion;
+- (void)fadeOutView:(UIView*)view;
 - (void)fadeOutView:(UIView*)view completion:(SimpleBlock)completion;
 - (void)presentViewControllerAnimated:(UIViewController *)viewController;
+- (void)dismissViewControllerAnimated;
 
 @end
