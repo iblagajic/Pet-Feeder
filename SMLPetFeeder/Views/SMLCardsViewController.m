@@ -28,13 +28,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor whiteColor];
-    
     [self setupPageViewController];
-    
     self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
-    
     NSUInteger index = [self.viewModel indexOfViewModel:self.viewModel.currentPetModel];
     [self refreshViewAtIndex:index animated:NO];
 }

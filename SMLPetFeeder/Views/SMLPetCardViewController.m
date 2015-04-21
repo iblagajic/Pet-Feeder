@@ -47,18 +47,9 @@
 - (void)setupView {
     self.view.backgroundColor = [UIColor clearColor];
     
-    self.petNameLabel.textColor = [UIColor whiteColor];
-    
-    self.petImageView.backgroundColor = [UIColor whiteColor];
-    self.petImageView.layer.cornerRadius = CGRectGetHeight(self.petImageView.frame)/2;
     self.petImageView.layer.masksToBounds = YES;
     self.petImageView.layer.borderColor = [UIColor blackColor].CGColor;
     self.petImageView.layer.borderWidth = 1.0;
-    
-//    self.feedButton.layer.cornerRadius = CGRectGetWidth(self.feedButton.frame)/2;
-//    self.feedButton.layer.masksToBounds = YES;
-//    self.feedButton.layer.borderColor = [UIColor whiteColor].CGColor;
-//    self.feedButton.layer.borderWidth = 2.0;
     
     self.feedingTableView.dataSource = self.tableViewDataSource;
     

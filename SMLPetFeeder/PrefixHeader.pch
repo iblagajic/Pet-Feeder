@@ -12,5 +12,6 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "EXTScope.h"
 #import "Common.h"
+#import "NSString+SML.h"
 
 #endif

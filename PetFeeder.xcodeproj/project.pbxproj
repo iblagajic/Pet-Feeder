@@ -31,6 +31,7 @@
 		1AC821901A8C9660002A57F9 /* SMLStandardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC8218F1A8C9660002A57F9 /* SMLStandardTableViewCell.m */; };
 		1AE019CC1AA3238B00E67315 /* SMLCardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE019CB1AA3238B00E67315 /* SMLCardsViewController.m */; };
 		1AE019CF1AA323C200E67315 /* SMLPetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE019CE1AA323C200E67315 /* SMLPetsTableViewController.m */; };
+		1AE277D61AE6F46A00C72960 /* NSString+SML.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE277D51AE6F46A00C72960 /* NSString+SML.m */; };
 		CC82D9E5DE338DBD2EB600EA /* libPods-SMLPetFeeder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C3FC8FA340AA2D7ED372CE /* libPods-SMLPetFeeder.a */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,8 @@
 		1AE019CB1AA3238B00E67315 /* SMLCardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLCardsViewController.m; sourceTree = "<group>"; };
 		1AE019CD1AA323C200E67315 /* SMLPetsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPetsTableViewController.h; sourceTree = "<group>"; };
 		1AE019CE1AA323C200E67315 /* SMLPetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetsTableViewController.m; sourceTree = "<group>"; };
+		1AE277D41AE6F46A00C72960 /* NSString+SML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SML.h"; sourceTree = "<group>"; };
+		1AE277D51AE6F46A00C72960 /* NSString+SML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SML.m"; sourceTree = "<group>"; };
 		242C45BF18590B9AD84A5237 /* Pods-SMLPetFeeder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLPetFeeder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder.debug.xcconfig"; sourceTree = "<group>"; };
 		92C14DFA9D527BDF0F32352A /* Pods-SMLPetFeeder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLPetFeeder.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +141,8 @@
 				1AAC39041A964E3400596D14 /* SMLImageView.h */,
 				1AAC39051A964E3400596D14 /* SMLImageView.m */,
 				1A8512AF1A9A37B000117C43 /* Common.h */,
+				1AE277D41AE6F46A00C72960 /* NSString+SML.h */,
+				1AE277D51AE6F46A00C72960 /* NSString+SML.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -428,6 +433,7 @@
 				1AC821901A8C9660002A57F9 /* SMLStandardTableViewCell.m in Sources */,
 				1A7CD7A91A8AB1C600640E2E /* PetFeeder.xcdatamodeld in Sources */,
 				1AE019CF1AA323C200E67315 /* SMLPetsTableViewController.m in Sources */,
+				1AE277D61AE6F46A00C72960 /* NSString+SML.m in Sources */,
 				1A02820A1A8C884E006AA051 /* SMLTableViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
