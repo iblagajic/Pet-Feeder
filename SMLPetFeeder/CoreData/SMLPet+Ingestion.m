@@ -30,7 +30,7 @@ static NSString * const SMLEntityName = @"SMLPet";
 
 + (BOOL)updatePet:(SMLPet*)pet withImage:(UIImage*)image context:(NSManagedObjectContext*)context {
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString * basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;;
+    NSString * basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
     NSData * binaryImageData = UIImagePNGRepresentation(image);
     NSString *imageName = [pet.name stringByAppendingString:@".png"];
     NSString *path = [basePath stringByAppendingPathComponent:imageName];

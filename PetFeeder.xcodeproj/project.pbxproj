@@ -562,7 +562,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PetFeeder;
-				PROVISIONING_PROFILE = "24f8598d-4390-484c-bd74-c777448d1640";
+				PROVISIONING_PROFILE = "5bbf69bb-d007-4085-8dda-497bb83347e2";
 			};
 			name = Debug;
 		};
@@ -576,7 +576,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PetFeeder;
-				PROVISIONING_PROFILE = "24f8598d-4390-484c-bd74-c777448d1640";
+				PROVISIONING_PROFILE = "5bbf69bb-d007-4085-8dda-497bb83347e2";
 			};
 			name = Release;
 		};

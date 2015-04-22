@@ -15,7 +15,7 @@
 @interface SMLAppModelController ()
 
 @property (nonatomic) SMLDataController *dataController;
-@property (nonatomic) NSArray *cardModels;
+@property (nonatomic) NSMutableArray *petModels;
 @property (nonatomic) NSDateFormatter *dateFormatter;
 
 @property (nonatomic) RACSubject *updatedContent;
@@ -34,18 +34,12 @@
     if (self) {
         self.dataController = [SMLDataController new];
         self.dateFormatter = [NSDateFormatter new];
-        self.dateFormatter.dateFormat = @"eee, dd";
-        self.cardModels = [self cardModelsWithPets:[self.dataController allPets]];
+        self.dateFormatter.dateFormat = @"eee dd hh:mm";
+        self.petModels = [self petModelsForPets:[self.dataController allPets]];
         
         self.updatedContent = [[RACSubject subject] setNameWithFormat:@"SMLAppModelController updatedContent"];
         self.addedPet = [[RACSubject subject] setNameWithFormat:@"SMLAppModelController addedPet"];
-        [self.addedPet subscribeNext:^(id x) {
-            [self.updatedContent sendNext:x];
-        }];
         self.removedPet = [[RACSubject subject] setNameWithFormat:@"SMLAppModelController removedPet"];
-        [self.removedPet subscribeNext:^(id x) {
-            [self.updatedContent sendNext:x];
-        }];
         self.updatedImage = [[RACSubject subject] setNameWithFormat:@"SMLAppModelController updatedImage"];
     }
     return self;
@@ -54,63 +48,81 @@
 #pragma mark - Public
 
 - (NSUInteger)count {
-    return self.cardModels.count;
+    return self.petModels.count;
 }
 
 - (SMLPetViewModel*)modelAtIndex:(NSUInteger)index {
-    if (index > self.cardModels.count-1) {
+    if (index > self.petModels.count-1) {
         return nil;
     }
-    return self.cardModels[index];
+    return self.petModels[index];
 }
 
 - (SMLPetViewModel*)modelBeforeViewModel:(SMLPetViewModel*)viewModel {
-    NSInteger index = [self.cardModels indexOfObject:viewModel];
+    NSInteger index = [self.petModels indexOfObject:viewModel];
     if (index == NSNotFound || index == 0) {
         return nil;
     }
-    return self.cardModels[index-1];
+    return self.petModels[index-1];
 }
 
 - (SMLPetViewModel*)modelAfterViewModel:(SMLPetViewModel*)viewModel {
-    NSInteger index = [self.cardModels indexOfObject:viewModel];
-    if (index == NSNotFound || index == self.cardModels.count - 1) {
+    NSInteger index = [self.petModels indexOfObject:viewModel];
+    if (index == NSNotFound || index == self.petModels.count - 1) {
         return nil;
     }
-    return self.cardModels[index+1];
+    return self.petModels[index+1];
 }
 
 - (NSUInteger)indexOfViewModel:(SMLPetViewModel*)viewModel {
-    return [self.cardModels indexOfObject:viewModel];
+    return [self.petModels indexOfObject:viewModel];
 }
 
 - (void)addNewPetWithName:(NSString*)name {
-    [self.dataController addNewPetWithName:name];
-    self.cardModels = [self cardModelsWithPets:[self.dataController allPets]];
-    [self.addedPet sendNext:@(self.cardModels.count-1)];
+    SMLPet *pet = [self.dataController addNewPetWithName:name];
+    SMLPetViewModel *petViewModel = [self petViewModelForPet:pet];
+    [self.petModels addObject:petViewModel];
+    [self.addedPet sendNext:@(self.petModels.count-1)];
 }
 
 - (void)removeObjectAtIndex:(NSUInteger)index {
     SMLPetViewModel *petModel = [self modelAtIndex:index];
+    [self.petModels removeObject:petModel];
     [self.dataController removePet:petModel.pet];
-    self.cardModels = [self cardModelsWithPets:[self.dataController allPets]];
-    [self.removedPet sendNext:@(MIN(self.cardModels.count, index))];
+    [self.removedPet sendNext:@(MIN(self.petModels.count, index))];
+}
+
+- (void)updateName:(NSString*)name forPetAtIndex:(NSInteger)index {
+    SMLPetViewModel *petModel = [self modelAtIndex:index];
+    [petModel updateName:name];
+    [self.updatedContent sendNext:@(index)];
+}
+
+- (void)updateImage:(UIImage*)image forPetAtIndex:(NSInteger)index {
+    SMLPetViewModel *petModel = [self modelAtIndex:index];
+    [petModel updateImage:image];
+    [self.updatedContent sendNext:@(index)];
 }
 
 #pragma mark - Helpers
 
-- (NSArray*)cardModelsWithPets:(NSArray*)pets {
+- (NSMutableArray*)petModelsForPets:(NSArray*)pets {
     NSMutableArray *cardModels = [NSMutableArray new];
     for (SMLPet *pet in pets) {
-        SMLPetViewModel *petCardViewModel = [[SMLPetViewModel alloc] initWithPet:pet
-                                                                  dataController:self.dataController
-                                                                   dateFormatter:self.dateFormatter];
-        [petCardViewModel.updatedImage subscribeNext:^(id x) {
-            [self.updatedImage sendNext:@([self.cardModels indexOfObject:petCardViewModel])];
-        }];
-        [cardModels addObject:petCardViewModel];
+        SMLPetViewModel *petViewModel = [self petViewModelForPet:pet];
+        [cardModels addObject:petViewModel];
     }
     return cardModels;
+}
+
+- (SMLPetViewModel*)petViewModelForPet:(SMLPet*)pet {
+    SMLPetViewModel *petViewModel = [[SMLPetViewModel alloc] initWithPet:pet
+                                                          dataController:self.dataController
+                                                           dateFormatter:self.dateFormatter];
+    [petViewModel.updatedImage subscribeNext:^(id x) {
+        [self.updatedImage sendNext:@([self.petModels indexOfObject:petViewModel])];
+    }];
+    return petViewModel;
 }
 
 @end

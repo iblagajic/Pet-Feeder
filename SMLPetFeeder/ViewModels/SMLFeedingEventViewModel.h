@@ -15,4 +15,6 @@
 
 - (instancetype)initWithFeedingEvent:(SMLFeedingEvent*)feedingEvent dateFormatter:(NSDateFormatter*)dateFormatter;
 
+- (NSString*)feedingEventString;
+
 @end

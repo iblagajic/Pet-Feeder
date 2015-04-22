@@ -29,7 +29,9 @@
 - (NSUInteger)count;
 - (SMLFeedingEventViewModel*)modelAtIndex:(NSUInteger)index;
 
+- (NSString*)lastFeedingEventString;
 - (void)addFeedingEventWithMealText:(NSString*)mealText;
+
 - (void)updateName:(NSString*)name;
 - (void)updateImage:(UIImage*)image;
 

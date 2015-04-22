@@ -11,11 +11,13 @@
 #import "SMLStandardTableViewCell.h"
 #import "SMLCardsViewController.h"
 #import "SMLTableViewDataSource.h"
+#import "SMLPetViewModel.h"
 
-@interface SMLPetsTableViewController ()
+@interface SMLPetsTableViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic) SMLAppModelController *viewModel;
 @property (nonatomic) SMLTableViewDataSource *tableViewDataSource;
+@property (nonatomic) NSInteger editingIndex;
 
 @end
 
@@ -46,6 +48,11 @@
                               withRowAnimation:UITableViewRowAnimationMiddle];
         [self setNeedsStatusBarAppearanceUpdate];
     }];
+    [self.viewModel.updatedContent subscribeNext:^(NSNumber *index) {
+        @strongify(self);
+        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForItem:index.unsignedIntegerValue inSection:0]]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
+    }];
 }
 
 #pragma mark - UITableViewDelegate
@@ -59,7 +66,7 @@
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     return @[
-             [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault
+             [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
                                                 title:@"Delete"
                                               handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
                                                   [self.viewModel removeObjectAtIndex:indexPath.row];
@@ -67,7 +74,7 @@
              [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
                                                 title:@"Edit"
                                               handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-                                                  [self edit];
+                                                  [self edit:indexPath.row];
                                               }]
              ];
 }
@@ -99,19 +106,19 @@
 
 #pragma mark - Edit
 
-- (IBAction)edit {
-    UIAlertController *editAlertController = [UIAlertController alertControllerWithTitle:@"Edit"
+- (void)edit:(NSUInteger)index {
+    UIAlertController *editAlertController = [UIAlertController alertControllerWithTitle:@"Edit Pet"
                                                                                  message:nil
                                                                           preferredStyle:UIAlertControllerStyleActionSheet];
     [editAlertController addAction:[UIAlertAction actionWithTitle:@"Rename"
                                                             style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction *action) {
-                                                              
+                                                              [self renamePetAtIndex:index];
                                                           }]];
     [editAlertController addAction:[UIAlertAction actionWithTitle:@"Change Image"
                                                             style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction *action) {
-                                                              
+                                                              [self updateImageForPetAtIndex:index];
                                                           }]];
     [editAlertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
                                                             style:UIAlertActionStyleCancel
@@ -119,6 +126,42 @@
                                                               [self dismissViewControllerAnimated];
                                                           }]];
     [self presentViewControllerAnimated:editAlertController];
+}
+
+- (void)updateImageForPetAtIndex:(NSInteger)index {
+    self.editingIndex = index;
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePicker.allowsEditing = YES;
+    imagePicker.delegate = self;
+    [self presentViewControllerAnimated:imagePicker];
+}
+
+- (void)renamePetAtIndex:(NSInteger)index {
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Rename Pet"
+                                                                              message:@"Set new pet name."
+                                                                       preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"Selina";
+        textField.text = [self.viewModel modelAtIndex:index].petName;
+    }];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                                        style:UIAlertActionStyleCancel
+                                                      handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Add"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction *action) {
+                                                          UITextField *textField = alertController.textFields[0];
+                                                          [self.viewModel updateName:textField.text forPetAtIndex:index];
+                                                      }]];
+    [self presentViewControllerAnimated:alertController];
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary*)info {
+    [self.viewModel updateImage:[info objectForKey:UIImagePickerControllerEditedImage] forPetAtIndex:self.editingIndex];
+    [self dismissViewControllerAnimated];
 }
 
 #pragma mark - Navigation

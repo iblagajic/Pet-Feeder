@@ -39,8 +39,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([self.viewModel respondsToSelector:@selector(removeObjectAtIndex:)]) {
-        if (UITableViewCellEditingStyleDelete) {
+    if (UITableViewCellEditingStyleDelete) {
+        if ([self.viewModel respondsToSelector:@selector(removeObjectAtIndex:)]) {   
             [self.viewModel removeObjectAtIndex:indexPath.row];
         }
     }

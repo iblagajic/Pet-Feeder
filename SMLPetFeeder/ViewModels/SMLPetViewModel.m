@@ -49,10 +49,6 @@
     return self.pet.name;
 }
 
-- (NSString*)title {
-    return self.petName;
-}
-
 - (UIImage*)petImage {
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString * basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;;
@@ -69,6 +65,16 @@
 
 - (SMLFeedingEventViewModel*)modelAtIndex:(NSUInteger)index {
     return self.cellModels[index];
+}
+
+#pragma mark - SMLBasicCellModel
+
+- (NSString*)title {
+    return self.petName;
+}
+
+- (UIImage*)image {
+    return self.petImage;
 }
 
 #pragma mark Feeding Events
@@ -89,6 +95,14 @@
     }
     self.cellModels = array;
     [self.updatedContent sendNext:nil];
+}
+
+- (NSString*)lastFeedingEventString {
+    SMLFeedingEventViewModel *feedingEventViewModel = [self.cellModels lastObject];
+    if (!feedingEventViewModel) {
+        return @"No feeding events";
+    }
+    return feedingEventViewModel.feedingEventString;
 }
 
 - (void)addFeedingEventWithMealText:(NSString*)mealText {

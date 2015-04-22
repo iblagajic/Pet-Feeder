@@ -25,7 +25,9 @@
         self.subtitleLabel.text = self.cellModel.subtitle;
     }
     if ([self.cellModel respondsToSelector:@selector(image)]) {
-        self.roundImageView.image = self.cellModel.image;
+        if (self.cellModel.image) {
+            self.roundImageView.image = self.cellModel.image;
+        }
     }
 }
 

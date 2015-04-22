@@ -10,14 +10,13 @@
 #import "SMLPetViewModel.h"
 #import "SMLTableViewDataSource.h"
 
-@interface SMLPetCardViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface SMLPetCardViewController ()
 
+@property (nonatomic) IBOutlet UIView *petImageContainer;
 @property (nonatomic) IBOutlet UIImageView *petImageView;
 @property (nonatomic) IBOutlet UILabel *petNameLabel;
-@property (nonatomic) IBOutlet UITableView *feedingTableView;
+@property (nonatomic) IBOutlet UILabel *lastFedLabel;
 @property (nonatomic) IBOutlet UIButton *feedButton;
-
-@property (nonatomic) SMLTableViewDataSource *tableViewDataSource;
 
 @end
 
@@ -27,8 +26,6 @@
 
 - (void)setViewModel:(SMLPetViewModel *)viewModel {
     _viewModel = viewModel;
-    
-    self.tableViewDataSource = [[SMLTableViewDataSource alloc] initWithViewModel:viewModel];
     
     @weakify(self);
     [self.viewModel.updatedContent subscribeNext:^(NSNumber *index) {
@@ -45,11 +42,9 @@
 - (void)setupView {
     self.view.backgroundColor = [UIColor clearColor];
     
-    self.petImageView.layer.masksToBounds = YES;
-    self.petImageView.layer.borderColor = [UIColor blackColor].CGColor;
-    self.petImageView.layer.borderWidth = 1.0;
-    
-    self.feedingTableView.dataSource = self.tableViewDataSource;
+    self.petImageContainer.layer.masksToBounds = YES;
+    self.petImageContainer.layer.borderColor = [UIColor blackColor].CGColor;
+    self.petImageContainer.layer.borderWidth = 1.0;
     
     [self addParallaxEffect];
     
@@ -61,7 +56,7 @@
 
 - (void)updateView {
     self.petNameLabel.text = self.viewModel.petName;
-    [self.feedingTableView reloadData];
+    self.lastFedLabel.text = self.viewModel.lastFeedingEventString;
 }
 
 - (void)updateImage {
@@ -71,35 +66,6 @@
 }
 
 #pragma mark - Actions
-
-- (IBAction)updateImage:(UILongPressGestureRecognizer*)sender {
-    if (sender.state == UIGestureRecognizerStateBegan) {
-        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        imagePicker.allowsEditing = YES;
-        imagePicker.delegate = self;
-        [self presentViewController:imagePicker animated:YES completion:nil];
-    }
-}
-
-- (IBAction)updateName:(id)sender {
-    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Add Pet"
-                                                                              message:@"Add new pet name."
-                                                                       preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-        textField.placeholder = @"Selina";
-    }];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel"
-                                                        style:UIAlertActionStyleCancel
-                                                      handler:nil]];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Add"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction *action) {
-                                                          UITextField *textField = alertController.textFields[0];
-                                                          [self.viewModel updateName:textField.text];
-                                                      }]];
-    [self presentViewControllerAnimated:alertController];
-}
 
 - (IBAction)feed:(id)sender {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Choose Food"
@@ -117,13 +83,6 @@
                                                         style:UIAlertActionStyleCancel
                                                       handler:nil]];
     [self presentViewControllerAnimated:alertController];
-}
-
-#pragma mark - UIImagePickerControllerDelegate
-
-- (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary*)info {
-    [self.viewModel updateImage:[info objectForKey:UIImagePickerControllerEditedImage]];
-    [self dismissViewControllerAnimated];
 }
 
 #pragma mark - Helpers
