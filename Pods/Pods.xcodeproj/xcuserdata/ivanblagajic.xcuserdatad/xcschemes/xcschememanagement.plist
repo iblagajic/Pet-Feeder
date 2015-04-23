@@ -4,35 +4,41 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-SMLPetFeeder-ReactiveCocoa.xcscheme</key>
+		<key>Pods-PetFeeder-ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
-		<key>Pods-SMLPetFeeder-libextobjc.xcscheme</key>
+		<key>Pods-PetFeeder-libextobjc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
-		<key>Pods-SMLPetFeeder.xcscheme</key>
+		<key>Pods-PetFeeder.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1CABC57154645902F3A3EEE9</key>
+		<key>29C6FFC1F563C585CD76CB48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53AAE7B648D8C82DEF88B619</key>
+		<key>9C82C10772498E0FB0373CEF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>72F373DCEE0F38BC043E6A45</key>
+		<key>D76815E2BFE1BE64DB908FF9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

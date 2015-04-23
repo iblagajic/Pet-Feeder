@@ -38,6 +38,8 @@
 - (void)setupView {
     self.view.backgroundColor = [UIColor clearColor];
     
+    self.petNameLabel.text = self.viewModel.petName;
+    
     self.petImageContainer.layer.masksToBounds = YES;
     self.petImageContainer.layer.borderColor = [UIColor blackColor].CGColor;
     self.petImageContainer.layer.borderWidth = 1.0;

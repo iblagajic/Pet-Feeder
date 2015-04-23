@@ -23,7 +23,6 @@
 		1A7CD74B1A8AAC1F00640E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD7491A8AAC1F00640E2E /* Main.storyboard */; };
 		1A7CD74D1A8AAC1F00640E2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD74C1A8AAC1F00640E2E /* Images.xcassets */; };
 		1A7CD7501A8AAC1F00640E2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7CD74E1A8AAC1F00640E2E /* LaunchScreen.xib */; };
-		1A7CD75C1A8AAC1F00640E2E /* SMLPetFeederTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD75B1A8AAC1F00640E2E /* SMLPetFeederTests.m */; };
 		1A7CD7A91A8AB1C600640E2E /* PetFeeder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7A71A8AB1C600640E2E /* PetFeeder.xcdatamodeld */; };
 		1A7CD7AD1A8AB27300640E2E /* SMLDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7AC1A8AB27300640E2E /* SMLDataController.m */; };
 		1A7CD7BB1A8ABD3800640E2E /* SMLPetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7CD7BA1A8ABD3800640E2E /* SMLPetViewModel.m */; };
@@ -32,21 +31,10 @@
 		1AE019CC1AA3238B00E67315 /* SMLCardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE019CB1AA3238B00E67315 /* SMLCardsViewController.m */; };
 		1AE019CF1AA323C200E67315 /* SMLPetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE019CE1AA323C200E67315 /* SMLPetsTableViewController.m */; };
 		1AE277D61AE6F46A00C72960 /* NSString+SML.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE277D51AE6F46A00C72960 /* NSString+SML.m */; };
-		CC82D9E5DE338DBD2EB600EA /* libPods-SMLPetFeeder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C3FC8FA340AA2D7ED372CE /* libPods-SMLPetFeeder.a */; };
+		FF1B3DAA090976C9FAFDAC2B /* libPods-PetFeeder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CF1CCE132CF8497245418E /* libPods-PetFeeder.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1A7CD7561A8AAC1F00640E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A7CD72E1A8AAC1F00640E2E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1A7CD7351A8AAC1F00640E2E;
-			remoteInfo = SMLPetFeeder;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		10C3FC8FA340AA2D7ED372CE /* libPods-SMLPetFeeder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMLPetFeeder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0281FD1A8BE3F2006AA051 /* SMLPetCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLPetCardViewController.h; sourceTree = "<group>"; };
 		1A0281FE1A8BE3F2006AA051 /* SMLPetCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetCardViewController.m; sourceTree = "<group>"; };
 		1A0282081A8C884E006AA051 /* SMLTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLTableViewDataSource.h; sourceTree = "<group>"; };
@@ -78,7 +66,6 @@
 		1A7CD74A1A8AAC1F00640E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A7CD74C1A8AAC1F00640E2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1A7CD74F1A8AAC1F00640E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1A7CD7551A8AAC1F00640E2E /* PetFeederTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetFeederTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7CD75A1A8AAC1F00640E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7CD75B1A8AAC1F00640E2E /* SMLPetFeederTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMLPetFeederTests.m; sourceTree = "<group>"; };
 		1A7CD7A81A8AB1C600640E2E /* PetFeeder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetFeeder.xcdatamodel; sourceTree = "<group>"; };
@@ -99,8 +86,9 @@
 		1AE019CE1AA323C200E67315 /* SMLPetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLPetsTableViewController.m; sourceTree = "<group>"; };
 		1AE277D41AE6F46A00C72960 /* NSString+SML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SML.h"; sourceTree = "<group>"; };
 		1AE277D51AE6F46A00C72960 /* NSString+SML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SML.m"; sourceTree = "<group>"; };
-		242C45BF18590B9AD84A5237 /* Pods-SMLPetFeeder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLPetFeeder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder.debug.xcconfig"; sourceTree = "<group>"; };
-		92C14DFA9D527BDF0F32352A /* Pods-SMLPetFeeder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLPetFeeder.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder.release.xcconfig"; sourceTree = "<group>"; };
+		3E635BD33720DA0E81361B8B /* Pods-PetFeeder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFeeder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PetFeeder/Pods-PetFeeder.debug.xcconfig"; sourceTree = "<group>"; };
+		B2CF1CCE132CF8497245418E /* libPods-PetFeeder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PetFeeder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E364983B5159B5950563E601 /* Pods-PetFeeder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFeeder.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetFeeder/Pods-PetFeeder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,14 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC82D9E5DE338DBD2EB600EA /* libPods-SMLPetFeeder.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1A7CD7521A8AAC1F00640E2E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				FF1B3DAA090976C9FAFDAC2B /* libPods-PetFeeder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				1A7CD7361A8AAC1F00640E2E /* PetFeeder.app */,
-				1A7CD7551A8AAC1F00640E2E /* PetFeederTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,7 +245,7 @@
 		2D5ADBB68F9699C8D13662A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				10C3FC8FA340AA2D7ED372CE /* libPods-SMLPetFeeder.a */,
+				B2CF1CCE132CF8497245418E /* libPods-PetFeeder.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -273,8 +253,8 @@
 		6EF4D842C97203BFEC9AC4E4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				242C45BF18590B9AD84A5237 /* Pods-SMLPetFeeder.debug.xcconfig */,
-				92C14DFA9D527BDF0F32352A /* Pods-SMLPetFeeder.release.xcconfig */,
+				3E635BD33720DA0E81361B8B /* Pods-PetFeeder.debug.xcconfig */,
+				E364983B5159B5950563E601 /* Pods-PetFeeder.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -301,24 +281,6 @@
 			productReference = 1A7CD7361A8AAC1F00640E2E /* PetFeeder.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1A7CD7541A8AAC1F00640E2E /* PetFeederTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1A7CD7621A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "PetFeederTests" */;
-			buildPhases = (
-				1A7CD7511A8AAC1F00640E2E /* Sources */,
-				1A7CD7521A8AAC1F00640E2E /* Frameworks */,
-				1A7CD7531A8AAC1F00640E2E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1A7CD7571A8AAC1F00640E2E /* PBXTargetDependency */,
-			);
-			name = PetFeederTests;
-			productName = SMLPetFeederTests;
-			productReference = 1A7CD7551A8AAC1F00640E2E /* PetFeederTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -330,10 +292,6 @@
 				TargetAttributes = {
 					1A7CD7351A8AAC1F00640E2E = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					1A7CD7541A8AAC1F00640E2E = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 1A7CD7351A8AAC1F00640E2E;
 					};
 				};
 			};
@@ -351,7 +309,6 @@
 			projectRoot = "";
 			targets = (
 				1A7CD7351A8AAC1F00640E2E /* PetFeeder */,
-				1A7CD7541A8AAC1F00640E2E /* PetFeederTests */,
 			);
 		};
 /* End PBXProject section */
@@ -364,13 +321,6 @@
 				1A7CD74B1A8AAC1F00640E2E /* Main.storyboard in Resources */,
 				1A7CD7501A8AAC1F00640E2E /* LaunchScreen.xib in Resources */,
 				1A7CD74D1A8AAC1F00640E2E /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1A7CD7531A8AAC1F00640E2E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMLPetFeeder/Pods-SMLPetFeeder-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetFeeder/Pods-PetFeeder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9ACE36488365C9EBCFEDF8BF /* Check Pods Manifest.lock */ = {
@@ -438,23 +388,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1A7CD7511A8AAC1F00640E2E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A7CD75C1A8AAC1F00640E2E /* SMLPetFeederTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1A7CD7571A8AAC1F00640E2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1A7CD7351A8AAC1F00640E2E /* PetFeeder */;
-			targetProxy = 1A7CD7561A8AAC1F00640E2E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1A7CD7491A8AAC1F00640E2E /* Main.storyboard */ = {
@@ -554,7 +488,7 @@
 		};
 		1A7CD7601A8AAC1F00640E2E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 242C45BF18590B9AD84A5237 /* Pods-SMLPetFeeder.debug.xcconfig */;
+			baseConfigurationReference = 3E635BD33720DA0E81361B8B /* Pods-PetFeeder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = SMLPetFeeder/PrefixHeader.pch;
@@ -568,7 +502,7 @@
 		};
 		1A7CD7611A8AAC1F00640E2E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92C14DFA9D527BDF0F32352A /* Pods-SMLPetFeeder.release.xcconfig */;
+			baseConfigurationReference = E364983B5159B5950563E601 /* Pods-PetFeeder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = SMLPetFeeder/PrefixHeader.pch;
@@ -577,40 +511,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PetFeeder;
 				PROVISIONING_PROFILE = "5bbf69bb-d007-4085-8dda-497bb83347e2";
-			};
-			name = Release;
-		};
-		1A7CD7631A8AAC1F00640E2E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SMLPetFeederTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = PetFeederTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMLPetFeeder.app/SMLPetFeeder";
-			};
-			name = Debug;
-		};
-		1A7CD7641A8AAC1F00640E2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SMLPetFeederTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = PetFeederTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMLPetFeeder.app/SMLPetFeeder";
 			};
 			name = Release;
 		};
@@ -631,15 +531,6 @@
 			buildConfigurations = (
 				1A7CD7601A8AAC1F00640E2E /* Debug */,
 				1A7CD7611A8AAC1F00640E2E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1A7CD7621A8AAC1F00640E2E /* Build configuration list for PBXNativeTarget "PetFeederTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1A7CD7631A8AAC1F00640E2E /* Debug */,
-				1A7CD7641A8AAC1F00640E2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
