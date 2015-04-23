@@ -103,7 +103,7 @@
 #pragma mark Remove
 
 - (void)removePet:(SMLPet*)pet {
-    [self.managedObjectContext deleteObject:pet];
+    [SMLPet removePet:pet context:self.managedObjectContext];
     [self saveContext];
 }
 

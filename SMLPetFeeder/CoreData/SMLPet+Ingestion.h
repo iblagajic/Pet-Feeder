@@ -17,5 +17,6 @@
 + (void)updatePet:(SMLPet*)pet withName:(NSString*)name context:(NSManagedObjectContext*)context;
 + (BOOL)updatePet:(SMLPet*)pet withImage:(UIImage*)image context:(NSManagedObjectContext*)context;
 + (void)updatePet:(SMLPet *)pet withFeedingEvent:(SMLFeedingEvent*)feedingEvent context:(NSManagedObjectContext*)context;
++ (void)removePet:(SMLPet*)pet context:(NSManagedObjectContext*)context;
 
 @end

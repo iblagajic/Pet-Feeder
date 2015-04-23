@@ -16,7 +16,8 @@
 
 @interface SMLPetViewModel : NSObject <SMLBasicCellModel, SMLStandardTableViewModel>
 
-@property (nonatomic, readonly) RACSubject *updatedContent;
+@property (nonatomic, readonly) RACSubject *updatedFeedingEvents;
+@property (nonatomic, readonly) RACSubject *updatedName;
 @property (nonatomic, readonly) RACSubject *updatedImage;
 
 @property (nonatomic, readonly) SMLPet *pet;

@@ -21,7 +21,13 @@ static NSString * const SMLEntityName = @"SMLPet";
 }
 
 + (NSArray*)allPetsInContext:(NSManagedObjectContext*)context {
-    return [SMLPet petsWithName:nil context:context];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:SMLEntityName];
+    NSError *err;
+    NSArray *allPets = [context executeFetchRequest:request error:&err];
+    if (err) {
+        NSLog(@"Error fetching pets: %@", err.localizedDescription);
+    }
+    return allPets;
 }
 
 + (void)updatePet:(SMLPet*)pet withName:(NSString*)name context:(NSManagedObjectContext*)context {
@@ -45,24 +51,31 @@ static NSString * const SMLEntityName = @"SMLPet";
     [pet addFeedingEventsObject:feedingEvent];
 }
 
+#pragma mark - Remove
+
++ (void)removePet:(SMLPet*)petToRemove context:(NSManagedObjectContext*)context {
+    [[NSFileManager defaultManager] removeItemAtPath:[SMLPet imagePathForPet:petToRemove] error:nil];
+    [context deleteObject:petToRemove];
+    NSArray *pets = [self allPetsInContext:context];
+    for (SMLPet *pet in pets) {
+        if (pet.ordinal > petToRemove.ordinal) {
+            pet.ordinal = @(pet.ordinal.integerValue - 1);
+        }
+    }
+}
+
 #pragma mark - Helpers
 
 + (SMLPet*)newPetInContext:(NSManagedObjectContext*)context {
     return [NSEntityDescription insertNewObjectForEntityForName:SMLEntityName inManagedObjectContext:context];
 }
 
-+ (NSArray*)petsWithName:(NSString*)name context:(NSManagedObjectContext*)context {
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:SMLEntityName];
-    // If name is provided, filter. If not, return all.
-    if (name) {
-        request.predicate = [NSPredicate predicateWithFormat:@"name = %@", name];
-    }
-    NSError *err;
-    NSArray *petsWithName = [context executeFetchRequest:request error:&err];
-    if (err) {
-        NSLog(@"Error fetching pet: %@", err.localizedDescription);
-    }
-    return petsWithName;
++ (NSString*)imagePathForPet:(SMLPet*)pet {
+    NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString * basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    NSString *imageName = [pet.name stringByAppendingString:@".png"];
+    NSString *path = [basePath stringByAppendingPathComponent:imageName];
+    return path;
 }
 
 @end

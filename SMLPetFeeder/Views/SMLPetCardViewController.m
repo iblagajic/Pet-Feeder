@@ -28,13 +28,9 @@
     _viewModel = viewModel;
     
     @weakify(self);
-    [self.viewModel.updatedContent subscribeNext:^(NSNumber *index) {
+    [self.viewModel.updatedFeedingEvents subscribeNext:^(NSNumber *index) {
         @strongify(self);
         [self updateView];
-    }];
-    [self.viewModel.updatedImage subscribeNext:^(id x) {
-        @strongify(self);
-        [self updateImage];
     }];
     [self setupView];
 }
@@ -55,7 +51,6 @@
 #pragma mark - Update
 
 - (void)updateView {
-    self.petNameLabel.text = self.viewModel.petName;
     self.lastFedLabel.text = self.viewModel.lastFeedingEventString;
 }
 

@@ -20,7 +20,8 @@
 @property (nonatomic) NSArray *cellModels;
 @property (nonatomic) NSDateFormatter *dateFormatter;
 
-@property (nonatomic) RACSubject *updatedContent;
+@property (nonatomic) RACSubject *updatedFeedingEvents;
+@property (nonatomic) RACSubject *updatedName;
 @property (nonatomic) RACSubject *updatedImage;
 
 @end
@@ -34,7 +35,8 @@
     if (self) {
         self.pet = pet;
         self.dataController = dataController;
-        self.updatedContent = [[RACSubject subject] setNameWithFormat:@"SMLPetViewModel updatedContent"];
+        self.updatedFeedingEvents = [[RACSubject subject] setNameWithFormat:@"SMLPetViewModel updatedFeedingEvents"];
+        self.updatedName = [[RACSubject subject] setNameWithFormat:@"SMLPetViewModel updatedName"];
         self.updatedImage = [[RACSubject subject] setNameWithFormat:@"SMLPetViewModel updatedImage"];
         self.dateFormatter = dateFormatter;
         [self loadCellModels];
@@ -94,11 +96,11 @@
         [array addObject:viewModel];
     }
     self.cellModels = array;
-    [self.updatedContent sendNext:nil];
+    [self.updatedFeedingEvents sendNext:nil];
 }
 
 - (NSString*)lastFeedingEventString {
-    SMLFeedingEventViewModel *feedingEventViewModel = [self.cellModels lastObject];
+    SMLFeedingEventViewModel *feedingEventViewModel = self.cellModels.firstObject;
     if (!feedingEventViewModel) {
         return @"No feeding events";
     }
@@ -134,7 +136,7 @@
 
 - (void)updateName:(NSString*)name {
     [self.dataController updatePet:self.pet withName:name];
-    [self.updatedContent sendNext:nil];
+    [self.updatedName sendNext:nil];
 }
 
 - (void)updateImage:(UIImage*)image {
