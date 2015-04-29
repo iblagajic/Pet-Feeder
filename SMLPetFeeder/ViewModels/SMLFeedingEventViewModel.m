@@ -14,6 +14,8 @@
 
 @property (nonatomic) SMLFeedingEvent *feedingEvent;
 @property (nonatomic) NSDateFormatter *dateFormatter;
+@property (nonatomic) RACSubject *updatedTitle;
+@property (nonatomic) RACSubject *updatedSubtitle;
 
 @end
 

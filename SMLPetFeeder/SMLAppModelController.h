@@ -26,7 +26,6 @@
 - (SMLPetViewModel*)modelAfterViewModel:(SMLPetViewModel*)viewModel;
 - (NSUInteger)indexOfViewModel:(SMLPetViewModel*)viewModel;
 - (void)addNewPetWithName:(NSString*)name;
-- (void)removeObjectAtIndex:(NSUInteger)index;
 - (void)updateName:(NSString*)name forPetAtIndex:(NSInteger)index;
 - (void)updateImage:(UIImage*)image forPetAtIndex:(NSInteger)index;
 

@@ -20,14 +20,29 @@
 
 - (void)setCellModel:(id<SMLBasicCellModel>)cellModel {
     _cellModel = cellModel;
-    self.titleLabel.text = cellModel.title;
+    @weakify(self)
+    [self.cellModel.updatedTitle subscribeNext:^(NSString *title) {
+        @strongify(self)
+        self.titleLabel.text = title;
+    }];
+    self.titleLabel.text = self.cellModel.title;
     if ([self.cellModel respondsToSelector:@selector(subtitle)]) {
+        if ([self.cellModel respondsToSelector:@selector(updatedSubtitle)]) {
+            [self.cellModel.updatedSubtitle subscribeNext:^(NSString *subtitle) {
+                @strongify(self)
+                self.subtitleLabel.text = subtitle;
+            }];
+        }
         self.subtitleLabel.text = self.cellModel.subtitle;
     }
     if ([self.cellModel respondsToSelector:@selector(image)]) {
-        if (self.cellModel.image) {
-            self.roundImageView.image = self.cellModel.image;
+        if ([self.cellModel respondsToSelector:@selector(updatedImage)]) {
+            [self.cellModel.updatedImage subscribeNext:^(UIImage *image) {
+                @strongify(self)
+                self.roundImageView.image = image;
+            }];
         }
+        self.roundImageView.image = self.cellModel.image;
     }
 }
 

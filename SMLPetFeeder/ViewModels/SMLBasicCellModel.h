@@ -11,11 +11,13 @@
 @required
 
 @property (nonatomic, readonly) NSString *title;
-
+@property (nonatomic, readonly) RACSubject *updatedTitle;
 
 @optional
 
 @property (nonatomic, readonly) NSString *subtitle;
+@property (nonatomic, readonly) RACSubject *updatedSubtitle;
 @property (nonatomic, readonly) UIImage *image;
+@property (nonatomic, readonly) RACSubject *updatedImage;
 
 @end

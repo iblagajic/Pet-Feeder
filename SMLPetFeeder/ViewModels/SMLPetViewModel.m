@@ -21,7 +21,7 @@
 @property (nonatomic) NSDateFormatter *dateFormatter;
 
 @property (nonatomic) RACSubject *updatedFeedingEvents;
-@property (nonatomic) RACSubject *updatedName;
+@property (nonatomic) RACSubject *updatedTitle;
 @property (nonatomic) RACSubject *updatedImage;
 
 @end
@@ -36,7 +36,7 @@
         self.pet = pet;
         self.dataController = dataController;
         self.updatedFeedingEvents = [[RACSubject subject] setNameWithFormat:@"SMLPetViewModel updatedFeedingEvents"];
-        self.updatedName = [[RACSubject subject] setNameWithFormat:@"SMLPetViewModel updatedName"];
+        self.updatedTitle = [[RACSubject subject] setNameWithFormat:@"SMLPetViewModel updatedTitle"];
         self.updatedImage = [[RACSubject subject] setNameWithFormat:@"SMLPetViewModel updatedImage"];
         self.dateFormatter = dateFormatter;
         [self loadCellModels];
@@ -55,10 +55,14 @@
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString * basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;;
     if (!basePath) {
-        return nil;
+        return [UIImage imageNamed:@"PetPlaceholder"];
     }
     NSString *path = [basePath stringByAppendingPathComponent:self.pet.image];
-    return [UIImage imageWithContentsOfFile:path];
+    UIImage *image = [UIImage imageWithContentsOfFile:path];
+    if (image) {
+        return image;
+    }
+    return [UIImage imageNamed:@"PetPlaceholder"];
 }
 
 - (NSUInteger)count {
@@ -136,12 +140,12 @@
 
 - (void)updateName:(NSString*)name {
     [self.dataController updatePet:self.pet withName:name];
-    [self.updatedName sendNext:nil];
+    [self.updatedTitle sendNext:name];
 }
 
 - (void)updateImage:(UIImage*)image {
     [self.dataController updatePet:self.pet withImage:image];
-    [self.updatedImage sendNext:nil];
+    [self.updatedImage sendNext:image];
 }
 
 @end

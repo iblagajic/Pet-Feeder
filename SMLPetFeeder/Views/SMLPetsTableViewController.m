@@ -35,23 +35,20 @@
     self.viewModel = [[SMLAppModelController alloc] init];
     self.tableViewDataSource = [[SMLTableViewDataSource alloc] initWithViewModel:self.viewModel];
     self.tableView.dataSource = self.tableViewDataSource;
-    @weakify(self);
+    @weakify(self)
     [self.viewModel.addedPet subscribeNext:^(NSNumber *index) {
-        @strongify(self);
-        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForItem:index.unsignedIntegerValue inSection:0]]
+        @strongify(self)
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index.integerValue inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath]
                               withRowAnimation:UITableViewRowAnimationMiddle];
         [self setNeedsStatusBarAppearanceUpdate];
     }];
     [self.viewModel.removedPet subscribeNext:^(NSNumber *index) {
-        @strongify(self);
-        [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForItem:index.unsignedIntegerValue inSection:0]]
+        @strongify(self)
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index.integerValue inSection:0];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath]
                               withRowAnimation:UITableViewRowAnimationMiddle];
         [self setNeedsStatusBarAppearanceUpdate];
-    }];
-    [self.viewModel.updatedContent subscribeNext:^(NSNumber *index) {
-        @strongify(self);
-        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForItem:index.unsignedIntegerValue inSection:0]]
-                              withRowAnimation:UITableViewRowAnimationAutomatic];
     }];
 }
 
