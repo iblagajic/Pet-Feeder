@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -9,28 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1A7CD7351A8AAC1F00640E2E"
-               BuildableName = "PetFeeder.app"
-               BlueprintName = "PetFeeder"
-               ReferencedContainer = "container:PetFeeder.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1AADC8991AF7FBA80025ABB6"
-               BuildableName = "PetFeeder Tests.xctest"
-               BlueprintName = "PetFeeder Tests"
+               BlueprintIdentifier = "1A94B11C1AF91479003ADA0C"
+               BuildableName = "PetFeederTests.xctest"
+               BlueprintName = "PetFeederTests"
                ReferencedContainer = "container:PetFeeder.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1AADC8991AF7FBA80025ABB6"
-               BuildableName = "PetFeeder Tests.xctest"
-               BlueprintName = "PetFeeder Tests"
+               BlueprintIdentifier = "1A94B11C1AF91479003ADA0C"
+               BuildableName = "PetFeederTests.xctest"
+               BlueprintName = "PetFeederTests"
                ReferencedContainer = "container:PetFeeder.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1A7CD7351A8AAC1F00640E2E"
-            BuildableName = "PetFeeder.app"
-            BlueprintName = "PetFeeder"
+            BlueprintIdentifier = "1A94B11C1AF91479003ADA0C"
+            BuildableName = "PetFeederTests.xctest"
+            BlueprintName = "PetFeederTests"
             ReferencedContainer = "container:PetFeeder.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,16 +58,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1A7CD7351A8AAC1F00640E2E"
-            BuildableName = "PetFeeder.app"
-            BlueprintName = "PetFeeder"
+            BlueprintIdentifier = "1A94B11C1AF91479003ADA0C"
+            BuildableName = "PetFeederTests.xctest"
+            BlueprintName = "PetFeederTests"
             ReferencedContainer = "container:PetFeeder.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -91,16 +76,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1A7CD7351A8AAC1F00640E2E"
-            BuildableName = "PetFeeder.app"
-            BlueprintName = "PetFeeder"
+            BlueprintIdentifier = "1A94B11C1AF91479003ADA0C"
+            BuildableName = "PetFeederTests.xctest"
+            BlueprintName = "PetFeederTests"
             ReferencedContainer = "container:PetFeeder.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

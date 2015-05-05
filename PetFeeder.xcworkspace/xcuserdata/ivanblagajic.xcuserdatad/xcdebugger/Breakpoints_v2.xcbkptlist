@@ -2,4 +2,116 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PetFeeder Tests/PetFeeder_Tests.m"
+            timestampString = "452531571.137379"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-ensureOrdinalsUpdated"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PetFeeder_Tests ensureOrdinalsUpdated]"
+                  moduleName = "PetFeeder Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanblagajic/Developer/Pet%20Feeder/PetFeeder%20Tests/PetFeeder_Tests.m"
+                  timestampString = "452497482.958083"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "211">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PetFeeder_Tests ensureOrdinalsUpdated]"
+                  moduleName = "PetFeeder Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanblagajic/Developer/Pet%20Feeder/PetFeeder%20Tests/PetFeeder_Tests.m"
+                  timestampString = "452497482.958425"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "797">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PetFeeder_Tests ensureOrdinalsUpdated]"
+                  moduleName = "PetFeeder Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanblagajic/Developer/Pet%20Feeder/PetFeeder%20Tests/PetFeeder_Tests.m"
+                  timestampString = "452497482.958938"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "846">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PetFeeder_Tests ensureOrdinalsUpdated]"
+                  moduleName = "PetFeeder Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanblagajic/Developer/Pet%20Feeder/PetFeeder%20Tests/PetFeeder_Tests.m"
+                  timestampString = "452497482.959416"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "968">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMLPetFeeder/CoreData/SMLDataController.m"
+            timestampString = "452532406.72169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-persistentStoreCoordinator"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SMLPetFeeder/CoreData/SMLDataController.m"
+            timestampString = "452532406.72169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-persistentStoreCoordinator"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

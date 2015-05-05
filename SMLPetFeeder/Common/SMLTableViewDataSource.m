@@ -32,13 +32,16 @@
     return self.viewModel.count;
 }
 
-- (SMLStandardTableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+- (SMLStandardTableViewCell *)tableView:(UITableView *)tableView
+                 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SMLStandardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell"];
-    cell.cellModel = (id<SMLBasicCellModel>)[self.viewModel modelAtIndex:indexPath.row];
+    cell.cellModel = [self.viewModel modelAtIndex:indexPath.row];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (UITableViewCellEditingStyleDelete) {
         if ([self.viewModel respondsToSelector:@selector(removeObjectAtIndex:)]) {   
             [self.viewModel removeObjectAtIndex:indexPath.row];

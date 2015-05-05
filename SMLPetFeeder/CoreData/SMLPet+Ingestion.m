@@ -13,8 +13,8 @@ static NSString * const SMLEntityName = @"SMLPet";
 @implementation SMLPet (Ingestion)
 
 + (SMLPet*)addPetWithName:(NSString*)name context:(NSManagedObjectContext*)context {
-    SMLPet *newPet = [SMLPet newPetInContext:context];
     NSInteger ordinal = [SMLPet allPetsInContext:context].count;
+    SMLPet *newPet = [SMLPet newPetInContext:context];
     newPet.name = name;
     newPet.ordinal = @(ordinal);
     return newPet;
@@ -27,7 +27,9 @@ static NSString * const SMLEntityName = @"SMLPet";
     if (err) {
         NSLog(@"Error fetching pets: %@", err.localizedDescription);
     }
-    return allPets;
+    return [allPets sortedArrayUsingComparator:^NSComparisonResult(SMLPet *obj1, SMLPet *obj2) {
+        return obj1.ordinal > obj2.ordinal;
+    }];
 }
 
 + (void)updatePet:(SMLPet*)pet withName:(NSString*)name context:(NSManagedObjectContext*)context {

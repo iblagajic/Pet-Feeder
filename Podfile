@@ -7,3 +7,10 @@ pod 'ReactiveCocoa'
 pod 'libextobjc'
 
 end
+
+target 'PetFeederTests' do
+
+pod 'ReactiveCocoa'
+pod 'libextobjc'
+
+end

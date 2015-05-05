@@ -30,7 +30,8 @@
 
 - (NSManagedObjectModel *)managedObjectModel {
     if (!_managedObjectModel) {
-        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"PetFeeder" withExtension:@"momd"];
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        NSURL *modelURL = [bundle URLForResource:@"PetFeeder" withExtension:@"momd"];
         _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     }
     return _managedObjectModel;
@@ -39,7 +40,7 @@
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
     if (!_persistentStoreCoordinator) {
         _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-        NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Test.sqlite"];
+        NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"PetFeeder.sqlite"];
         NSError *error = nil;
         NSString *failureReason = @"There was an error creating or loading the application's saved data.";
         if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
