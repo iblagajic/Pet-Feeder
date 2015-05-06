@@ -43,6 +43,11 @@
     [self.appModelController removeObjectAtIndex:0];
     
     [self ensureOrdinalsUpdated];
+    
+    [self.appModelController addNewPetWithName:@"Lady"];
+    [self.appModelController addNewPetWithName:@"Marino"];
+    
+    [self ensureOrdinalsUpdated];
 }
 
 - (void)ensureOrdinalsUpdated {
@@ -56,13 +61,6 @@
     for (NSInteger i=0; i<self.appModelController.count; i++) {
         [self.appModelController removeObjectAtIndex:i];
     }
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
 }
 
 @end
