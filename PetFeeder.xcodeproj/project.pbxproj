@@ -83,8 +83,6 @@
 		1A7CD74A1A8AAC1F00640E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A7CD74C1A8AAC1F00640E2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1A7CD74F1A8AAC1F00640E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1A7CD75A1A8AAC1F00640E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A7CD75B1A8AAC1F00640E2E /* SMLPetFeederTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMLPetFeederTests.m; sourceTree = "<group>"; };
 		1A7CD7A81A8AB1C600640E2E /* PetFeeder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetFeeder.xcdatamodel; sourceTree = "<group>"; };
 		1A7CD7AB1A8AB27300640E2E /* SMLDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLDataController.h; sourceTree = "<group>"; };
 		1A7CD7AC1A8AB27300640E2E /* SMLDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLDataController.m; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				1A7CD7381A8AAC1F00640E2E /* SMLPetFeeder */,
-				1A7CD7581A8AAC1F00640E2E /* SMLPetFeederTests */,
 				1A94B11E1AF91479003ADA0C /* PetFeederTests */,
 				1A7CD7371A8AAC1F00640E2E /* Products */,
 				6EF4D842C97203BFEC9AC4E4 /* Pods */,
@@ -208,23 +205,6 @@
 				1A7CD73A1A8AAC1F00640E2E /* Info.plist */,
 				1A7CD73B1A8AAC1F00640E2E /* main.m */,
 				1A8512AE1A9A378C00117C43 /* PrefixHeader.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1A7CD7581A8AAC1F00640E2E /* SMLPetFeederTests */ = {
-			isa = PBXGroup;
-			children = (
-				1A7CD75B1A8AAC1F00640E2E /* SMLPetFeederTests.m */,
-				1A7CD7591A8AAC1F00640E2E /* Supporting Files */,
-			);
-			path = SMLPetFeederTests;
-			sourceTree = "<group>";
-		};
-		1A7CD7591A8AAC1F00640E2E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1A7CD75A1A8AAC1F00640E2E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
