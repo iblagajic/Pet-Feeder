@@ -87,9 +87,12 @@
 
 - (void)removeObjectAtIndex:(NSUInteger)index {
     SMLPetViewModel *petModel = [self modelAtIndex:index];
+    if (!petModel) {
+        NSLog(@"Error: no pet at index %zd", index);
+    }
     [self.petModels removeObject:petModel];
     [self.dataController removePet:petModel.pet];
-    [self.removedPet sendNext:@(MIN(self.petModels.count, index))];
+    [self.removedPet sendNext:@(index)];
 }
 
 - (void)updateName:(NSString*)name forPetAtIndex:(NSInteger)index {
